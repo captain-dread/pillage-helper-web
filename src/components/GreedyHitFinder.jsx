@@ -1,0 +1,169 @@
+import { useState } from "react";
+import { Box, Button, Typography, Divider } from "@mui/material";
+import { processLogContent } from "../assets/greedy";
+
+import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import TextField from "@mui/material/TextField";
+import ResultsModal from "./ResultsModal";
+
+export default function GreedyHitFinder() {
+  const [file, setFile] = useState(null);
+  const [fileText, setFileText] = useState("");
+  const [state, setState] = useState({
+    checked: false,
+    inputValue: 500,
+  });
+  const [showResultsModal, setShowResultsModal] = useState({
+    show: false,
+    summary: "",
+    hitCommands: [],
+  });
+
+  const handleCheckboxChange = (event) => {
+    setState((prevState) => ({
+      ...prevState,
+      checked: event.target.checked,
+    }));
+  };
+
+  const handleInputChange = (event) => {
+    setState((prevState) => ({
+      ...prevState,
+      inputValue: event.target.value === "" ? "" : Number(event.target.value),
+    }));
+  };
+
+  const handleFileChange = (event) => {
+    const selectedFile = event.target.files[0];
+    if (selectedFile) {
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        const text = e.target.result;
+        setFileText(text);
+      };
+
+      reader.readAsText(selectedFile);
+      setFile(selectedFile);
+    }
+  };
+
+  const isFileLoaded = file !== null;
+
+  const handleFindGreedyHits = () => {
+    if (!fileText) {
+      return;
+    }
+
+    const res = processLogContent(
+      fileText,
+      state.inputValue > 0 ? state.inputValue : 500
+    );
+    setShowResultsModal({
+      show: true,
+      summary: res.result,
+      payCommands: res.payCommands,
+    });
+  };
+
+  return (
+    <>
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <Divider variant="middle" sx={{ width: 100 }} />
+      </Box>
+      <Box
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      >
+        <Typography
+          textAlign="center"
+          fontSize={16}
+          style={{ fontFamily: '"Orbitron", sans-serif' }}
+        >
+          Greedy Hit Finder
+        </Typography>
+
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={state.checked}
+              onChange={handleCheckboxChange}
+              name="payCommands"
+              size="small"
+            />
+          }
+          label={
+            <Typography variant="body2" style={{ fontSize: "14px" }}>
+              Pay Commands
+            </Typography>
+          }
+          sx={{ mt: 0.5, mb: 0.2 }}
+        />
+        <Box
+          sx={{
+            display: "flex",
+            gap: 1,
+            justifyContent: "center",
+            alignItems: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          <label htmlFor="file-input">
+            <input
+              id="file-input"
+              type="file"
+              style={{ display: "none" }}
+              onChange={handleFileChange}
+            />
+            <Button
+              size="small"
+              variant="outlined"
+              onClick={() => document.getElementById("file-input").click()}
+            >
+              Load Chat File
+            </Button>
+          </label>
+
+          <TextField
+            type="number"
+            value={state.inputValue}
+            onChange={handleInputChange}
+            disabled={!state.checked}
+            label="Pay"
+            size="small"
+            style={{ width: "65px" }}
+            InputProps={{
+              sx: {
+                input: {
+                  padding: "4px",
+                },
+              },
+            }}
+          />
+          <Button
+            size="small"
+            variant="outlined"
+            disabled={!isFileLoaded}
+            onClick={handleFindGreedyHits}
+          >
+            Find
+          </Button>
+        </Box>
+      </Box>
+      {showResultsModal.show ? (
+        <ResultsModal
+          hitSummary={showResultsModal.summary}
+          payCommands={showResultsModal.payCommands}
+          close={() => {
+            setShowResultsModal((SRM) => {
+              return {
+                ...SRM,
+                show: !SRM.show,
+              };
+            });
+          }}
+        />
+      ) : null}
+    </>
+  );
+}
