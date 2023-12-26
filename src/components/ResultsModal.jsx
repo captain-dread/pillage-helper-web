@@ -14,6 +14,10 @@ export default function ResultsModal({ hitSummary, payCommands, close }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <Typography sx={{ fontWeight: "bold", textAlign: "center" }}>
+            Only run after "The victors plundered.." message to get the most
+            recent battle.
+          </Typography>
           <Box sx={entryStyle}>
             <Typography>{hitSummary}</Typography>
             <Button onClick={() => copyToClipboard(hitSummary)}>Copy</Button>
