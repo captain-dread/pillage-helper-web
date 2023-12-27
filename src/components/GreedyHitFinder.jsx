@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Box, Button, Typography, Divider } from "@mui/material";
+import { Box, Button, Typography, Divider, IconButton } from "@mui/material";
 import { processLogContent } from "../assets/greedy";
 
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import TextField from "@mui/material/TextField";
 import ResultsModal from "./ResultsModal";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 export default function GreedyHitFinder() {
   const [file, setFile] = useState(null);
@@ -32,6 +33,13 @@ export default function GreedyHitFinder() {
       ...prevState,
       inputValue: event.target.value === "" ? "" : Number(event.target.value),
     }));
+  };
+
+  const handleHelpClick = () => {
+    window.open(
+      "https://github.com/captain-dread/pillage-helper-web",
+      "_blank"
+    );
   };
 
   const handleFileChange = (event) => {
@@ -75,13 +83,24 @@ export default function GreedyHitFinder() {
       <Box
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
-        <Typography
-          textAlign="center"
-          fontSize={16}
-          style={{ fontFamily: '"Orbitron", sans-serif' }}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          Greedy Hit Finder
-        </Typography>
+          <Typography
+            textAlign="center"
+            fontSize={16}
+            style={{ fontFamily: '"Orbitron", sans-serif' }}
+          >
+            Greedy Hit Finder
+          </Typography>
+          <IconButton onClick={handleHelpClick} aria-label="help" size="small">
+            <HelpOutlineIcon size="small" fontSize="11" />
+          </IconButton>
+        </div>
 
         <FormControlLabel
           control={
