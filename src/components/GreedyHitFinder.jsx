@@ -54,7 +54,10 @@ export default function GreedyHitFinder() {
 
       reader.readAsText(selectedFile);
       setFile(selectedFile);
+    } else {
+      alert("Not File Selected");
     }
+    event.target.value = "";
   };
 
   const isFileLoaded = file !== null;
@@ -174,6 +177,7 @@ export default function GreedyHitFinder() {
           hitSummary={showResultsModal.summary}
           payCommands={showResultsModal.payCommands}
           close={() => {
+            setFile(null);
             setShowResultsModal((SRM) => {
               return {
                 ...SRM,
