@@ -14,7 +14,12 @@ export default function ResultsModal({ hitSummary, payCommands, close }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography sx={{ fontWeight: "bold", textAlign: "center" }}>
+          <Typography
+            sx={{
+              fontWeight: "bold",
+              textAlign: "center",
+            }}
+          >
             Only run after "The victors plundered.." message to get the most
             recent battle.
           </Typography>
@@ -28,6 +33,7 @@ export default function ResultsModal({ hitSummary, payCommands, close }) {
               <Button onClick={() => copyToClipboard(command)}>Copy</Button>
             </Box>
           ))}
+          <Button onClick={close}>Close</Button>
         </Box>
       </Modal>
     </div>
@@ -43,17 +49,21 @@ const style = {
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
-  p: 4,
+  py: 1,
+  px: 2,
   display: "flex",
   flexDirection: "column",
-  gap: 2, // Adds space between entries
+  gap: 1,
+  maxHeight: "100vh",
+  overflow: "scroll",
+  borderRadius: "4px",
 };
 
 const entryStyle = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  border: "1px solid #ddd", // Border for each entry
-  padding: "8px",
-  borderRadius: "4px", // Optional for rounded corners
+  border: "1px solid #ddd",
+  px: 1,
+  borderRadius: "4px",
 };
