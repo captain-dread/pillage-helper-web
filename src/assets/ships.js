@@ -53,9 +53,13 @@ let ships = [
     4,
     1,
     "small",
+    // Max Pillage Damage
     new Damage(6, 4, 3),
+    // Max Sink Damage
     new Damage(10, 6.667, 5),
+    // Rock Damage
     new Damage(0.5, 0.333, 0.25),
+    // Ram Damage
     new Damage(0.5, 0.333, 0.25)
   ),
   new Ship(

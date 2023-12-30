@@ -11,7 +11,7 @@ import {
 import ShipMetaInformation from "./ShipMetaInformation";
 import SelectShipInput from "./SelectShipInput";
 
-import ModeStandbyIcon from "@mui/icons-material/ModeStandby";
+import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 
 export default function ShipCard({
   identity,
@@ -28,7 +28,7 @@ export default function ShipCard({
   const cappedValue = Math.min(damageValue, 100);
 
   const progressBarColor =
-    cappedValue <= 50 ? "green" : cappedValue <= 80 ? "yellow" : "red";
+    cappedValue <= 40 ? "green" : cappedValue <= 65 ? "yellow" : "red";
 
   return (
     <Card sx={{ maxWidth: 250, p: 0 }} elevation={3}>
@@ -69,8 +69,11 @@ export default function ShipCard({
               recordShotsTaken(identity, 1);
             }}
           >
-            One Shot{" "}
-            <ModeStandbyIcon size="small" sx={{ fontSize: 10, ml: 0.5 }} />
+            One Hit
+            <LocalFireDepartmentIcon
+              size="small"
+              sx={{ fontSize: 10, ml: 0.5 }}
+            />
           </Button>
           <Button
             size="small"
@@ -80,9 +83,12 @@ export default function ShipCard({
               recordShotsTaken(identity, 2);
             }}
           >
-            Two Shots
-            <ModeStandbyIcon size="small" sx={{ fontSize: 10, mx: 0.5 }} />
-            <ModeStandbyIcon size="small" sx={{ fontSize: 10 }} />
+            Two Hits
+            <LocalFireDepartmentIcon
+              size="small"
+              sx={{ fontSize: 10, mx: 0.5 }}
+            />
+            <LocalFireDepartmentIcon size="small" sx={{ fontSize: 10 }} />
           </Button>
           <Button
             size="small"
@@ -92,7 +98,7 @@ export default function ShipCard({
               recordRockDamage(identity);
             }}
           >
-            Rock/Edge Damage
+            Rock/Edge Hit
           </Button>
         </Stack>
 
