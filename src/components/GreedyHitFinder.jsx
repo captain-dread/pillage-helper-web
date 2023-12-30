@@ -74,7 +74,7 @@ export default function GreedyHitFinder() {
     setShowResultsModal({
       show: true,
       summary: res.result,
-      payCommands: res.payCommands,
+      payCommands: state.checked ? res.payCommands : [],
     });
   };
 
