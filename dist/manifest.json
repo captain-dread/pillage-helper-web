@@ -1,0 +1,28 @@
+{
+  "name": "FirstMate",
+  "description": "Arrrrg, I be your first mate companion to bnav in Puzzle Pirates!",
+  "start_url": "/pillage-helper-web/",
+  "scope": "/pillage-helper-web/",
+  "theme_color": "#212121",
+  "background_color": "#212121",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "/favicon/favicon.ico",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/favicon/favicon-144x144.png",
+      "sizes": "144x144",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon/favicon-32x32.png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/favicon/favicon-16x16.png",
+      "sizes": "16x16"
+    }
+  ]
+}
