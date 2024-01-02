@@ -8,20 +8,20 @@
   "display": "fullscreen",
   "icons": [
     {
-      "src": "/favicon/favicon.ico",
+      "src": "/pillage-helper-web/favicon/favicon.ico",
       "sizes": "48x48"
     },
     {
-      "src": "/favicon/favicon-144x144.png",
+      "src": "/pillage-helper-web/favicon/favicon-144x144.png",
       "sizes": "144x144",
       "purpose": "any"
     },
     {
-      "src": "/favicon/favicon-32x32.png",
+      "src": "/pillage-helper-web/favicon/favicon-32x32.png",
       "sizes": "32x32"
     },
     {
-      "src": "/favicon/favicon-16x16.png",
+      "src": "/pillage-helper-web/favicon/favicon-16x16.png",
       "sizes": "16x16"
     }
   ]
