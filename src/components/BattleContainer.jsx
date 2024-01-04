@@ -53,14 +53,14 @@ export default function BattleContainer({ toggleDarkMode }) {
         ...battle,
         playerDamageTaken:
           battle.playerDamageTaken +
-          battle.playerShip.rockDamage[battle.playerShip.size],
+          battle.playerShip.rockDamage[battle.enemyShip.cannonSize],
       });
     } else {
       setBattle({
         ...battle,
         enemyDamageTaken:
           battle.enemyDamageTaken +
-          battle.enemyShip.rockDamage[battle.enemyShip.size],
+          battle.enemyShip.rockDamage[battle.playerShip.cannonSize],
       });
     }
   };
