@@ -79,8 +79,9 @@ export default function BattleContainer({ toggleDarkMode }) {
     }
 
     const damagePercent = (damageTaken / maxDamage) * 100;
-    return parseFloat(damagePercent.toFixed(2));
+    return parseFloat(damagePercent.toFixed(0));
   };
+
   const getShipDamageStatus = (identity) => {
     let damageTaken, maxPillageDamage;
 
@@ -95,7 +96,7 @@ export default function BattleContainer({ toggleDarkMode }) {
     }
 
     const formatNumber = (num) => {
-      return num % 1 === 0 ? num.toString() : num.toFixed(2);
+      return num % 1 === 0 ? num.toString() : num.toFixed(1);
     };
 
     return `${formatNumber(damageTaken)}/${formatNumber(maxPillageDamage)}`;
@@ -107,6 +108,7 @@ export default function BattleContainer({ toggleDarkMode }) {
       "(" +
       Math.min(getDamage("player"), 100) +
       "%)";
+
     const enemy =
       getShipDamageStatus("enemy") +
       "(" +
