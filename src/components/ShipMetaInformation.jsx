@@ -28,6 +28,9 @@ export default function ShipMetaInformation({ ship, identity, battle }) {
       "Maxed at",
       `${getPillageMax()} cb${getPillageMax() > 1 ? "'s" : ""}`
     ),
+    createData("Max pirates", ship.maxPirates),
+    createData("Mass", ship.mass.toLocaleString()),
+    createData("Volume", ship.volume.toLocaleString()),
   ];
 
   return (

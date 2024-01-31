@@ -8,7 +8,10 @@ class Ship {
     maxPillageDamage,
     maxSinkDamage,
     rockDamage,
-    ramDamage
+    ramDamage,
+    maxPirates,
+    mass,
+    volume
   ) {
     this.shipType = shipType;
     this.size = size.toLowerCase();
@@ -20,6 +23,9 @@ class Ship {
     this.rockDamage = rockDamage;
     this.ramDamage = ramDamage;
     this.imagePath = `./images/${this.shipType.replace(" ", "_")}.png`;
+    this.maxPirates = maxPirates;
+    this.mass = mass;
+    this.volume = volume;
   }
 }
 
@@ -60,7 +66,10 @@ let ships = [
     // Rock Damage
     new Damage(0.5, 0.333, 0.25),
     // Ram Damage
-    new Damage(0.5, 0.333, 0.25)
+    new Damage(0.5, 0.333, 0.25),
+    7,
+    13500,
+    20250
   ),
   new Ship(
     "Cutter",
@@ -71,7 +80,10 @@ let ships = [
     new Damage(7.5, 5, 3.75),
     new Damage(12, 8, 6),
     new Damage(0.625, 0.417, 0.3125),
-    new Damage(0.5, 0.333, 0.25)
+    new Damage(0.5, 0.333, 0.25),
+    12,
+    40500,
+    60750
   ),
   new Ship(
     "Dhow",
@@ -82,7 +94,10 @@ let ships = [
     new Damage(7.5, 5, 3.75),
     new Damage(12, 8, 6),
     new Damage(0.625, 0.417, 0.3125),
-    new Damage(0.5, 0.333, 0.25)
+    new Damage(0.5, 0.333, 0.25),
+    12,
+    13500,
+    20250
   ),
   new Ship(
     "Fanchuan",
@@ -93,7 +108,10 @@ let ships = [
     new Damage(7.875, 5.225, 3.9375),
     new Damage(13.125, 8.75, 6.5625),
     new Damage(0.65625, 0.4375, 0.328125),
-    new Damage(0.5, 0.333, 0.25)
+    new Damage(0.5, 0.333, 0.25),
+    12,
+    13500,
+    20250
   ),
   new Ship(
     "Longship",
@@ -104,7 +122,10 @@ let ships = [
     new Damage(9, 6, 4.5),
     new Damage(15, 10, 7.5),
     new Damage(0.75, 0.5, 0.375),
-    new Damage(0.5, 0.333, 0.25)
+    new Damage(0.5, 0.333, 0.25),
+    15,
+    13500,
+    20250
   ),
   new Ship(
     "Baghlah",
@@ -115,7 +136,10 @@ let ships = [
     new Damage(12, 8, 6),
     new Damage(20, 13.333, 10),
     new Damage(1, 0.667, 0.5),
-    new Damage(1, 0.667, 0.5)
+    new Damage(1, 0.667, 0.5),
+    18,
+    18000,
+    27000
   ),
   new Ship(
     "Merchant Brig",
@@ -126,7 +150,10 @@ let ships = [
     new Damage(12, 8, 6),
     new Damage(20, 13.333, 10),
     new Damage(1, 0.667, 0.5),
-    new Damage(1, 0.667, 0.5)
+    new Damage(1, 0.667, 0.5),
+    20,
+    90000,
+    135000
   ),
   new Ship(
     "Junk",
@@ -137,7 +164,10 @@ let ships = [
     new Damage(15, 10, 7.5),
     new Damage(25, 16.66, 12.5),
     new Damage(1.25, 0.833, 0.625),
-    new Damage(1.5, 1, 0.75)
+    new Damage(1.5, 1, 0.75),
+    18,
+    18000,
+    27000
   ),
   new Ship(
     "War Brig",
@@ -148,7 +178,10 @@ let ships = [
     new Damage(15, 10, 7.5),
     new Damage(25, 16.667, 12.5),
     new Damage(1.25, 0.833, 0.625),
-    new Damage(2, 1.333, 1)
+    new Damage(2, 1.333, 1),
+    30,
+    54000,
+    81000
   ),
   new Ship(
     "Merchant Galleon",
@@ -159,7 +192,10 @@ let ships = [
     new Damage(18, 12, 9),
     new Damage(30, 20, 15),
     new Damage(1.5, 1, 0.75),
-    new Damage(2.5, 1.667, 1.25)
+    new Damage(2.5, 1.667, 1.25),
+    30,
+    270000,
+    405000
   ),
   new Ship(
     "Xebec",
@@ -170,7 +206,10 @@ let ships = [
     new Damage(21, 14, 10.5),
     new Damage(25, 23.3333, 17.5),
     new Damage(1.75, 1.167, 0.875),
-    new Damage(2.5, 1.667, 1.25)
+    new Damage(2.5, 1.667, 1.25),
+    45,
+    121500,
+    182250
   ),
   new Ship(
     "War Galleon",
@@ -181,7 +220,10 @@ let ships = [
     new Damage(15, 10, 7.5),
     new Damage(25, 16.667, 12.5),
     new Damage(1.75, 1.167, 0.875),
-    new Damage(2.5, 1.667, 1.25)
+    new Damage(2.5, 1.667, 1.25),
+    40,
+    90000,
+    135000
   ),
   new Ship(
     "War Frigate",
@@ -192,7 +234,10 @@ let ships = [
     new Damage(30, 20, 15),
     new Damage(50, 33.333, 25),
     new Damage(2.5, 1.667, 1.25),
-    new Damage(3, 2, 1.5)
+    new Damage(3, 2, 1.5),
+    75,
+    216000,
+    324000
   ),
   new Ship(
     "Grand Frigate",
@@ -203,7 +248,10 @@ let ships = [
     new Damage(36, 24, 18),
     new Damage(60, 40, 30),
     new Damage(3, 2, 1.5),
-    new Damage(4, 2.667, 2)
+    new Damage(4, 2.667, 2),
+    159,
+    540000,
+    810000
   ),
 ];
 
