@@ -8,7 +8,7 @@ import { ships } from "../assets/ships";
 import GreedyHitFinder from "./GreedyHitFinder.jsx";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 
-export default function BattleContainer({ toggleDarkMode }) {
+export default function BattleContainer({ toggleDarkMode, darkMode }) {
   const [battle, setBattle] = useState({
     playerShip: ships[0],
     enemyShip: ships[0],
@@ -128,15 +128,34 @@ export default function BattleContainer({ toggleDarkMode }) {
     { identity: "enemy", ship: battle.enemyShip },
   ];
 
+  const style = {
+    display: "flex",
+    flexDirection: "column",
+    pt: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "100vh",
+    background: `${
+      darkMode
+        ? "linear-gradient(to bottom, #0a0f0b, #212121)"
+        : "linear-gradient(to bottom, #fafafa, #ffffff)"
+    }`,
+  };
+
   return (
-    <Box sx={{ display: "flex", flexDirection: "column" }}>
+    <Box sx={style}>
       <Box
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          pb: 0.5,
+        }}
       >
         <Typography
           textAlign="center"
           variant="h5"
-          style={{ fontFamily: '"Orbitron", sans-serif' }}
+          style={{ fontFamily: '"Orbitron", sans-serif', fontWeight: "bold" }}
         >
           First Mate
         </Typography>

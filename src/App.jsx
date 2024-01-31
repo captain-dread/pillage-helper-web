@@ -16,7 +16,7 @@ function App() {
   return (
     <ThemeProvider theme={currentTheme}>
       <CssBaseline />
-      <BattleContainer toggleDarkMode={toggleDarkMode} />
+      <BattleContainer toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
     </ThemeProvider>
   );
 }
