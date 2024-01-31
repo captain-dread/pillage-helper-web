@@ -4,18 +4,18 @@ const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#1976d2", // A blue color for primary actions
+      main: "#1976d2",
     },
     secondary: {
-      main: "#90caf9", // A lighter shade of blue for secondary actions
+      main: "#90caf9",
     },
     background: {
-      default: "#fafafa", // Softer white background
-      paper: "#ffffff", // Surface color
+      default: "#fafafa",
+      paper: "#ffffff",
     },
     text: {
-      primary: "#333333", // Main text color
-      secondary: "#666666", // Secondary text color
+      primary: "#333333",
+      secondary: "#666666",
     },
   },
 });
@@ -24,10 +24,10 @@ const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#6EA6B6",
+      main: "#C9AA7B",
     },
     secondary: {
-      main: "#6EA6B6",
+      main: "#C9AA7B",
     },
     background: {
       default: "#212121",

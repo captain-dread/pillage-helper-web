@@ -135,9 +135,8 @@ export default function BattleContainer({ toggleDarkMode }) {
       >
         <Typography
           textAlign="center"
-          variant="h4"
+          variant="h5"
           style={{ fontFamily: '"Orbitron", sans-serif' }}
-          sx={{ pb: 1 }}
         >
           First Mate
         </Typography>

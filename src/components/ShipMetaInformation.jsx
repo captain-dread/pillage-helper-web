@@ -21,13 +21,13 @@ export default function ShipMetaInformation({ ship, identity, battle }) {
   };
 
   const rows = [
-    createData("Moves Per Turn", ship.movesPerTurn),
-    createData("Shots Per Turn", ship.shotsPerMove),
+    createData("Moves per turn", ship.movesPerTurn),
+    createData("Shots per turn", ship.shotsPerMove),
+    createData("Cannon size", ship.cannonSize),
     createData(
-      "Maxed At",
+      "Maxed at",
       `${getPillageMax()} cb${getPillageMax() > 1 ? "'s" : ""}`
     ),
-    createData("Cannon Size", ship.cannonSize),
   ];
 
   return (

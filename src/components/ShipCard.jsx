@@ -11,7 +11,7 @@ import {
 import ShipMetaInformation from "./ShipMetaInformation";
 import SelectShipInput from "./SelectShipInput";
 
-import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
+import CrisisAlertIcon from "@mui/icons-material/CrisisAlert";
 
 export default function ShipCard({
   identity,
@@ -70,10 +70,7 @@ export default function ShipCard({
             }}
           >
             One Hit
-            <LocalFireDepartmentIcon
-              size="small"
-              sx={{ fontSize: 10, ml: 0.5 }}
-            />
+            <CrisisAlertIcon size="small" sx={{ fontSize: 10, ml: 0.5 }} />
           </Button>
           <Button
             size="small"
@@ -84,11 +81,8 @@ export default function ShipCard({
             }}
           >
             Two Hits
-            <LocalFireDepartmentIcon
-              size="small"
-              sx={{ fontSize: 10, mx: 0.5 }}
-            />
-            <LocalFireDepartmentIcon size="small" sx={{ fontSize: 10 }} />
+            <CrisisAlertIcon size="small" sx={{ fontSize: 10, mx: 0.5 }} />
+            <CrisisAlertIcon size="small" sx={{ fontSize: 10 }} />
           </Button>
           <Button
             size="small"
