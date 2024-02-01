@@ -16,6 +16,12 @@ export default function BattleContainer({ toggleDarkMode, darkMode }) {
     enemyDamageTaken: 0,
   });
 
+  const [expandShipInfo, setExpandShipInfo] = useState(false);
+
+  const toggleExpandShipInfo = () => {
+    setExpandShipInfo((ESI) => !ESI);
+  };
+
   const handleShipChange = (identity, shipSelected) => {
     setBattle({
       ...battle,
@@ -184,6 +190,8 @@ export default function BattleContainer({ toggleDarkMode, darkMode }) {
             getDamage={getDamage}
             recordRockDamage={recordRockDamage}
             getShipDamageStatus={getShipDamageStatus}
+            expandShipInfo={expandShipInfo}
+            toggleExpandShipInfo={toggleExpandShipInfo}
           />
         ))}
       </Box>

@@ -43,8 +43,11 @@ function pullGreedyHitsFromBattleLog(latestBattle) {
 function formatBattleResult(battleResult) {
   const { hits, totalHits } = battleResult;
 
-  let resultString = `${totalHits} Total Hits!`;
-  for (const [name, hitCount] of Object.entries(hits)) {
+  let resultString = `${totalHits} total hits!`;
+
+  const sortedHits = Object.entries(hits).sort((a, b) => b[1] - a[1]);
+
+  for (const [name, hitCount] of sortedHits) {
     resultString += ` ${name}: ${hitCount},`;
   }
 

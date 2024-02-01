@@ -11,7 +11,12 @@ function createData(name, value) {
   return { name, value };
 }
 
-export default function ShipMetaInformation({ ship, identity, battle }) {
+export default function ShipMetaInformation({
+  ship,
+  identity,
+  battle,
+  expandShipInfo,
+}) {
   const getPillageMax = () => {
     if (identity === "player") {
       return battle.playerShip.maxPillageDamage[battle.enemyShip.cannonSize];
@@ -29,8 +34,12 @@ export default function ShipMetaInformation({ ship, identity, battle }) {
       `${getPillageMax()} cb${getPillageMax() > 1 ? "'s" : ""}`
     ),
     createData("Max pirates", ship.maxPirates),
-    createData("Mass", ship.mass.toLocaleString()),
-    createData("Volume", ship.volume.toLocaleString()),
+    ...(expandShipInfo
+      ? [
+          createData("Mass", ship.mass.toLocaleString()),
+          createData("Volume", ship.volume.toLocaleString()),
+        ]
+      : []),
   ];
 
   return (

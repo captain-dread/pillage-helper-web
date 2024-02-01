@@ -7,11 +7,13 @@ import {
   LinearProgress,
   Button,
   Stack,
+  IconButton,
 } from "@mui/material";
 import ShipMetaInformation from "./ShipMetaInformation";
 import SelectShipInput from "./SelectShipInput";
 
 import CrisisAlertIcon from "@mui/icons-material/CrisisAlert";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 export default function ShipCard({
   identity,
@@ -23,6 +25,8 @@ export default function ShipCard({
   recordRockDamage,
   battle,
   getShipDamageStatus,
+  expandShipInfo,
+  toggleExpandShipInfo,
 }) {
   const damageValue = getDamage(identity);
   const cappedValue = Math.min(damageValue, 100);
@@ -38,6 +42,7 @@ export default function ShipCard({
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          position: "relative",
         }}
       >
         <SelectShipInput
@@ -56,9 +61,21 @@ export default function ShipCard({
             backgroundPosition: "center",
           }}
         />
+        <IconButton
+          size="small"
+          sx={{ position: "absolute", bottom: 10, right: 5 }}
+          onClick={toggleExpandShipInfo}
+        >
+          <InfoOutlinedIcon sx={{ fontSize: 16 }} />
+        </IconButton>
       </CardContent>
       <CardContent sx={{ p: 0.5, paddingBottom: "5px !important" }}>
-        <ShipMetaInformation ship={ship} battle={battle} identity={identity} />
+        <ShipMetaInformation
+          ship={ship}
+          battle={battle}
+          identity={identity}
+          expandShipInfo={expandShipInfo}
+        />
 
         <Stack direction="column" spacing={0.5} sx={{ p: 0.5 }}>
           <Button
