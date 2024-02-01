@@ -36,6 +36,7 @@ export default function ShipMetaInformation({
     createData("Max pirates", ship.maxPirates),
     ...(expandShipInfo
       ? [
+          createData("Max swabbies", ship.maxSwabbies),
           createData("Mass", ship.mass.toLocaleString()),
           createData("Volume", ship.volume.toLocaleString()),
         ]

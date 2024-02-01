@@ -11,7 +11,8 @@ class Ship {
     ramDamage,
     maxPirates,
     mass,
-    volume
+    volume,
+    maxSwabbies
   ) {
     this.shipType = shipType;
     this.size = size.toLowerCase();
@@ -26,6 +27,7 @@ class Ship {
     this.maxPirates = maxPirates;
     this.mass = mass;
     this.volume = volume;
+    this.maxSwabbies = maxSwabbies;
   }
 }
 
@@ -67,9 +69,14 @@ let ships = [
     new Damage(0.5, 0.333, 0.25),
     // Ram Damage
     new Damage(0.5, 0.333, 0.25),
+    // Max Pirates
     7,
+    // Mass
     13500,
-    20250
+    // Volume
+    20250,
+    // Max Swabbies
+    6
   ),
   new Ship(
     "Cutter",
@@ -83,7 +90,8 @@ let ships = [
     new Damage(0.5, 0.333, 0.25),
     12,
     40500,
-    60750
+    60750,
+    11
   ),
   new Ship(
     "Dhow",
@@ -97,7 +105,8 @@ let ships = [
     new Damage(0.5, 0.333, 0.25),
     12,
     13500,
-    20250
+    20250,
+    11
   ),
   new Ship(
     "Fanchuan",
@@ -111,7 +120,8 @@ let ships = [
     new Damage(0.5, 0.333, 0.25),
     12,
     13500,
-    20250
+    20250,
+    11
   ),
   new Ship(
     "Longship",
@@ -125,7 +135,8 @@ let ships = [
     new Damage(0.5, 0.333, 0.25),
     15,
     13500,
-    20250
+    20250,
+    14
   ),
   new Ship(
     "Baghlah",
@@ -139,7 +150,8 @@ let ships = [
     new Damage(1, 0.667, 0.5),
     18,
     18000,
-    27000
+    27000,
+    17
   ),
   new Ship(
     "Merchant Brig",
@@ -153,7 +165,8 @@ let ships = [
     new Damage(1, 0.667, 0.5),
     20,
     90000,
-    135000
+    135000,
+    19
   ),
   new Ship(
     "Junk",
@@ -167,7 +180,8 @@ let ships = [
     new Damage(1.5, 1, 0.75),
     18,
     18000,
-    27000
+    27000,
+    17
   ),
   new Ship(
     "War Brig",
@@ -181,7 +195,8 @@ let ships = [
     new Damage(2, 1.333, 1),
     30,
     54000,
-    81000
+    81000,
+    23
   ),
   new Ship(
     "Merchant Galleon",
@@ -195,7 +210,8 @@ let ships = [
     new Damage(2.5, 1.667, 1.25),
     30,
     270000,
-    405000
+    405000,
+    29
   ),
   new Ship(
     "Xebec",
@@ -209,7 +225,8 @@ let ships = [
     new Damage(2.5, 1.667, 1.25),
     45,
     121500,
-    182250
+    182250,
+    37
   ),
   new Ship(
     "War Galleon",
@@ -223,7 +240,8 @@ let ships = [
     new Damage(2.5, 1.667, 1.25),
     40,
     90000,
-    135000
+    135000,
+    33
   ),
   new Ship(
     "War Frigate",
@@ -237,7 +255,8 @@ let ships = [
     new Damage(3, 2, 1.5),
     75,
     216000,
-    324000
+    324000,
+    55
   ),
   new Ship(
     "Grand Frigate",
@@ -251,7 +270,8 @@ let ships = [
     new Damage(4, 2.667, 2),
     159,
     540000,
-    810000
+    810000,
+    76
   ),
 ];
 
