@@ -35,11 +35,17 @@ function hasSingleWordName(inputString) {
 }
 
 function extractNumbers(inputString) {
-  // Regular expression to find numbers (including commas) in the string
+  // Remove the timestamp from the string
+  const stringWithoutTimestamp = inputString.replace(
+    /\[\d{2}:\d{2}:\d{2}\]\s*/,
+    ""
+  );
+
+  // Regular expression to find numbers (including commas) in the modified string
   const numberPattern = /[\d,]+/g;
 
-  // Extract all numbers (as strings) found in the string
-  const numberStrings = inputString.match(numberPattern);
+  // Extract all numbers (as strings) found in the modified string
+  const numberStrings = stringWithoutTimestamp.match(numberPattern);
 
   // Convert the number strings to integers, removing commas
   if (numberStrings && numberStrings.length >= 2) {
@@ -106,6 +112,8 @@ function getBootyResults(latestBattle) {
       res.commodities = unitsOfGoods;
     }
   });
+
+  return res;
 }
 
 export function processLogContent(logContent, pay) {
@@ -138,6 +146,9 @@ export function processLogContent(logContent, pay) {
       result: formatBattleResult(battleResult),
       payCommands,
       totalHits: battleResult.totalHits,
+      wonBattle: bootyResults.win,
+      poe: bootyResults.poe,
+      commodities: bootyResults.commodities,
     };
   } catch (e) {
     console.error("Error processing log content: ", e);

@@ -71,6 +71,27 @@ export default function GreedyHitFinder({ setResults }) {
       fileText,
       state.inputValue > 0 ? state.inputValue : 500
     );
+    if (res.wonBattle) {
+      setResults((R) => {
+        return {
+          ...R,
+          lavishLockers: R.lavishLockers + res.totalHits,
+          poe: R.poe + res.poe,
+          commodities: R.commodities + res.commodities,
+          wins: R.wins + 1,
+        };
+      });
+    } else {
+      setResults((R) => {
+        return {
+          ...R,
+          lavishLockers: R.lavishLockers - res.totalHits,
+          poe: R.poe - res.poe,
+          commodities: R.commodities - res.commodities,
+          losses: R.losses + 1,
+        };
+      });
+    }
     setShowResultsModal({
       show: true,
       summary: res.result,
@@ -87,12 +108,27 @@ export default function GreedyHitFinder({ setResults }) {
       state.inputValue > 0 ? state.inputValue : 500
     );
 
-    setResults((R) => {
-      return {
-        ...R,
-        lavishLockers: R.lavishLockers + res.totalHits,
-      };
-    });
+    if (res.wonBattle) {
+      setResults((R) => {
+        return {
+          ...R,
+          lavishLockers: R.lavishLockers + res.totalHits,
+          poe: R.poe + res.poe,
+          commodities: R.commodities + res.commodities,
+          wins: R.wins + 1,
+        };
+      });
+    } else {
+      setResults((R) => {
+        return {
+          ...R,
+          lavishLockers: R.lavishLockers - res.totalHits,
+          poe: R.poe - res.poe,
+          commodities: R.commodities - res.commodities,
+          losses: R.losses + 1,
+        };
+      });
+    }
     setFile(null);
   };
 
