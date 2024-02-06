@@ -27,7 +27,7 @@ export default function ShipMetaInformation({
 
   const rows = [
     createData("Moves per turn", ship.movesPerTurn),
-    createData("Shots per turn", ship.shotsPerMove),
+    createData("Shots per move", ship.shotsPerMove),
     createData("Cannon size", ship.cannonSize),
     createData(
       "Maxed at",
