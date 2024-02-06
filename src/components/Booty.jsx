@@ -1,10 +1,10 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Paper } from "@mui/material";
 
-export default function Booty({ setResults, results }) {
+export default function Booty({ setResults, results, darkMode }) {
   return (
-    <Box
+    <Paper
       sx={{
-        backgroundColor: "#393939",
+        backgroundColor: `${darkMode ? "#393939" : "#FFFFFF"}`,
         display: "flex",
         alignItems: "center",
         justifyContent: "space-evenly",
@@ -14,6 +14,7 @@ export default function Booty({ setResults, results }) {
         px: 1,
         py: 0.5,
         gap: 2,
+        elevation: 2,
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -58,7 +59,7 @@ export default function Booty({ setResults, results }) {
         </Typography>
         <Counter reference="losses" setResults={setResults} />
       </Box>
-    </Box>
+    </Paper>
   );
 }
 

@@ -189,7 +189,7 @@ export default function BattleContainer({ toggleDarkMode, darkMode }) {
         />
       </Box>
       {showBootyCounter ? (
-        <Booty setResults={setResults} results={results} />
+        <Booty setResults={setResults} results={results} darkMode={darkMode} />
       ) : null}
       <Box
         sx={{
