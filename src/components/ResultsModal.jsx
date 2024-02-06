@@ -16,12 +16,19 @@ export default function ResultsModal({ hitSummary, payCommands, close }) {
         <Box sx={style}>
           <Typography
             sx={{
-              fontWeight: "bold",
               textAlign: "center",
             }}
           >
             Only run after "The victors plundered.." message to get the most
             recent battle.
+          </Typography>
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontSize: 12,
+            }}
+          >
+            Booty data has been added to counter.
           </Typography>
           <Box sx={entryStyle}>
             <Typography>{hitSummary}</Typography>

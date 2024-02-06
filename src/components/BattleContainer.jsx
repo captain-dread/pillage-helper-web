@@ -1,13 +1,12 @@
 import { useState } from "react";
-import { Box, Typography, Button, IconButton } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import ShipCard from "./ShipCard";
-import BattleResultsCounter from "./BattleResultsCounter.jsx";
 import Booty from "./Booty.jsx";
+import BasicMenu from "./BasicMenu.jsx";
 
 import { ships } from "../assets/ships";
 
 import GreedyHitFinder from "./GreedyHitFinder.jsx";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
 
 export default function BattleContainer({ toggleDarkMode, darkMode }) {
   const [results, setResults] = useState({
@@ -24,8 +23,8 @@ export default function BattleContainer({ toggleDarkMode, darkMode }) {
     enemyDamageTaken: 0,
   });
   const [battleType, setBattleType] = useState("brigands");
-
   const [expandShipInfo, setExpandShipInfo] = useState(false);
+  const [showBootyCounter, setShowBootyCounter] = useState(false);
 
   const toggleExpandShipInfo = () => {
     setExpandShipInfo((ESI) => !ESI);
@@ -184,11 +183,14 @@ export default function BattleContainer({ toggleDarkMode, darkMode }) {
         >
           First Mate
         </Typography>
-        <IconButton onClick={toggleDarkMode}>
-          <Brightness4Icon />
-        </IconButton>
+        <BasicMenu
+          toggleDarkMode={toggleDarkMode}
+          setShowBootyCounter={setShowBootyCounter}
+        />
       </Box>
-      <Booty setResults={setResults} results={results} />
+      {showBootyCounter ? (
+        <Booty setResults={setResults} results={results} />
+      ) : null}
       <Box
         sx={{
           display: "flex",

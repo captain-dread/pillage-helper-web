@@ -27,27 +27,22 @@ function hasSingleWordName(inputString) {
 
   for (let name of names) {
     if (!name.includes(" ")) {
-      return true; // Found a single word name
+      return true;
     }
   }
 
-  return false; // No single word names found
+  return false;
 }
 
 function extractNumbers(inputString) {
-  // Remove the timestamp from the string
   const stringWithoutTimestamp = inputString.replace(
     /\[\d{2}:\d{2}:\d{2}\]\s*/,
     ""
   );
-
-  // Regular expression to find numbers (including commas) in the modified string
   const numberPattern = /[\d,]+/g;
 
-  // Extract all numbers (as strings) found in the modified string
   const numberStrings = stringWithoutTimestamp.match(numberPattern);
 
-  // Convert the number strings to integers, removing commas
   if (numberStrings && numberStrings.length >= 2) {
     return {
       piecesOfEight: parseInt(numberStrings[0].replace(/,/g, ""), 10),
@@ -55,7 +50,7 @@ function extractNumbers(inputString) {
     };
   }
 
-  return null; // In case the pattern is not matched or there aren't enough numbers
+  return null;
 }
 
 // Function to count greedy hits from battle logs

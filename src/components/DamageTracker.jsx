@@ -59,7 +59,7 @@ export default function DamageTracker({
 
         <Box
           sx={{
-            width: 25,
+            width: 20,
             backgroundImage: `linear-gradient(
       ${battleType === "brigands" ? "to top" : "to bottom"}, 
       red ${cappedValue / 2}%, 

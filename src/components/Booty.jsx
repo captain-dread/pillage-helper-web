@@ -17,38 +17,45 @@ export default function Booty({ setResults, results }) {
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5 }}>{results.poe.toLocaleString()}</Typography>
+        <Typography sx={{ pr: 0.5, fontSize: 14 }}>
+          {results.poe.toLocaleString()}
+        </Typography>
         <img
           src="./icons/poe.png"
           alt="poe"
           style={{ width: "15px", height: "15px" }}
         />
       </Box>
-
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5 }}>{results.commodities}</Typography>
+        <Typography sx={{ pr: 0.5, fontSize: 14 }}>
+          {results.commodities}
+        </Typography>
         <img
           src="./icons/commodities.png"
           alt="poe"
           style={{ width: "15px", height: "15px" }}
         />
       </Box>
-
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5 }}>{results.lavishLockers}</Typography>
+        <Typography sx={{ pr: 0.5, fontSize: 14 }}>
+          {results.lavishLockers}
+        </Typography>
         <img
           src="./icons/lavish_lockers.png"
           alt="poe"
           style={{ width: "15px", height: "15px" }}
         />
       </Box>
-
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5, color: "green" }}>{results.wins}</Typography>
+        <Typography sx={{ pr: 0.5, color: "green", fontSize: 14 }}>
+          {results.wins}
+        </Typography>
         <Counter reference="wins" setResults={setResults} />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5, color: "red" }}>{results.losses}</Typography>
+        <Typography sx={{ pr: 0.5, color: "red", fontSize: 14 }}>
+          {results.losses}
+        </Typography>
         <Counter reference="losses" setResults={setResults} />
       </Box>
     </Box>
