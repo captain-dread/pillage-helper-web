@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Box, Typography, Button, IconButton } from "@mui/material";
 import ShipCard from "./ShipCard";
 import BattleResultsCounter from "./BattleResultsCounter.jsx";
+import Booty from "./Booty.jsx";
 
 import { ships } from "../assets/ships";
 
@@ -9,6 +10,11 @@ import GreedyHitFinder from "./GreedyHitFinder.jsx";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 
 export default function BattleContainer({ toggleDarkMode, darkMode }) {
+  const [results, setResults] = useState({
+    wins: 0,
+    losses: 0,
+    lavishLockers: 0,
+  });
   const [battle, setBattle] = useState({
     playerShip: ships[0],
     enemyShip: ships[0],
@@ -169,6 +175,7 @@ export default function BattleContainer({ toggleDarkMode, darkMode }) {
           <Brightness4Icon />
         </IconButton>
       </Box>
+      <Booty setResults={setResults} results={results} />
       <Box
         sx={{
           display: "flex",
@@ -222,7 +229,6 @@ export default function BattleContainer({ toggleDarkMode, darkMode }) {
       </Box>
 
       <GreedyHitFinder />
-      <BattleResultsCounter />
     </Box>
   );
 }
