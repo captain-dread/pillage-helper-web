@@ -3,14 +3,13 @@ import {
   Card,
   CardContent,
   Box,
-  Typography,
-  LinearProgress,
   Button,
   Stack,
   IconButton,
 } from "@mui/material";
 import ShipMetaInformation from "./ShipMetaInformation";
 import SelectShipInput from "./SelectShipInput";
+import DamageTracker from "./DamageTracker";
 
 import CrisisAlertIcon from "@mui/icons-material/CrisisAlert";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
@@ -27,13 +26,9 @@ export default function ShipCard({
   getShipDamageStatus,
   expandShipInfo,
   toggleExpandShipInfo,
+  battleType,
+  toggleBattleType,
 }) {
-  const damageValue = getDamage(identity);
-  const cappedValue = Math.min(damageValue, 100);
-
-  const progressBarColor =
-    cappedValue <= 40 ? "green" : cappedValue <= 65 ? "yellow" : "red";
-
   return (
     <Card sx={{ maxWidth: 250, p: 0 }} elevation={3}>
       <CardContent
@@ -113,37 +108,13 @@ export default function ShipCard({
           </Button>
         </Stack>
 
-        <Box position="relative" display="flex" alignItems="center">
-          <LinearProgress
-            variant="determinate"
-            value={cappedValue}
-            sx={{
-              width: "100%",
-              height: "2rem",
-              "& .MuiLinearProgress-bar": { backgroundColor: progressBarColor },
-            }}
-          />
-
-          <Box
-            position="absolute"
-            width="100%"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            style={{ height: "100%" }}
-          >
-            <Typography
-              variant="body2"
-              color="textPrimary"
-              sx={{ color: "black", fontWeight: "bold" }}
-            >
-              {`${cappedValue}%`}
-            </Typography>
-          </Box>
-        </Box>
-        <Typography sx={{ fontSize: ".65rem" }} textAlign="center">
-          {getShipDamageStatus(identity)} (received/max)
-        </Typography>
+        <DamageTracker
+          getShipDamageStatus={getShipDamageStatus}
+          getDamage={getDamage}
+          identity={identity}
+          battleType={battleType}
+          toggleBattleType={toggleBattleType}
+        />
       </CardContent>
     </Card>
   );

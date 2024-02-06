@@ -15,11 +15,22 @@ export default function BattleContainer({ toggleDarkMode, darkMode }) {
     playerDamageTaken: 0,
     enemyDamageTaken: 0,
   });
+  const [battleType, setBattleType] = useState("brigands");
 
   const [expandShipInfo, setExpandShipInfo] = useState(false);
 
   const toggleExpandShipInfo = () => {
     setExpandShipInfo((ESI) => !ESI);
+  };
+
+  const toggleBattleType = () => {
+    setBattleType((BT) => {
+      if (BT === "brigands") {
+        return "barbarians";
+      } else {
+        return "brigands";
+      }
+    });
   };
 
   const handleShipChange = (identity, shipSelected) => {
@@ -192,6 +203,8 @@ export default function BattleContainer({ toggleDarkMode, darkMode }) {
             getShipDamageStatus={getShipDamageStatus}
             expandShipInfo={expandShipInfo}
             toggleExpandShipInfo={toggleExpandShipInfo}
+            battleType={battleType}
+            toggleBattleType={toggleBattleType}
           />
         ))}
       </Box>
