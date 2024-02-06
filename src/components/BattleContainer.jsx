@@ -11,9 +11,11 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 
 export default function BattleContainer({ toggleDarkMode, darkMode }) {
   const [results, setResults] = useState({
-    wins: 0,
-    losses: 0,
-    lavishLockers: 0,
+    poe: 123123,
+    commodities: 123,
+    lavishLockers: 55,
+    wins: 3,
+    losses: 1,
   });
   const [battle, setBattle] = useState({
     playerShip: ships[0],
@@ -228,7 +230,7 @@ export default function BattleContainer({ toggleDarkMode, darkMode }) {
         </Button>
       </Box>
 
-      <GreedyHitFinder />
+      <GreedyHitFinder setResults={setResults} />
     </Box>
   );
 }

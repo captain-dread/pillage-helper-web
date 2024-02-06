@@ -21,6 +21,37 @@ function getIndividualGreedyHit(line) {
   return match ? match[1] : null;
 }
 
+function hasSingleWordName(inputString) {
+  const winnersPart = inputString.split("Winners: ")[1];
+  const names = winnersPart.split(",").map((name) => name.trim());
+
+  for (let name of names) {
+    if (!name.includes(" ")) {
+      return true; // Found a single word name
+    }
+  }
+
+  return false; // No single word names found
+}
+
+function extractNumbers(inputString) {
+  // Regular expression to find numbers (including commas) in the string
+  const numberPattern = /[\d,]+/g;
+
+  // Extract all numbers (as strings) found in the string
+  const numberStrings = inputString.match(numberPattern);
+
+  // Convert the number strings to integers, removing commas
+  if (numberStrings && numberStrings.length >= 2) {
+    return {
+      piecesOfEight: parseInt(numberStrings[0].replace(/,/g, ""), 10),
+      unitsOfGoods: parseInt(numberStrings[1].replace(/,/g, ""), 10),
+    };
+  }
+
+  return null; // In case the pattern is not matched or there aren't enough numbers
+}
+
 // Function to count greedy hits from battle logs
 function pullGreedyHitsFromBattleLog(latestBattle) {
   const hits = {};
@@ -56,6 +87,27 @@ function formatBattleResult(battleResult) {
   return resultString;
 }
 
+function getBootyResults(latestBattle) {
+  const res = {
+    win: false,
+    poe: 0,
+    commodities: 0,
+  };
+
+  latestBattle.forEach((line) => {
+    if (line.includes("Game over.  Winners:")) {
+      let didWin = hasSingleWordName(line);
+      res.win = didWin;
+    }
+
+    if (line.includes("The victors plundered")) {
+      const { piecesOfEight, unitsOfGoods } = extractNumbers(line);
+      res.poe = piecesOfEight;
+      res.commodities = unitsOfGoods;
+    }
+  });
+}
+
 export function processLogContent(logContent, pay) {
   try {
     const latestBattle = [];
@@ -74,6 +126,7 @@ export function processLogContent(logContent, pay) {
       }
     });
 
+    const bootyResults = getBootyResults(latestBattle);
     const battleResult = pullGreedyHitsFromBattleLog(latestBattle);
 
     const payCommands = [];
@@ -81,7 +134,11 @@ export function processLogContent(logContent, pay) {
       payCommands.push(`/pay ${name} ${hitCount * pay}`);
     }
 
-    return { result: formatBattleResult(battleResult), payCommands };
+    return {
+      result: formatBattleResult(battleResult),
+      payCommands,
+      totalHits: battleResult.totalHits,
+    };
   } catch (e) {
     console.error("Error processing log content: ", e);
   }

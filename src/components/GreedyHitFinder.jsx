@@ -8,7 +8,7 @@ import TextField from "@mui/material/TextField";
 import ResultsModal from "./ResultsModal";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
-export default function GreedyHitFinder() {
+export default function GreedyHitFinder({ setResults }) {
   const [file, setFile] = useState(null);
   const [fileText, setFileText] = useState("");
   const [state, setState] = useState({
@@ -78,6 +78,24 @@ export default function GreedyHitFinder() {
     });
   };
 
+  const handleAddBattleResults = () => {
+    if (!fileText) {
+      return;
+    }
+    const res = processLogContent(
+      fileText,
+      state.inputValue > 0 ? state.inputValue : 500
+    );
+
+    setResults((R) => {
+      return {
+        ...R,
+        lavishLockers: R.lavishLockers + res.totalHits,
+      };
+    });
+    setFile(null);
+  };
+
   return (
     <>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -98,7 +116,7 @@ export default function GreedyHitFinder() {
             fontSize={16}
             style={{ fontFamily: '"Orbitron", sans-serif' }}
           >
-            Greedy Hit Finder
+            Booty Manager
           </Typography>
           <IconButton onClick={handleHelpClick} aria-label="help" size="small">
             <HelpOutlineIcon size="small" fontSize="11" />
@@ -115,8 +133,8 @@ export default function GreedyHitFinder() {
             />
           }
           label={
-            <Typography variant="body2" style={{ fontSize: "14px" }}>
-              Pay Commands
+            <Typography variant="body2" style={{ fontSize: "12px" }}>
+              Show Greedy Pay
             </Typography>
           }
           sx={{ mt: 0.5, mb: 0.2 }}
@@ -142,7 +160,7 @@ export default function GreedyHitFinder() {
               variant="outlined"
               onClick={() => document.getElementById("file-input").click()}
             >
-              Load Chat File
+              Load File
             </Button>
           </label>
 
@@ -168,9 +186,18 @@ export default function GreedyHitFinder() {
             disabled={!isFileLoaded}
             onClick={handleFindGreedyHits}
           >
-            Find
+            Find Greedies
           </Button>
         </Box>
+        <Button
+          size="small"
+          variant="outlined"
+          disabled={!isFileLoaded}
+          onClick={handleAddBattleResults}
+          sx={{ mt: 1 }}
+        >
+          Add battle results
+        </Button>
       </Box>
       {showResultsModal.show ? (
         <ResultsModal

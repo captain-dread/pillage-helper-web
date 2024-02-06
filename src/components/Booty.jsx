@@ -17,7 +17,7 @@ export default function Booty({ setResults, results }) {
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5 }}>100,000</Typography>
+        <Typography sx={{ pr: 0.5 }}>{results.poe.toLocaleString()}</Typography>
         <img
           src="./icons/poe.png"
           alt="poe"
@@ -26,7 +26,7 @@ export default function Booty({ setResults, results }) {
       </Box>
 
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5 }}>432</Typography>
+        <Typography sx={{ pr: 0.5 }}>{results.commodities}</Typography>
         <img
           src="./icons/commodities.png"
           alt="poe"
@@ -35,7 +35,7 @@ export default function Booty({ setResults, results }) {
       </Box>
 
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5 }}>23</Typography>
+        <Typography sx={{ pr: 0.5 }}>{results.lavishLockers}</Typography>
         <img
           src="./icons/lavish_lockers.png"
           alt="poe"
