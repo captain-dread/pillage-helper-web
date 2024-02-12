@@ -7,9 +7,9 @@ import {
   Stack,
   IconButton,
 } from "@mui/material";
-import ShipMetaInformation from "./ShipMetaInformation";
-import SelectShipInput from "./SelectShipInput";
-import DamageTracker from "./DamageTracker";
+import ShipMetaInformation from "./atoms/ShipMetaInformation";
+import SelectShipInput from "./atoms/SelectShipInput";
+import DamageTracker from "./atoms/DamageTracker";
 
 import CrisisAlertIcon from "@mui/icons-material/CrisisAlert";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";

@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import { Box, Typography, Button } from "@mui/material";
 import ShipCard from "./ShipCard.jsx";
-import Booty from "./Booty.jsx";
-import BasicMenu from "./BasicMenu.jsx";
+import BootyOverview from "./BootyOverview.jsx";
+import BasicMenu from "./atoms/BasicMenu.jsx";
 import BootyManager from "./BootyManager.jsx";
 
 import { ships } from "../assets/ships.js";
@@ -193,7 +193,11 @@ export default function Home({ toggleDarkMode, darkMode }) {
         />
       </Box>
       {showBootyCounter ? (
-        <Booty setResults={setResults} results={results} darkMode={darkMode} />
+        <BootyOverview
+          setResults={setResults}
+          results={results}
+          darkMode={darkMode}
+        />
       ) : null}
       <Box
         sx={{

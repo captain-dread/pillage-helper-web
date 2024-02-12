@@ -10,7 +10,7 @@ import {
   TextField,
   FormControlLabel,
 } from "@mui/material";
-import ResultsModal from "./ResultsModal";
+import ResultsModal from "./atoms/ResultsModal";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 import { processLogContent } from "../assets/greedy";
