@@ -1,14 +1,21 @@
 import { useState } from "react";
-import { Box, Button, Typography, Divider, IconButton } from "@mui/material";
-import { processLogContent } from "../assets/greedy";
 
-import Checkbox from "@mui/material/Checkbox";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import TextField from "@mui/material/TextField";
+import {
+  Box,
+  Button,
+  Typography,
+  Divider,
+  IconButton,
+  Checkbox,
+  TextField,
+  FormControlLabel,
+} from "@mui/material";
 import ResultsModal from "./ResultsModal";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
-export default function GreedyHitFinder({ setResults }) {
+import { processLogContent } from "../assets/greedy";
+
+export default function BootyManager({ setResults }) {
   const [file, setFile] = useState(null);
   const [fileText, setFileText] = useState("");
   const [state, setState] = useState({

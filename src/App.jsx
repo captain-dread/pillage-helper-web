@@ -3,7 +3,7 @@ import { useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import { lightTheme, darkTheme } from "./theme/theme";
-import BattleContainer from "./components/BattleContainer";
+import Home from "./components/Home";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -16,7 +16,7 @@ function App() {
   return (
     <ThemeProvider theme={currentTheme}>
       <CssBaseline />
-      <BattleContainer toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+      <Home toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
     </ThemeProvider>
   );
 }

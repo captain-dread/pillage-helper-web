@@ -1,27 +1,31 @@
 import { useState } from "react";
+
 import { Box, Typography, Button } from "@mui/material";
-import ShipCard from "./ShipCard";
+import ShipCard from "./ShipCard.jsx";
 import Booty from "./Booty.jsx";
 import BasicMenu from "./BasicMenu.jsx";
+import BootyManager from "./BootyManager.jsx";
 
-import { ships } from "../assets/ships";
+import { ships } from "../assets/ships.js";
 
-import GreedyHitFinder from "./GreedyHitFinder.jsx";
-
-export default function BattleContainer({ toggleDarkMode, darkMode }) {
+export default function Home({ toggleDarkMode, darkMode }) {
   const [results, setResults] = useState({
     poe: 0,
     commodities: 0,
     lavishLockers: 0,
+    krakenBloods: 0,
     wins: 0,
     losses: 0,
+    pirates: [],
   });
+
   const [battle, setBattle] = useState({
     playerShip: ships[0],
     enemyShip: ships[0],
     playerDamageTaken: 0,
     enemyDamageTaken: 0,
   });
+
   const [battleType, setBattleType] = useState("brigands");
   const [expandShipInfo, setExpandShipInfo] = useState(false);
   const [showBootyCounter, setShowBootyCounter] = useState(false);
@@ -245,7 +249,7 @@ export default function BattleContainer({ toggleDarkMode, darkMode }) {
         </Button>
       </Box>
 
-      <GreedyHitFinder setResults={setResults} />
+      <BootyManager setResults={setResults} />
     </Box>
   );
 }
