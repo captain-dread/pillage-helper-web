@@ -17,8 +17,11 @@ export default function Home({ toggleDarkMode, darkMode }) {
     krakenBloods: 0,
     wins: 0,
     losses: 0,
+    // Collection Of All Pirates That Participates
     pirates: [],
+    // [{poe, commodities, lavishLockers, won, pirates}]
     battles: [],
+    // {poe, commodities, lavishLockers, won, pirates}
     latestBattle: [],
   });
 
@@ -31,10 +34,10 @@ export default function Home({ toggleDarkMode, darkMode }) {
 
   const [battleType, setBattleType] = useState("brigands");
   const [expandShipInfo, setExpandShipInfo] = useState(false);
-  const [showBootyCounter, setShowBootyCounter] = useState(false);
+  const [showBootyCounter, setShowBootyCounter] = useState(true);
 
-  const addBattleResult = (chatLogContent) => {
-    const battleResults = getLatestBattleResult(chatLogContent);
+  const addBattleResult = (chatLogContent, payPerGreedy) => {
+    const battleResults = getLatestBattleResult(chatLogContent, payPerGreedy);
     console.log(battleResults);
   };
 

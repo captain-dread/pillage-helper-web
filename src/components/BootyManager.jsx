@@ -110,7 +110,7 @@ export default function BootyManager({ setResults, addBattleResult }) {
     if (!fileText) {
       return;
     }
-    addBattleResult(fileText);
+    addBattleResult(fileText, state.inputValue);
 
     // OLD
     // const res = processLogContent(

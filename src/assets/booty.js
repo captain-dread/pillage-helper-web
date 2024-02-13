@@ -51,37 +51,76 @@ function extractPlunderedGoods(inputString) {
 }
 
 function greedyHitStringSummary(battleResult) {
-  const { hits, totalHits } = battleResult;
+  const { pirates, totalHits } = battleResult;
+  pirates.sort((a, b) => b.greedyHits - a.greedyHits);
 
   let resultString = `${totalHits} total hits!`;
-
-  const sortedHits = Object.entries(hits).sort((a, b) => b[1] - a[1]);
-
-  for (const [name, hitCount] of sortedHits) {
-    resultString += ` ${name}: ${hitCount},`;
+  for (const pirate of pirates) {
+    const { name, greedyHits } = pirate;
+    if (greedyHits > 0) {
+      resultString += ` ${name}: ${greedyHits},`;
+    }
   }
-
   resultString = resultString.slice(0, -1);
-
   return resultString;
 }
 
-function pullGreedyHitsFromBattleLog(latestBattle) {
-  const hits = {};
-  let totalHits = 0;
+function pullGreedyHitsFromBattleLog(latestBattle, pirates) {
+  const updatedPirates = [...pirates];
 
+  let totalHits = 0;
   latestBattle.forEach((line) => {
-    const name = getIndividualGreedyHit(line);
-    if (name) {
-      if (!hits[name]) {
-        hits[name] = 0;
+    const nameOfPirateWhoHit = getIndividualGreedyHit(line);
+    if (nameOfPirateWhoHit) {
+      let pirate = updatedPirates.find(
+        (obj) => obj.name === nameOfPirateWhoHit
+      );
+      if (pirate) {
+        pirate.greedyHits += 1;
+        totalHits += 1;
       }
-      hits[name] += 1;
-      totalHits += 1;
     }
   });
 
-  return { hits, totalHits };
+  return {
+    pirates: updatedPirates,
+    totalHits,
+  };
+}
+
+function getParticipatingPirates(latestBattle, didWinLastBattle) {
+  const pirates = [];
+
+  if (didWinLastBattle) {
+    latestBattle.forEach((line) => {
+      if (line.includes("Game over.  Winners:")) {
+        const winnersPart = line.split("Winners: ")[1];
+        const names = winnersPart.split(",").map((name) => name.trim());
+
+        for (let name of names) {
+          if (!name.includes(" ")) {
+            pirates.push({ name: name, greedyHits: 0 });
+          }
+        }
+      }
+      return;
+    });
+  } else {
+    // NOT WORKING
+    console.log("hitting losing factor NOT WORKING");
+    const nameRegex = /\[\d+:\d+:\d+\] (\w+) is eliminated!/;
+    latestBattle.forEach((line) => {
+      const match = line.match(nameRegex);
+      if (match) {
+        const name = match[1];
+        if (name.split(" ").length === 1) {
+          pirates.push({ name: name, greedyHits: 0 });
+        }
+      }
+    });
+  }
+
+  return pirates;
 }
 
 function getBootyResults(latestBattle) {
@@ -104,6 +143,7 @@ function getBootyResults(latestBattle) {
     }
   });
 
+  res.pirates = getParticipatingPirates(latestBattle, res.win);
   return res;
 }
 
@@ -130,16 +170,18 @@ function getLogsFromLatestBattle(logContent) {
 export function getLatestBattleResult(logContent, pay) {
   try {
     const latestBattle = getLogsFromLatestBattle(logContent);
-
-    // Contains Poe, Commodities, Win/Loss
     const bootyResults = getBootyResults(latestBattle);
-
-    // Contains {pirate: numHits, totalHits}
-    const greedyResults = pullGreedyHitsFromBattleLog(latestBattle);
+    const greedyResults = pullGreedyHitsFromBattleLog(
+      latestBattle,
+      bootyResults.pirates
+    );
 
     const greedyHitPayCommands = [];
-    for (const [name, hitCount] of Object.entries(greedyResults.hits)) {
-      greedyHitPayCommands.push(`/pay ${name} ${hitCount * pay}`);
+    for (const pirate of greedyResults.pirates) {
+      const { name, greedyHits } = pirate;
+      if (greedyHits > 0) {
+        greedyHitPayCommands.push(`/pay ${name} ${greedyHits * pay}`);
+      }
     }
 
     return {
@@ -149,6 +191,7 @@ export function getLatestBattleResult(logContent, pay) {
       poe: bootyResults.poe,
       commodities: bootyResults.commodities,
       lavishLockers: greedyResults.totalHits,
+      pirates: greedyResults.pirates,
     };
   } catch (e) {
     console.error("Error processing log content: ", e);
