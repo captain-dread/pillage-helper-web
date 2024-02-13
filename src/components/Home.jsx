@@ -41,6 +41,8 @@ export default function Home({ toggleDarkMode, darkMode }) {
       pirates: newPirates,
       greedyHitPayCommands,
       greedyHitsSummary,
+      playerVesselPirates,
+      enemyVesselPirates,
     } = getLatestBattleResult(chatLogContent, payPerGreedy);
 
     setResults((prevState) => {
@@ -91,6 +93,12 @@ export default function Home({ toggleDarkMode, darkMode }) {
         pirates: newPirates,
         greedyHitPayCommands,
         greedyHitsSummary,
+        playerShip: battle.playerShip,
+        enemyShip: battle.enemyShip,
+        playerDamageTaken: battle.playerDamageTaken,
+        enemyDamageTaken: battle.enemyDamageTaken,
+        playerVesselPirates,
+        enemyVesselPirates,
       });
 
       return {
@@ -102,43 +110,6 @@ export default function Home({ toggleDarkMode, darkMode }) {
         lavishLockers: updatedLavishLockers,
         pirates: updatedPirates,
         battles: updatedBattles,
-      };
-    });
-  };
-
-  const deleteLastBattle = () => {
-    setResults((prevState) => {
-      if (prevState.battles.length === 0) {
-        return prevState;
-      }
-
-      const lastBattle = prevState.battles[prevState.battles.length - 1];
-      const updatedPirates = prevState.pirates.map((pirate) => {
-        const matchingPirateInBattle = lastBattle.pirates.find(
-          (battlePirate) => battlePirate.name === pirate.name
-        );
-        if (matchingPirateInBattle) {
-          const newGreedyHits =
-            pirate.greedyHits - matchingPirateInBattle.greedyHits;
-          const newBattlesCount = pirate.battles - 1;
-          return {
-            ...pirate,
-            greedyHits: newGreedyHits,
-            battles: newBattlesCount,
-          };
-        }
-        return pirate;
-      });
-
-      return {
-        ...prevState,
-        wins: lastBattle.wonBattle ? prevState.wins - 1 : prevState.wins,
-        losses: lastBattle.wonBattle ? prevState.losses : prevState.losses - 1,
-        poe: prevState.poe - lastBattle.poe,
-        commodities: prevState.commodities - lastBattle.commodities,
-        lavishLockers: prevState.lavishLockers - lastBattle.lavishLockers,
-        pirates: updatedPirates,
-        battles: prevState.battles.slice(0, -1), // Remove the last battle
       };
     });
   };

@@ -89,38 +89,64 @@ function pullGreedyHitsFromBattleLog(latestBattle, pirates) {
 }
 
 function getParticipatingPirates(latestBattle, didWinLastBattle) {
-  const pirates = [];
+  const playerVesselPirates = [];
+  const enemyVesselPirates = [];
+  const realPirates = [];
 
   if (didWinLastBattle) {
     latestBattle.forEach((line) => {
       if (line.includes("Game over.  Winners:")) {
         const winnersPart = line.split("Winners: ")[1];
         const names = winnersPart.split(",").map((name) => name.trim());
-
         for (let name of names) {
+          playerVesselPirates.push(name);
           if (!name.includes(" ")) {
-            pirates.push({ name: name, greedyHits: 0 });
+            realPirates.push({ name: name, greedyHits: 0 });
           }
         }
       }
-      return;
     });
   } else {
-    // NOT WORKING
-    console.log("hitting losing factor NOT WORKING");
-    const nameRegex = /\[\d+:\d+:\d+\] (\w+) is eliminated!/;
+    // Process for when the player's team loses
     latestBattle.forEach((line) => {
-      const match = line.match(nameRegex);
-      if (match) {
-        const name = match[1];
-        if (name.split(" ").length === 1) {
-          pirates.push({ name: name, greedyHits: 0 });
+      if (line.includes("Game over.  Winners:")) {
+        const winnersPart = line.split("Winners: ")[1];
+        const names = winnersPart.split(",").map((name) => name.trim());
+        for (let name of names) {
+          enemyVesselPirates.push(name);
         }
       }
     });
   }
 
-  return pirates;
+  // This part is common for both winning and losing scenarios
+  latestBattle.forEach((line) => {
+    const stringWithoutTimestamp = line.replace(/\[\d{2}:\d{2}:\d{2}\]\s*/, "");
+    const eliminationPattern = /(.+) is eliminated!/;
+    const match = stringWithoutTimestamp.match(eliminationPattern);
+
+    if (match) {
+      const pirateName = match[1];
+      if (didWinLastBattle) {
+        // Original logic for winning scenario
+        if (!playerVesselPirates.includes(pirateName)) {
+          if (!enemyVesselPirates.includes(pirateName)) {
+            enemyVesselPirates.push(pirateName);
+          }
+        }
+      } else {
+        // Reverse logic for losing scenario
+        if (!enemyVesselPirates.includes(pirateName)) {
+          playerVesselPirates.push(pirateName);
+          if (!pirateName.includes(" ")) {
+            realPirates.push({ name: pirateName, greedyHits: 0 });
+          }
+        }
+      }
+    }
+  });
+
+  return { realPirates, playerVesselPirates, enemyVesselPirates };
 }
 
 function getBootyResults(latestBattle) {
@@ -143,7 +169,11 @@ function getBootyResults(latestBattle) {
     }
   });
 
-  res.pirates = getParticipatingPirates(latestBattle, res.win);
+  const pirateParticipation = getParticipatingPirates(latestBattle, res.win);
+  res.pirates = pirateParticipation.realPirates;
+  res.playerVesselPirates = pirateParticipation.playerVesselPirates;
+  res.enemyVesselPirates = pirateParticipation.enemyVesselPirates;
+
   return res;
 }
 
@@ -192,6 +222,8 @@ export function getLatestBattleResult(logContent, pay) {
       commodities: bootyResults.commodities,
       lavishLockers: greedyResults.totalHits,
       pirates: greedyResults.pirates,
+      playerVesselPirates: bootyResults.playerVesselPirates.length,
+      enemyVesselPirates: bootyResults.enemyVesselPirates.length,
     };
   } catch (e) {
     console.error("Error processing log content: ", e);
