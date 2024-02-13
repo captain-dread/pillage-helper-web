@@ -59,8 +59,12 @@ export default function Home({ toggleDarkMode, darkMode }) {
           (pirate) => pirate.name === newPirate.name
         );
         if (existingPirateIndex === -1) {
-          // If it's a new pirate, add them to the pirates array with battles: 1
-          updatedPirates.push({ ...newPirate, battles: 1 });
+          updatedPirates.push({
+            ...newPirate,
+            battles: 1,
+            krakenShares: 0,
+            bootyShareAdjustment: 0,
+          });
         } else {
           // If it's an existing pirate, update their greedyHits and battles count
           const existingPirate = prevState.pirates[existingPirateIndex];

@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import ResultsModal from "./atoms/ResultsModal";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import ExpandedBootyView from "./ExpandedBootyView";
 
 import { processLogContent } from "../assets/greedy";
 
@@ -111,34 +112,6 @@ export default function BootyManager({ setResults, addBattleResult }) {
       return;
     }
     addBattleResult(fileText, state.inputValue);
-
-    // OLD
-    // const res = processLogContent(
-    //   fileText,
-    //   state.inputValue > 0 ? state.inputValue : 500
-    // );
-    // if (res.wonBattle) {
-    //   setResults((R) => {
-    //     return {
-    //       ...R,
-    //       lavishLockers: R.lavishLockers + res.totalHits,
-    //       poe: R.poe + res.poe,
-    //       commodities: R.commodities + res.commodities,
-    //       wins: R.wins + 1,
-    //     };
-    //   });
-    // } else {
-    //   setResults((R) => {
-    //     return {
-    //       ...R,
-    //       lavishLockers: R.lavishLockers - res.totalHits,
-    //       poe: R.poe - res.poe,
-    //       commodities: R.commodities - res.commodities,
-    //       losses: R.losses + 1,
-    //     };
-    //   });
-    // }
-    // setFile(null);
   };
 
   return (
@@ -234,15 +207,17 @@ export default function BootyManager({ setResults, addBattleResult }) {
             Find Greedies
           </Button>
         </Box>
-        <Button
-          size="small"
-          variant="outlined"
-          disabled={!isFileLoaded}
-          onClick={handleAddBattleResults}
-          sx={{ mt: 1 }}
-        >
-          Add battle results
-        </Button>
+        <Box sx={{ display: "flex", gap: 1, mt: 1 }}>
+          <ExpandedBootyView />
+          <Button
+            size="small"
+            variant="outlined"
+            disabled={!isFileLoaded}
+            onClick={handleAddBattleResults}
+          >
+            Add battle results
+          </Button>
+        </Box>
       </Box>
       {showResultsModal.show ? (
         <ResultsModal
