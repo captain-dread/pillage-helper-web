@@ -21,7 +21,7 @@ export default function BattleResultsTable({ results, deleteBattle }) {
 
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Result</TableCell>
@@ -39,7 +39,7 @@ export default function BattleResultsTable({ results, deleteBattle }) {
         <TableBody>
           {battles.map((row) => (
             <TableRow
-              key={row.name}
+              key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">

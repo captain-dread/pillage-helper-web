@@ -132,8 +132,6 @@ export default function Home({ toggleDarkMode, darkMode }) {
       const updatedLosses = !battleToDelete.wonBattle
         ? prevState.losses - 1
         : prevState.losses;
-
-      // Adjust POE, commodities, and lavishLockers based on whether the battle was won or lost
       const updatedPOE = battleToDelete.wonBattle
         ? prevState.poe - battleToDelete.poe
         : prevState.poe + battleToDelete.poe;
@@ -149,6 +147,32 @@ export default function Home({ toggleDarkMode, darkMode }) {
         (battle) => battle.id !== battleId
       );
 
+      // Initialize an empty object to hold the aggregated data for pirates
+      const piratesAggregator = {};
+
+      // Rebuild the pirates list based on the updated list of battles
+      updatedBattles.forEach((battle) => {
+        battle.pirates.forEach((pirate) => {
+          const { name, greedyHits } = pirate;
+
+          if (!piratesAggregator[name]) {
+            piratesAggregator[name] = {
+              name,
+              greedyHits,
+              battles: 1,
+              krakenShares: 0,
+              bootyShareAdjustment: 0,
+            };
+          } else {
+            piratesAggregator[name].greedyHits += greedyHits;
+            piratesAggregator[name].battles += 1;
+          }
+        });
+      });
+
+      // Convert the piratesAggregator object back into an array of pirate objects
+      const updatedPirates = Object.values(piratesAggregator);
+
       // Return the updated state
       return {
         ...prevState,
@@ -158,6 +182,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
         commodities: updatedCommodities,
         lavishLockers: updatedLavishLockers,
         battles: updatedBattles,
+        pirates: updatedPirates,
       };
     });
   };

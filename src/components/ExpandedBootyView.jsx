@@ -13,6 +13,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "clamp(300px, 90vw, 900px)",
+  maxHeight: "90vh",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
