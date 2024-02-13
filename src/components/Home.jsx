@@ -7,6 +7,7 @@ import BasicMenu from "./atoms/BasicMenu.jsx";
 import BootyManager from "./BootyManager.jsx";
 
 import { ships } from "../assets/ships.js";
+import { getLatestBattleResult } from "../assets/booty";
 
 export default function Home({ toggleDarkMode, darkMode }) {
   const [results, setResults] = useState({
@@ -17,6 +18,8 @@ export default function Home({ toggleDarkMode, darkMode }) {
     wins: 0,
     losses: 0,
     pirates: [],
+    battles: [],
+    latestBattle: [],
   });
 
   const [battle, setBattle] = useState({
@@ -29,6 +32,11 @@ export default function Home({ toggleDarkMode, darkMode }) {
   const [battleType, setBattleType] = useState("brigands");
   const [expandShipInfo, setExpandShipInfo] = useState(false);
   const [showBootyCounter, setShowBootyCounter] = useState(false);
+
+  const addBattleResult = (chatLogContent) => {
+    const battleResults = getLatestBattleResult(chatLogContent);
+    console.log(battleResults);
+  };
 
   const toggleExpandShipInfo = () => {
     setExpandShipInfo((ESI) => !ESI);
@@ -253,7 +261,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
         </Button>
       </Box>
 
-      <BootyManager setResults={setResults} />
+      <BootyManager setResults={setResults} addBattleResult={addBattleResult} />
     </Box>
   );
 }

@@ -15,7 +15,7 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 import { processLogContent } from "../assets/greedy";
 
-export default function BootyManager({ setResults }) {
+export default function BootyManager({ setResults, addBattleResult }) {
   const [file, setFile] = useState(null);
   const [fileText, setFileText] = useState("");
   const [state, setState] = useState({
@@ -110,33 +110,35 @@ export default function BootyManager({ setResults }) {
     if (!fileText) {
       return;
     }
-    const res = processLogContent(
-      fileText,
-      state.inputValue > 0 ? state.inputValue : 500
-    );
+    addBattleResult(fileText);
 
-    if (res.wonBattle) {
-      setResults((R) => {
-        return {
-          ...R,
-          lavishLockers: R.lavishLockers + res.totalHits,
-          poe: R.poe + res.poe,
-          commodities: R.commodities + res.commodities,
-          wins: R.wins + 1,
-        };
-      });
-    } else {
-      setResults((R) => {
-        return {
-          ...R,
-          lavishLockers: R.lavishLockers - res.totalHits,
-          poe: R.poe - res.poe,
-          commodities: R.commodities - res.commodities,
-          losses: R.losses + 1,
-        };
-      });
-    }
-    setFile(null);
+    // OLD
+    // const res = processLogContent(
+    //   fileText,
+    //   state.inputValue > 0 ? state.inputValue : 500
+    // );
+    // if (res.wonBattle) {
+    //   setResults((R) => {
+    //     return {
+    //       ...R,
+    //       lavishLockers: R.lavishLockers + res.totalHits,
+    //       poe: R.poe + res.poe,
+    //       commodities: R.commodities + res.commodities,
+    //       wins: R.wins + 1,
+    //     };
+    //   });
+    // } else {
+    //   setResults((R) => {
+    //     return {
+    //       ...R,
+    //       lavishLockers: R.lavishLockers - res.totalHits,
+    //       poe: R.poe - res.poe,
+    //       commodities: R.commodities - res.commodities,
+    //       losses: R.losses + 1,
+    //     };
+    //   });
+    // }
+    // setFile(null);
   };
 
   return (
