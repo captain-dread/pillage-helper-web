@@ -16,7 +16,12 @@ import ExpandedBootyView from "./ExpandedBootyView";
 
 import { processLogContent } from "../assets/greedy";
 
-export default function BootyManager({ setResults, addBattleResult }) {
+export default function BootyManager({
+  setResults,
+  addBattleResult,
+  results,
+  deleteBattle,
+}) {
   const [file, setFile] = useState(null);
   const [fileText, setFileText] = useState("");
   const [state, setState] = useState({
@@ -209,7 +214,7 @@ export default function BootyManager({ setResults, addBattleResult }) {
           </Button>
         </Box>
         <Box sx={{ display: "flex", gap: 1, mt: 1 }}>
-          <ExpandedBootyView />
+          <ExpandedBootyView results={results} deleteBattle={deleteBattle} />
           <Button
             size="small"
             variant="outlined"

@@ -117,6 +117,51 @@ export default function Home({ toggleDarkMode, darkMode }) {
     });
   };
 
+  const deleteBattle = (battleId) => {
+    setResults((prevState) => {
+      // Find the battle to be deleted
+      const battleToDelete = prevState.battles.find(
+        (battle) => battle.id === battleId
+      );
+      if (!battleToDelete) return prevState; // Battle not found, return current state
+
+      // Adjust the cumulative values based on the deleted battle's outcome
+      const updatedWins = battleToDelete.wonBattle
+        ? prevState.wins - 1
+        : prevState.wins;
+      const updatedLosses = !battleToDelete.wonBattle
+        ? prevState.losses - 1
+        : prevState.losses;
+
+      // Adjust POE, commodities, and lavishLockers based on whether the battle was won or lost
+      const updatedPOE = battleToDelete.wonBattle
+        ? prevState.poe - battleToDelete.poe
+        : prevState.poe + battleToDelete.poe;
+      const updatedCommodities = battleToDelete.wonBattle
+        ? prevState.commodities - battleToDelete.commodities
+        : prevState.commodities + battleToDelete.commodities;
+      const updatedLavishLockers = battleToDelete.wonBattle
+        ? prevState.lavishLockers - battleToDelete.lavishLockers
+        : prevState.lavishLockers + battleToDelete.lavishLockers;
+
+      // Remove the battle from the battles array
+      const updatedBattles = prevState.battles.filter(
+        (battle) => battle.id !== battleId
+      );
+
+      // Return the updated state
+      return {
+        ...prevState,
+        wins: updatedWins,
+        losses: updatedLosses,
+        poe: updatedPOE,
+        commodities: updatedCommodities,
+        lavishLockers: updatedLavishLockers,
+        battles: updatedBattles,
+      };
+    });
+  };
+
   const toggleExpandShipInfo = () => {
     setExpandShipInfo((ESI) => !ESI);
   };
@@ -340,7 +385,12 @@ export default function Home({ toggleDarkMode, darkMode }) {
         </Button>
       </Box>
 
-      <BootyManager setResults={setResults} addBattleResult={addBattleResult} />
+      <BootyManager
+        setResults={setResults}
+        addBattleResult={addBattleResult}
+        results={results}
+        deleteBattle={deleteBattle}
+      />
     </Box>
   );
 }

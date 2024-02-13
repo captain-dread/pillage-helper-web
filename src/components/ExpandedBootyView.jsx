@@ -19,7 +19,7 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal() {
+export default function BasicModal({ results, deleteBattle }) {
   const [open, setOpen] = React.useState(false);
   const [alignment, setAlignment] = React.useState("battles");
 
@@ -41,7 +41,7 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Box sx={{ display: "flex", justifyContent: "center", mb: 1 }}>
             <ToggleButtonGroup
               color="primary"
               value={alignment}
@@ -54,7 +54,11 @@ export default function BasicModal() {
               <ToggleButton value="pirates">Pirates Summary</ToggleButton>
             </ToggleButtonGroup>
           </Box>
-          {alignment === "battles" ? <BattleResultsTable /> : <PiratesTable />}
+          {alignment === "battles" ? (
+            <BattleResultsTable results={results} deleteBattle={deleteBattle} />
+          ) : (
+            <PiratesTable results={results} />
+          )}
         </Box>
       </Modal>
     </div>
