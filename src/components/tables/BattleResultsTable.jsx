@@ -20,8 +20,8 @@ export default function BattleResultsTable({ results, deleteBattle }) {
   };
 
   return (
-    <TableContainer component={Paper}>
-      <Table aria-label="simple table">
+    <TableContainer component={Paper} sx={{ maxHeight: "60vh" }}>
+      <Table aria-label="simple table" size="small">
         <TableHead>
           <TableRow>
             <TableCell>Result</TableCell>
@@ -46,7 +46,9 @@ export default function BattleResultsTable({ results, deleteBattle }) {
                 {row.wonBattle ? "Victory" : "Defeat"}
               </TableCell>
               <TableCell align="right">
-                {row.wonBattle ? row.poe : `-${row.poe}`}
+                {row.wonBattle
+                  ? row.poe.toLocaleString()
+                  : `-${row.poe.toLocaleString()}`}
               </TableCell>
               <TableCell align="right">
                 {row.wonBattle ? row.lavishLockers : `-${row.lavishLockers}`}

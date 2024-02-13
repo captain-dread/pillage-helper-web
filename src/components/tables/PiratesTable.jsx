@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Table,
   TableBody,
@@ -9,10 +10,10 @@ import {
 } from "@mui/material";
 
 export default function PiratesTable({ results }) {
-  const pirates = results.pirates;
+  const pirates = [...results.pirates].sort((a, b) => b.battles - a.battles);
 
   return (
-    <TableContainer component={Paper} sx={{ maxHeight: "70vh" }}>
+    <TableContainer component={Paper} sx={{ maxHeight: "60vh" }}>
       <Table sx={{ minWidth: 300 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>

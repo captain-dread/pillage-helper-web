@@ -10,17 +10,26 @@ import BootyManager from "./BootyManager.jsx";
 import { ships } from "../assets/ships.js";
 import { getLatestBattleResult } from "../assets/booty";
 
+const defaultResults = {
+  poe: 0,
+  commodities: 0,
+  lavishLockers: 0,
+  krakenBloods: 0,
+  wins: 0,
+  losses: 0,
+  pirates: [],
+  battles: [],
+};
+
 export default function Home({ toggleDarkMode, darkMode }) {
-  const [results, setResults] = useState({
-    poe: 0,
-    commodities: 0,
-    lavishLockers: 0,
-    krakenBloods: 0,
-    wins: 0,
-    losses: 0,
-    pirates: [],
-    battles: [],
+  const [results, setResults] = useState(() => {
+    const savedResults = localStorage.getItem("myResults");
+    return savedResults ? JSON.parse(savedResults) : defaultResults;
   });
+
+  useEffect(() => {
+    localStorage.setItem("myResults", JSON.stringify(results));
+  }, [results]);
 
   useEffect(() => {
     console.log(results);

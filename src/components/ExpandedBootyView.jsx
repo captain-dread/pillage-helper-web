@@ -1,9 +1,18 @@
 import * as React from "react";
-import ToggleButton from "@mui/material/ToggleButton";
-import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Modal from "@mui/material/Modal";
+import {
+  Button,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  ToggleButton,
+  Box,
+  Modal,
+  ToggleButtonGroup,
+} from "@mui/material";
 import BattleResultsTable from "./tables/BattleResultsTable";
 import PiratesTable from "./tables/PiratesTable";
 
@@ -54,6 +63,40 @@ export default function BasicModal({ results, deleteBattle }) {
               <ToggleButton value="battles">Battles Summary</ToggleButton>
               <ToggleButton value="pirates">Pirates Summary</ToggleButton>
             </ToggleButtonGroup>
+          </Box>
+          <Box sx={{ mt: 0.5, mb: 1 }}>
+            <TableContainer component={Paper}>
+              <Table
+                sx={{ minWidth: 650 }}
+                size="small"
+                aria-label="a dense table"
+              >
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Total PoE</TableCell>
+                    <TableCell>Total Lavish Lockers</TableCell>
+                    <TableCell align="right">Battles Won</TableCell>
+                    <TableCell align="right">Battles Lost</TableCell>
+                    <TableCell align="right">Unique Pirates Jobbed</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow
+                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                  >
+                    <TableCell component="th" scope="row">
+                      {results.poe}
+                    </TableCell>
+                    <TableCell align="right">{results.lavishLockers}</TableCell>
+                    <TableCell align="right">{results.wins}</TableCell>
+                    <TableCell align="right">{results.losses}</TableCell>
+                    <TableCell align="right">
+                      {results.pirates.length}
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
           </Box>
           {alignment === "battles" ? (
             <BattleResultsTable results={results} deleteBattle={deleteBattle} />
