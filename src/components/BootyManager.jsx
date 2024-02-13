@@ -112,6 +112,7 @@ export default function BootyManager({ setResults, addBattleResult }) {
       return;
     }
     addBattleResult(fileText, state.inputValue);
+    setFile(null);
   };
 
   return (

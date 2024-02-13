@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { v4 as uuid } from "uuid";
 
 import { Box, Typography, Button } from "@mui/material";
 import ShipCard from "./ShipCard.jsx";
@@ -20,6 +21,10 @@ export default function Home({ toggleDarkMode, darkMode }) {
     pirates: [],
     battles: [],
   });
+
+  useEffect(() => {
+    console.log(results);
+  }, [results]);
 
   const [battle, setBattle] = useState({
     playerShip: ships[0],
@@ -46,16 +51,10 @@ export default function Home({ toggleDarkMode, darkMode }) {
     } = getLatestBattleResult(chatLogContent, payPerGreedy);
 
     setResults((prevState) => {
-      const updatedPirates = [];
-      let updatedWins = prevState.wins;
-      let updatedLosses = prevState.losses;
-      let updatedPOE = prevState.poe;
-      let updatedCommodities = prevState.commodities;
-      let updatedLavishLockers = prevState.lavishLockers;
-      let updatedBattles = [...prevState.battles];
+      let updatedPirates = [...prevState.pirates];
 
       newPirates.forEach((newPirate) => {
-        const existingPirateIndex = prevState.pirates.findIndex(
+        const existingPirateIndex = updatedPirates.findIndex(
           (pirate) => pirate.name === newPirate.name
         );
         if (existingPirateIndex === -1) {
@@ -66,44 +65,44 @@ export default function Home({ toggleDarkMode, darkMode }) {
             bootyShareAdjustment: 0,
           });
         } else {
-          // If it's an existing pirate, update their greedyHits and battles count
-          const existingPirate = prevState.pirates[existingPirateIndex];
-          const updatedGreedyHits =
-            existingPirate.greedyHits + newPirate.greedyHits;
-
-          updatedPirates.push({
+          const existingPirate = updatedPirates[existingPirateIndex];
+          updatedPirates[existingPirateIndex] = {
             ...existingPirate,
-            greedyHits: updatedGreedyHits,
+            greedyHits: existingPirate.greedyHits + newPirate.greedyHits,
             battles: existingPirate.battles + 1,
-          });
+          };
         }
       });
 
-      if (wonBattle) {
-        updatedWins += 1;
-      } else {
-        updatedLosses += 1;
-      }
+      const updatedWins = wonBattle ? prevState.wins + 1 : prevState.wins;
+      const updatedLosses = !wonBattle
+        ? prevState.losses + 1
+        : prevState.losses;
+      const updatedPOE = prevState.poe + poe;
+      const updatedCommodities = prevState.commodities + commodities;
+      const updatedLavishLockers = prevState.lavishLockers + lavishLockers;
 
-      updatedPOE += poe;
-      updatedCommodities += commodities;
-      updatedLavishLockers += lavishLockers;
+      const updatedBattles = [
+        ...prevState.battles,
+        {
+          id: uuid(),
+          wonBattle,
+          poe,
+          commodities,
+          lavishLockers,
+          pirates: newPirates,
+          greedyHitPayCommands,
+          greedyHitsSummary,
+          playerShip: battle.playerShip,
+          enemyShip: battle.enemyShip,
+          playerDamageTaken: battle.playerDamageTaken,
+          enemyDamageTaken: battle.enemyDamageTaken,
+          playerVesselPirates,
+          enemyVesselPirates,
+        },
+      ];
 
-      updatedBattles.push({
-        wonBattle,
-        poe,
-        commodities,
-        lavishLockers,
-        pirates: newPirates,
-        greedyHitPayCommands,
-        greedyHitsSummary,
-        playerShip: battle.playerShip,
-        enemyShip: battle.enemyShip,
-        playerDamageTaken: battle.playerDamageTaken,
-        enemyDamageTaken: battle.enemyDamageTaken,
-        playerVesselPirates,
-        enemyVesselPirates,
-      });
+      setBattle({ ...battle, playerDamageTaken: 0, enemyDamageTaken: 0 });
 
       return {
         ...prevState,
