@@ -15,6 +15,7 @@ export default function BasicMenu({
   resetResults,
   updateCopyScoreConfig,
   results,
+  loadSampleData,
 }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -83,6 +84,14 @@ export default function BasicMenu({
           }}
         >
           Reset All Battle Data
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            loadSampleData();
+            handleClose();
+          }}
+        >
+          Add Sample Data
         </MenuItem>
         <Box sx={{ p: 1 }}>
           <FormGroup>

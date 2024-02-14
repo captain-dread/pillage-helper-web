@@ -10,6 +10,8 @@ import BootyManager from "./BootyManager.jsx";
 import { ships } from "../assets/ships.js";
 import { getLatestBattleResult } from "../assets/booty";
 
+import sampleData from "../assets/sampleData.json";
+
 const defaultResults = {
   poe: 0,
   commodities: 0,
@@ -49,6 +51,10 @@ export default function Home({ toggleDarkMode, darkMode }) {
 
   const resetResults = () => {
     setResults(defaultResults);
+  };
+
+  const loadSampleData = () => {
+    setResults(sampleData);
   };
 
   const updateCopyScoreConfig = (newConfig) => {
@@ -383,6 +389,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
           resetResults={resetResults}
           updateCopyScoreConfig={updateCopyScoreConfig}
           results={results}
+          loadSampleData={loadSampleData}
         />
       </Box>
       {showBootyCounter ? (

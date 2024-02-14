@@ -12,6 +12,7 @@ import {
   Box,
   Modal,
   ToggleButtonGroup,
+  Typography,
 } from "@mui/material";
 import BattleResultsTable from "./tables/BattleResultsTable";
 import PiratesTable from "./tables/PiratesTable";
@@ -69,7 +70,8 @@ export default function BasicModal({ results, deleteBattle }) {
               <ToggleButton value="pirates">Pirates Summary</ToggleButton>
             </ToggleButtonGroup>
           </Box>
-          <Box sx={{ mt: 0.5, mb: 1 }}>
+          <Box sx={{ mt: 0.5, mb: 1.5 }}>
+            <Typography sx={{ fontSize: 13, pl: 1 }}>Summary</Typography>
             <TableContainer component={Paper}>
               <Table
                 sx={{ minWidth: 650 }}
@@ -103,6 +105,11 @@ export default function BasicModal({ results, deleteBattle }) {
               </Table>
             </TableContainer>
           </Box>
+          <Typography sx={{ fontSize: 13, pl: 1 }}>
+            {alignment === "battles"
+              ? "List Of All Battles"
+              : "All Participating Pirates"}
+          </Typography>
           {alignment === "battles" ? (
             <BattleResultsTable results={results} deleteBattle={deleteBattle} />
           ) : (
