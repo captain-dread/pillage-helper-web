@@ -57,7 +57,7 @@ export default function BattleResultsTable({ results, deleteBattle }) {
                 {row.wonBattle ? row.commodities : `-${row.commodities}`}
               </TableCell>
               <TableCell align="right">{row.pirates.length}</TableCell>
-              <TableCell align="right">
+              <TableCell align="right" sx={{ fontSize: 12 }}>
                 {row.playerShip.shipType} v {row.enemyShip.shipType}
               </TableCell>
               <TableCell align="right">

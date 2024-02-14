@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Table,
   TableBody,
@@ -9,11 +9,9 @@ import {
   Paper,
 } from "@mui/material";
 
-export default function PiratesTable({ results }) {
-  const pirates = [...results.pirates].sort((a, b) => b.battles - a.battles);
-
+export default function PiratesTable({ sortedPirates }) {
   return (
-    <TableContainer component={Paper} sx={{ maxHeight: "60vh" }}>
+    <TableContainer component={Paper} sx={{ height: "55vh" }}>
       <Table sx={{ minWidth: 300 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
@@ -25,7 +23,7 @@ export default function PiratesTable({ results }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {pirates.map((pirate) => (
+          {sortedPirates.map((pirate) => (
             <TableRow
               key={pirate.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
