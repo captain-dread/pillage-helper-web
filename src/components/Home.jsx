@@ -129,6 +129,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
           enemyDamageTaken: battle.enemyDamageTaken,
           playerVesselPirates,
           enemyVesselPirates,
+          battleType,
         },
       ];
 

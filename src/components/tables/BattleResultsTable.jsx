@@ -32,6 +32,7 @@ export default function BattleResultsTable({ results, deleteBattle }) {
             <TableCell align="right">Vessel Types</TableCell>
             <TableCell align="right">Fray Size</TableCell>
             <TableCell align="right">Score</TableCell>
+            <TableCell align="right">Opponent Type</TableCell>
             <TableCell align="right">Greedy Hits</TableCell>
             <TableCell align="right">Delete Battle</TableCell>
           </TableRow>
@@ -60,6 +61,7 @@ export default function BattleResultsTable({ results, deleteBattle }) {
               <TableCell align="right" sx={{ fontSize: 12 }}>
                 {row.playerShip.shipType} v {row.enemyShip.shipType}
               </TableCell>
+              <TableCell align="right">{row.battleType}</TableCell>
               <TableCell align="right">
                 {row.playerVesselPirates} v {row.enemyVesselPirates}
               </TableCell>
