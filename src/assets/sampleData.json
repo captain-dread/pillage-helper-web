@@ -1,578 +1,11 @@
 {
-  "poe": 116415,
-  "commodities": 14,
-  "lavishLockers": 27,
+  "poe": 199153,
+  "commodities": 15,
+  "lavishLockers": 40,
   "krakenBloods": 0,
-  "wins": 2,
+  "wins": 3,
   "losses": 0,
   "pirates": [
-    {
-      "name": "Presuntoo",
-      "greedyHits": 2,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Championscub",
-      "greedyHits": 4,
-      "battles": 2,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Chimpanze",
-      "greedyHits": 1,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Valentiina",
-      "greedyHits": 1,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Kinching",
-      "greedyHits": 1,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Urfreaky",
-      "greedyHits": 1,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Sincap",
-      "greedyHits": 1,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Arbores",
-      "greedyHits": 1,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Poggy",
-      "greedyHits": 1,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Turtleman",
-      "greedyHits": 1,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Senoirfroggy",
-      "greedyHits": 1,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Adrielle",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Pharrothead",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Miakoi",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Nipnipfeet",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Whynott",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Whatnow",
-      "greedyHits": 0,
-      "battles": 2,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Whatwedo",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Seajay-East",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Oracleaa",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Disengaged",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Mustafabosa",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Lilbrass",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Insidi",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Lastbeats",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Bloodscara",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Teabiscuit",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Temerity",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Euphoria",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Stewartbig",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Crocheting",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Tamsinlin",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Trcik",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Caroo",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Xuren",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Jaynick",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Pricus",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Deathles",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Ripsycho",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Inspivid",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Distillium",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Sheownsme",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Balvdana",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Vera",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Inaliant",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Thorn",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Pinacola",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Delores",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Apl",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Fbeye",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Morties",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Crimeman",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Hottubfanati",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Dubiousgf",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Yoseff",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Fairyana",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Usishant",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Scoopydoo",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Qioux",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Absolum",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Restark",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Irks",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Yaeral",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Starstrikes",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Clamlicks",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Cookiqueen",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Aquella",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Revolter",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Mutelle",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Herculad",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Hallex",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Ogfuzzypeach",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Reynaud",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Jazzgurly",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Threeteeth",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Sharktopus",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Lesplastic",
-      "greedyHits": 0,
-      "battles": 2,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Straft",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Lickilicki",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Deadlyfat",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
-    {
-      "name": "Onlylines.",
-      "greedyHits": 0,
-      "battles": 1,
-      "krakenShares": 0,
-      "bootyShareAdjustment": 0
-    },
     {
       "name": "Gluba",
       "greedyHits": 4,
@@ -584,6 +17,13 @@
       "name": "Efijan",
       "greedyHits": 2,
       "battles": 1,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Championscub",
+      "greedyHits": 6,
+      "battles": 3,
       "krakenShares": 0,
       "bootyShareAdjustment": 0
     },
@@ -661,6 +101,13 @@
       "name": "Whiteashy",
       "greedyHits": 0,
       "battles": 1,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Whatnow",
+      "greedyHits": 0,
+      "battles": 3,
       "krakenShares": 0,
       "bootyShareAdjustment": 0
     },
@@ -987,6 +434,13 @@
       "bootyShareAdjustment": 0
     },
     {
+      "name": "Lesplastic",
+      "greedyHits": 0,
+      "battles": 3,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
       "name": "Toastyboy",
       "greedyHits": 0,
       "battles": 1,
@@ -1251,426 +705,557 @@
       "battles": 1,
       "krakenShares": 0,
       "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Presuntoo",
+      "greedyHits": 4,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Chimpanze",
+      "greedyHits": 2,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Valentiina",
+      "greedyHits": 2,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Kinching",
+      "greedyHits": 2,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Urfreaky",
+      "greedyHits": 2,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Sincap",
+      "greedyHits": 2,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Arbores",
+      "greedyHits": 2,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Poggy",
+      "greedyHits": 2,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Turtleman",
+      "greedyHits": 2,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Senoirfroggy",
+      "greedyHits": 2,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Adrielle",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Pharrothead",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Miakoi",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Nipnipfeet",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Whynott",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Whatwedo",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Seajay-East",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Oracleaa",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Disengaged",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Mustafabosa",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Lilbrass",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Insidi",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Lastbeats",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Bloodscara",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Teabiscuit",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Temerity",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Euphoria",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Stewartbig",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Crocheting",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Tamsinlin",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Trcik",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Caroo",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Xuren",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Jaynick",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Pricus",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Deathles",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Ripsycho",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Inspivid",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Distillium",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Sheownsme",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Balvdana",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Vera",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Inaliant",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Thorn",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Pinacola",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Delores",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Apl",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Fbeye",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Morties",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Crimeman",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Hottubfanati",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Dubiousgf",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Yoseff",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Fairyana",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Usishant",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Scoopydoo",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Qioux",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Absolum",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Restark",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Irks",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Yaeral",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Starstrikes",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Clamlicks",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Cookiqueen",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Aquella",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Revolter",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Mutelle",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Herculad",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Hallex",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Ogfuzzypeach",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Reynaud",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Jazzgurly",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Threeteeth",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Sharktopus",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Straft",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Lickilicki",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Deadlyfat",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
+    },
+    {
+      "name": "Onlylines.",
+      "greedyHits": 0,
+      "battles": 2,
+      "krakenShares": 0,
+      "bootyShareAdjustment": 0
     }
   ],
   "battles": [
     {
-      "id": "65fe185a-96f1-49cd-a9f0-43df082372f1",
-      "wonBattle": true,
-      "poe": 82738,
-      "commodities": 1,
-      "lavishLockers": 13,
-      "pirates": [
-        {
-          "name": "Presuntoo",
-          "greedyHits": 2
-        },
-        {
-          "name": "Championscub",
-          "greedyHits": 2
-        },
-        {
-          "name": "Chimpanze",
-          "greedyHits": 1
-        },
-        {
-          "name": "Valentiina",
-          "greedyHits": 1
-        },
-        {
-          "name": "Kinching",
-          "greedyHits": 1
-        },
-        {
-          "name": "Urfreaky",
-          "greedyHits": 1
-        },
-        {
-          "name": "Sincap",
-          "greedyHits": 1
-        },
-        {
-          "name": "Arbores",
-          "greedyHits": 1
-        },
-        {
-          "name": "Poggy",
-          "greedyHits": 1
-        },
-        {
-          "name": "Turtleman",
-          "greedyHits": 1
-        },
-        {
-          "name": "Senoirfroggy",
-          "greedyHits": 1
-        },
-        {
-          "name": "Adrielle",
-          "greedyHits": 0
-        },
-        {
-          "name": "Pharrothead",
-          "greedyHits": 0
-        },
-        {
-          "name": "Miakoi",
-          "greedyHits": 0
-        },
-        {
-          "name": "Nipnipfeet",
-          "greedyHits": 0
-        },
-        {
-          "name": "Whynott",
-          "greedyHits": 0
-        },
-        {
-          "name": "Whatnow",
-          "greedyHits": 0
-        },
-        {
-          "name": "Whatwedo",
-          "greedyHits": 0
-        },
-        {
-          "name": "Seajay-East",
-          "greedyHits": 0
-        },
-        {
-          "name": "Oracleaa",
-          "greedyHits": 0
-        },
-        {
-          "name": "Disengaged",
-          "greedyHits": 0
-        },
-        {
-          "name": "Mustafabosa",
-          "greedyHits": 0
-        },
-        {
-          "name": "Lilbrass",
-          "greedyHits": 0
-        },
-        {
-          "name": "Insidi",
-          "greedyHits": 0
-        },
-        {
-          "name": "Lastbeats",
-          "greedyHits": 0
-        },
-        {
-          "name": "Bloodscara",
-          "greedyHits": 0
-        },
-        {
-          "name": "Teabiscuit",
-          "greedyHits": 0
-        },
-        {
-          "name": "Temerity",
-          "greedyHits": 0
-        },
-        {
-          "name": "Euphoria",
-          "greedyHits": 0
-        },
-        {
-          "name": "Stewartbig",
-          "greedyHits": 0
-        },
-        {
-          "name": "Crocheting",
-          "greedyHits": 0
-        },
-        {
-          "name": "Tamsinlin",
-          "greedyHits": 0
-        },
-        {
-          "name": "Trcik",
-          "greedyHits": 0
-        },
-        {
-          "name": "Caroo",
-          "greedyHits": 0
-        },
-        {
-          "name": "Xuren",
-          "greedyHits": 0
-        },
-        {
-          "name": "Jaynick",
-          "greedyHits": 0
-        },
-        {
-          "name": "Pricus",
-          "greedyHits": 0
-        },
-        {
-          "name": "Deathles",
-          "greedyHits": 0
-        },
-        {
-          "name": "Ripsycho",
-          "greedyHits": 0
-        },
-        {
-          "name": "Inspivid",
-          "greedyHits": 0
-        },
-        {
-          "name": "Distillium",
-          "greedyHits": 0
-        },
-        {
-          "name": "Sheownsme",
-          "greedyHits": 0
-        },
-        {
-          "name": "Balvdana",
-          "greedyHits": 0
-        },
-        {
-          "name": "Vera",
-          "greedyHits": 0
-        },
-        {
-          "name": "Inaliant",
-          "greedyHits": 0
-        },
-        {
-          "name": "Thorn",
-          "greedyHits": 0
-        },
-        {
-          "name": "Pinacola",
-          "greedyHits": 0
-        },
-        {
-          "name": "Delores",
-          "greedyHits": 0
-        },
-        {
-          "name": "Apl",
-          "greedyHits": 0
-        },
-        {
-          "name": "Fbeye",
-          "greedyHits": 0
-        },
-        {
-          "name": "Morties",
-          "greedyHits": 0
-        },
-        {
-          "name": "Crimeman",
-          "greedyHits": 0
-        },
-        {
-          "name": "Hottubfanati",
-          "greedyHits": 0
-        },
-        {
-          "name": "Dubiousgf",
-          "greedyHits": 0
-        },
-        {
-          "name": "Yoseff",
-          "greedyHits": 0
-        },
-        {
-          "name": "Fairyana",
-          "greedyHits": 0
-        },
-        {
-          "name": "Usishant",
-          "greedyHits": 0
-        },
-        {
-          "name": "Scoopydoo",
-          "greedyHits": 0
-        },
-        {
-          "name": "Qioux",
-          "greedyHits": 0
-        },
-        {
-          "name": "Absolum",
-          "greedyHits": 0
-        },
-        {
-          "name": "Restark",
-          "greedyHits": 0
-        },
-        {
-          "name": "Irks",
-          "greedyHits": 0
-        },
-        {
-          "name": "Yaeral",
-          "greedyHits": 0
-        },
-        {
-          "name": "Starstrikes",
-          "greedyHits": 0
-        },
-        {
-          "name": "Clamlicks",
-          "greedyHits": 0
-        },
-        {
-          "name": "Cookiqueen",
-          "greedyHits": 0
-        },
-        {
-          "name": "Aquella",
-          "greedyHits": 0
-        },
-        {
-          "name": "Revolter",
-          "greedyHits": 0
-        },
-        {
-          "name": "Mutelle",
-          "greedyHits": 0
-        },
-        {
-          "name": "Herculad",
-          "greedyHits": 0
-        },
-        {
-          "name": "Hallex",
-          "greedyHits": 0
-        },
-        {
-          "name": "Ogfuzzypeach",
-          "greedyHits": 0
-        },
-        {
-          "name": "Reynaud",
-          "greedyHits": 0
-        },
-        {
-          "name": "Jazzgurly",
-          "greedyHits": 0
-        },
-        {
-          "name": "Threeteeth",
-          "greedyHits": 0
-        },
-        {
-          "name": "Sharktopus",
-          "greedyHits": 0
-        },
-        {
-          "name": "Lesplastic",
-          "greedyHits": 0
-        },
-        {
-          "name": "Straft",
-          "greedyHits": 0
-        },
-        {
-          "name": "Lickilicki",
-          "greedyHits": 0
-        },
-        {
-          "name": "Deadlyfat",
-          "greedyHits": 0
-        },
-        {
-          "name": "Onlylines.",
-          "greedyHits": 0
-        }
-      ],
-      "greedyHitPayCommands": [
-        "/pay Chimpanze 500",
-        "/pay Presuntoo 1000",
-        "/pay Valentiina 500",
-        "/pay Kinching 500",
-        "/pay Urfreaky 500",
-        "/pay Championscub 1000",
-        "/pay Sincap 500",
-        "/pay Arbores 500",
-        "/pay Poggy 500",
-        "/pay Turtleman 500",
-        "/pay Senoirfroggy 500"
-      ],
-      "greedyHitsSummary": "13 total hits! Presuntoo: 2, Championscub: 2, Chimpanze: 1, Valentiina: 1, Kinching: 1, Urfreaky: 1, Sincap: 1, Arbores: 1, Poggy: 1, Turtleman: 1, Senoirfroggy: 1",
-      "playerShip": {
-        "shipType": "War Frigate",
-        "size": "large",
-        "movesPerTurn": 3,
-        "shotsPerMove": 2,
-        "cannonSize": "large",
-        "maxPillageDamage": {
-          "small": 30,
-          "medium": 20,
-          "large": 15
-        },
-        "maxSinkDamage": {
-          "small": 50,
-          "medium": 33.333,
-          "large": 25
-        },
-        "rockDamage": {
-          "small": 2.5,
-          "medium": 1.667,
-          "large": 1.25
-        },
-        "ramDamage": {
-          "small": 3,
-          "medium": 2,
-          "large": 1.5
-        },
-        "imagePath": "./images/War_Frigate.png",
-        "maxPirates": 75,
-        "mass": 216000,
-        "volume": 324000,
-        "maxSwabbies": 55
-      },
-      "enemyShip": {
-        "shipType": "Grand Frigate",
-        "size": "large",
-        "movesPerTurn": 3,
-        "shotsPerMove": 2,
-        "cannonSize": "large",
-        "maxPillageDamage": {
-          "small": 36,
-          "medium": 24,
-          "large": 18
-        },
-        "maxSinkDamage": {
-          "small": 60,
-          "medium": 40,
-          "large": 30
-        },
-        "rockDamage": {
-          "small": 3,
-          "medium": 2,
-          "large": 1.5
-        },
-        "ramDamage": {
-          "small": 4,
-          "medium": 2.667,
-          "large": 2
-        },
-        "imagePath": "./images/Grand_Frigate.png",
-        "maxPirates": 159,
-        "mass": 540000,
-        "volume": 810000,
-        "maxSwabbies": 76
-      },
-      "playerDamageTaken": 6,
-      "enemyDamageTaken": 12,
-      "playerVesselPirates": 152,
-      "enemyVesselPirates": 159
-    },
-    {
-      "id": "1782a7ac-a738-4e27-b22e-e749a2410d76",
+      "id": "c3c4ccf2-bb6c-497b-aa85-2e069daff9ea",
       "wonBattle": true,
       "poe": 33677,
       "commodities": 13,
@@ -2152,10 +1737,843 @@
         "volume": 810000,
         "maxSwabbies": 76
       },
-      "playerDamageTaken": 10,
-      "enemyDamageTaken": 15.5,
+      "playerDamageTaken": 5,
+      "enemyDamageTaken": 13.5,
       "playerVesselPirates": 150,
-      "enemyVesselPirates": 158
+      "enemyVesselPirates": 158,
+      "battleType": "brigands"
+    },
+    {
+      "id": "98b95e22-6559-4df6-b7e7-c981136e6eca",
+      "wonBattle": true,
+      "poe": 82738,
+      "commodities": 1,
+      "lavishLockers": 13,
+      "pirates": [
+        {
+          "name": "Presuntoo",
+          "greedyHits": 2
+        },
+        {
+          "name": "Championscub",
+          "greedyHits": 2
+        },
+        {
+          "name": "Chimpanze",
+          "greedyHits": 1
+        },
+        {
+          "name": "Valentiina",
+          "greedyHits": 1
+        },
+        {
+          "name": "Kinching",
+          "greedyHits": 1
+        },
+        {
+          "name": "Urfreaky",
+          "greedyHits": 1
+        },
+        {
+          "name": "Sincap",
+          "greedyHits": 1
+        },
+        {
+          "name": "Arbores",
+          "greedyHits": 1
+        },
+        {
+          "name": "Poggy",
+          "greedyHits": 1
+        },
+        {
+          "name": "Turtleman",
+          "greedyHits": 1
+        },
+        {
+          "name": "Senoirfroggy",
+          "greedyHits": 1
+        },
+        {
+          "name": "Adrielle",
+          "greedyHits": 0
+        },
+        {
+          "name": "Pharrothead",
+          "greedyHits": 0
+        },
+        {
+          "name": "Miakoi",
+          "greedyHits": 0
+        },
+        {
+          "name": "Nipnipfeet",
+          "greedyHits": 0
+        },
+        {
+          "name": "Whynott",
+          "greedyHits": 0
+        },
+        {
+          "name": "Whatnow",
+          "greedyHits": 0
+        },
+        {
+          "name": "Whatwedo",
+          "greedyHits": 0
+        },
+        {
+          "name": "Seajay-East",
+          "greedyHits": 0
+        },
+        {
+          "name": "Oracleaa",
+          "greedyHits": 0
+        },
+        {
+          "name": "Disengaged",
+          "greedyHits": 0
+        },
+        {
+          "name": "Mustafabosa",
+          "greedyHits": 0
+        },
+        {
+          "name": "Lilbrass",
+          "greedyHits": 0
+        },
+        {
+          "name": "Insidi",
+          "greedyHits": 0
+        },
+        {
+          "name": "Lastbeats",
+          "greedyHits": 0
+        },
+        {
+          "name": "Bloodscara",
+          "greedyHits": 0
+        },
+        {
+          "name": "Teabiscuit",
+          "greedyHits": 0
+        },
+        {
+          "name": "Temerity",
+          "greedyHits": 0
+        },
+        {
+          "name": "Euphoria",
+          "greedyHits": 0
+        },
+        {
+          "name": "Stewartbig",
+          "greedyHits": 0
+        },
+        {
+          "name": "Crocheting",
+          "greedyHits": 0
+        },
+        {
+          "name": "Tamsinlin",
+          "greedyHits": 0
+        },
+        {
+          "name": "Trcik",
+          "greedyHits": 0
+        },
+        {
+          "name": "Caroo",
+          "greedyHits": 0
+        },
+        {
+          "name": "Xuren",
+          "greedyHits": 0
+        },
+        {
+          "name": "Jaynick",
+          "greedyHits": 0
+        },
+        {
+          "name": "Pricus",
+          "greedyHits": 0
+        },
+        {
+          "name": "Deathles",
+          "greedyHits": 0
+        },
+        {
+          "name": "Ripsycho",
+          "greedyHits": 0
+        },
+        {
+          "name": "Inspivid",
+          "greedyHits": 0
+        },
+        {
+          "name": "Distillium",
+          "greedyHits": 0
+        },
+        {
+          "name": "Sheownsme",
+          "greedyHits": 0
+        },
+        {
+          "name": "Balvdana",
+          "greedyHits": 0
+        },
+        {
+          "name": "Vera",
+          "greedyHits": 0
+        },
+        {
+          "name": "Inaliant",
+          "greedyHits": 0
+        },
+        {
+          "name": "Thorn",
+          "greedyHits": 0
+        },
+        {
+          "name": "Pinacola",
+          "greedyHits": 0
+        },
+        {
+          "name": "Delores",
+          "greedyHits": 0
+        },
+        {
+          "name": "Apl",
+          "greedyHits": 0
+        },
+        {
+          "name": "Fbeye",
+          "greedyHits": 0
+        },
+        {
+          "name": "Morties",
+          "greedyHits": 0
+        },
+        {
+          "name": "Crimeman",
+          "greedyHits": 0
+        },
+        {
+          "name": "Hottubfanati",
+          "greedyHits": 0
+        },
+        {
+          "name": "Dubiousgf",
+          "greedyHits": 0
+        },
+        {
+          "name": "Yoseff",
+          "greedyHits": 0
+        },
+        {
+          "name": "Fairyana",
+          "greedyHits": 0
+        },
+        {
+          "name": "Usishant",
+          "greedyHits": 0
+        },
+        {
+          "name": "Scoopydoo",
+          "greedyHits": 0
+        },
+        {
+          "name": "Qioux",
+          "greedyHits": 0
+        },
+        {
+          "name": "Absolum",
+          "greedyHits": 0
+        },
+        {
+          "name": "Restark",
+          "greedyHits": 0
+        },
+        {
+          "name": "Irks",
+          "greedyHits": 0
+        },
+        {
+          "name": "Yaeral",
+          "greedyHits": 0
+        },
+        {
+          "name": "Starstrikes",
+          "greedyHits": 0
+        },
+        {
+          "name": "Clamlicks",
+          "greedyHits": 0
+        },
+        {
+          "name": "Cookiqueen",
+          "greedyHits": 0
+        },
+        {
+          "name": "Aquella",
+          "greedyHits": 0
+        },
+        {
+          "name": "Revolter",
+          "greedyHits": 0
+        },
+        {
+          "name": "Mutelle",
+          "greedyHits": 0
+        },
+        {
+          "name": "Herculad",
+          "greedyHits": 0
+        },
+        {
+          "name": "Hallex",
+          "greedyHits": 0
+        },
+        {
+          "name": "Ogfuzzypeach",
+          "greedyHits": 0
+        },
+        {
+          "name": "Reynaud",
+          "greedyHits": 0
+        },
+        {
+          "name": "Jazzgurly",
+          "greedyHits": 0
+        },
+        {
+          "name": "Threeteeth",
+          "greedyHits": 0
+        },
+        {
+          "name": "Sharktopus",
+          "greedyHits": 0
+        },
+        {
+          "name": "Lesplastic",
+          "greedyHits": 0
+        },
+        {
+          "name": "Straft",
+          "greedyHits": 0
+        },
+        {
+          "name": "Lickilicki",
+          "greedyHits": 0
+        },
+        {
+          "name": "Deadlyfat",
+          "greedyHits": 0
+        },
+        {
+          "name": "Onlylines.",
+          "greedyHits": 0
+        }
+      ],
+      "greedyHitPayCommands": [
+        "/pay Chimpanze 500",
+        "/pay Presuntoo 1000",
+        "/pay Valentiina 500",
+        "/pay Kinching 500",
+        "/pay Urfreaky 500",
+        "/pay Championscub 1000",
+        "/pay Sincap 500",
+        "/pay Arbores 500",
+        "/pay Poggy 500",
+        "/pay Turtleman 500",
+        "/pay Senoirfroggy 500"
+      ],
+      "greedyHitsSummary": "13 total hits! Presuntoo: 2, Championscub: 2, Chimpanze: 1, Valentiina: 1, Kinching: 1, Urfreaky: 1, Sincap: 1, Arbores: 1, Poggy: 1, Turtleman: 1, Senoirfroggy: 1",
+      "playerShip": {
+        "shipType": "War Galleon",
+        "size": "large",
+        "movesPerTurn": 3,
+        "shotsPerMove": 2,
+        "cannonSize": "large",
+        "maxPillageDamage": {
+          "small": 15,
+          "medium": 10,
+          "large": 7.5
+        },
+        "maxSinkDamage": {
+          "small": 25,
+          "medium": 16.667,
+          "large": 12.5
+        },
+        "rockDamage": {
+          "small": 1.75,
+          "medium": 1.167,
+          "large": 0.875
+        },
+        "ramDamage": {
+          "small": 2.5,
+          "medium": 1.667,
+          "large": 1.25
+        },
+        "imagePath": "./images/War_Galleon.png",
+        "maxPirates": 40,
+        "mass": 90000,
+        "volume": 135000,
+        "maxSwabbies": 33
+      },
+      "enemyShip": {
+        "shipType": "Grand Frigate",
+        "size": "large",
+        "movesPerTurn": 3,
+        "shotsPerMove": 2,
+        "cannonSize": "large",
+        "maxPillageDamage": {
+          "small": 36,
+          "medium": 24,
+          "large": 18
+        },
+        "maxSinkDamage": {
+          "small": 60,
+          "medium": 40,
+          "large": 30
+        },
+        "rockDamage": {
+          "small": 3,
+          "medium": 2,
+          "large": 1.5
+        },
+        "ramDamage": {
+          "small": 4,
+          "medium": 2.667,
+          "large": 2
+        },
+        "imagePath": "./images/Grand_Frigate.png",
+        "maxPirates": 159,
+        "mass": 540000,
+        "volume": 810000,
+        "maxSwabbies": 76
+      },
+      "playerDamageTaken": 3,
+      "enemyDamageTaken": 16,
+      "playerVesselPirates": 152,
+      "enemyVesselPirates": 159,
+      "battleType": "barbarians"
+    },
+    {
+      "id": "b2bf2f61-5c7b-4771-81ee-34375e3dc2f1",
+      "wonBattle": true,
+      "poe": 82738,
+      "commodities": 1,
+      "lavishLockers": 13,
+      "pirates": [
+        {
+          "name": "Presuntoo",
+          "greedyHits": 2
+        },
+        {
+          "name": "Championscub",
+          "greedyHits": 2
+        },
+        {
+          "name": "Chimpanze",
+          "greedyHits": 1
+        },
+        {
+          "name": "Valentiina",
+          "greedyHits": 1
+        },
+        {
+          "name": "Kinching",
+          "greedyHits": 1
+        },
+        {
+          "name": "Urfreaky",
+          "greedyHits": 1
+        },
+        {
+          "name": "Sincap",
+          "greedyHits": 1
+        },
+        {
+          "name": "Arbores",
+          "greedyHits": 1
+        },
+        {
+          "name": "Poggy",
+          "greedyHits": 1
+        },
+        {
+          "name": "Turtleman",
+          "greedyHits": 1
+        },
+        {
+          "name": "Senoirfroggy",
+          "greedyHits": 1
+        },
+        {
+          "name": "Adrielle",
+          "greedyHits": 0
+        },
+        {
+          "name": "Pharrothead",
+          "greedyHits": 0
+        },
+        {
+          "name": "Miakoi",
+          "greedyHits": 0
+        },
+        {
+          "name": "Nipnipfeet",
+          "greedyHits": 0
+        },
+        {
+          "name": "Whynott",
+          "greedyHits": 0
+        },
+        {
+          "name": "Whatnow",
+          "greedyHits": 0
+        },
+        {
+          "name": "Whatwedo",
+          "greedyHits": 0
+        },
+        {
+          "name": "Seajay-East",
+          "greedyHits": 0
+        },
+        {
+          "name": "Oracleaa",
+          "greedyHits": 0
+        },
+        {
+          "name": "Disengaged",
+          "greedyHits": 0
+        },
+        {
+          "name": "Mustafabosa",
+          "greedyHits": 0
+        },
+        {
+          "name": "Lilbrass",
+          "greedyHits": 0
+        },
+        {
+          "name": "Insidi",
+          "greedyHits": 0
+        },
+        {
+          "name": "Lastbeats",
+          "greedyHits": 0
+        },
+        {
+          "name": "Bloodscara",
+          "greedyHits": 0
+        },
+        {
+          "name": "Teabiscuit",
+          "greedyHits": 0
+        },
+        {
+          "name": "Temerity",
+          "greedyHits": 0
+        },
+        {
+          "name": "Euphoria",
+          "greedyHits": 0
+        },
+        {
+          "name": "Stewartbig",
+          "greedyHits": 0
+        },
+        {
+          "name": "Crocheting",
+          "greedyHits": 0
+        },
+        {
+          "name": "Tamsinlin",
+          "greedyHits": 0
+        },
+        {
+          "name": "Trcik",
+          "greedyHits": 0
+        },
+        {
+          "name": "Caroo",
+          "greedyHits": 0
+        },
+        {
+          "name": "Xuren",
+          "greedyHits": 0
+        },
+        {
+          "name": "Jaynick",
+          "greedyHits": 0
+        },
+        {
+          "name": "Pricus",
+          "greedyHits": 0
+        },
+        {
+          "name": "Deathles",
+          "greedyHits": 0
+        },
+        {
+          "name": "Ripsycho",
+          "greedyHits": 0
+        },
+        {
+          "name": "Inspivid",
+          "greedyHits": 0
+        },
+        {
+          "name": "Distillium",
+          "greedyHits": 0
+        },
+        {
+          "name": "Sheownsme",
+          "greedyHits": 0
+        },
+        {
+          "name": "Balvdana",
+          "greedyHits": 0
+        },
+        {
+          "name": "Vera",
+          "greedyHits": 0
+        },
+        {
+          "name": "Inaliant",
+          "greedyHits": 0
+        },
+        {
+          "name": "Thorn",
+          "greedyHits": 0
+        },
+        {
+          "name": "Pinacola",
+          "greedyHits": 0
+        },
+        {
+          "name": "Delores",
+          "greedyHits": 0
+        },
+        {
+          "name": "Apl",
+          "greedyHits": 0
+        },
+        {
+          "name": "Fbeye",
+          "greedyHits": 0
+        },
+        {
+          "name": "Morties",
+          "greedyHits": 0
+        },
+        {
+          "name": "Crimeman",
+          "greedyHits": 0
+        },
+        {
+          "name": "Hottubfanati",
+          "greedyHits": 0
+        },
+        {
+          "name": "Dubiousgf",
+          "greedyHits": 0
+        },
+        {
+          "name": "Yoseff",
+          "greedyHits": 0
+        },
+        {
+          "name": "Fairyana",
+          "greedyHits": 0
+        },
+        {
+          "name": "Usishant",
+          "greedyHits": 0
+        },
+        {
+          "name": "Scoopydoo",
+          "greedyHits": 0
+        },
+        {
+          "name": "Qioux",
+          "greedyHits": 0
+        },
+        {
+          "name": "Absolum",
+          "greedyHits": 0
+        },
+        {
+          "name": "Restark",
+          "greedyHits": 0
+        },
+        {
+          "name": "Irks",
+          "greedyHits": 0
+        },
+        {
+          "name": "Yaeral",
+          "greedyHits": 0
+        },
+        {
+          "name": "Starstrikes",
+          "greedyHits": 0
+        },
+        {
+          "name": "Clamlicks",
+          "greedyHits": 0
+        },
+        {
+          "name": "Cookiqueen",
+          "greedyHits": 0
+        },
+        {
+          "name": "Aquella",
+          "greedyHits": 0
+        },
+        {
+          "name": "Revolter",
+          "greedyHits": 0
+        },
+        {
+          "name": "Mutelle",
+          "greedyHits": 0
+        },
+        {
+          "name": "Herculad",
+          "greedyHits": 0
+        },
+        {
+          "name": "Hallex",
+          "greedyHits": 0
+        },
+        {
+          "name": "Ogfuzzypeach",
+          "greedyHits": 0
+        },
+        {
+          "name": "Reynaud",
+          "greedyHits": 0
+        },
+        {
+          "name": "Jazzgurly",
+          "greedyHits": 0
+        },
+        {
+          "name": "Threeteeth",
+          "greedyHits": 0
+        },
+        {
+          "name": "Sharktopus",
+          "greedyHits": 0
+        },
+        {
+          "name": "Lesplastic",
+          "greedyHits": 0
+        },
+        {
+          "name": "Straft",
+          "greedyHits": 0
+        },
+        {
+          "name": "Lickilicki",
+          "greedyHits": 0
+        },
+        {
+          "name": "Deadlyfat",
+          "greedyHits": 0
+        },
+        {
+          "name": "Onlylines.",
+          "greedyHits": 0
+        }
+      ],
+      "greedyHitPayCommands": [
+        "/pay Chimpanze 500",
+        "/pay Presuntoo 1000",
+        "/pay Valentiina 500",
+        "/pay Kinching 500",
+        "/pay Urfreaky 500",
+        "/pay Championscub 1000",
+        "/pay Sincap 500",
+        "/pay Arbores 500",
+        "/pay Poggy 500",
+        "/pay Turtleman 500",
+        "/pay Senoirfroggy 500"
+      ],
+      "greedyHitsSummary": "13 total hits! Presuntoo: 2, Championscub: 2, Chimpanze: 1, Valentiina: 1, Kinching: 1, Urfreaky: 1, Sincap: 1, Arbores: 1, Poggy: 1, Turtleman: 1, Senoirfroggy: 1",
+      "playerShip": {
+        "shipType": "Grand Frigate",
+        "size": "large",
+        "movesPerTurn": 3,
+        "shotsPerMove": 2,
+        "cannonSize": "large",
+        "maxPillageDamage": {
+          "small": 36,
+          "medium": 24,
+          "large": 18
+        },
+        "maxSinkDamage": {
+          "small": 60,
+          "medium": 40,
+          "large": 30
+        },
+        "rockDamage": {
+          "small": 3,
+          "medium": 2,
+          "large": 1.5
+        },
+        "ramDamage": {
+          "small": 4,
+          "medium": 2.667,
+          "large": 2
+        },
+        "imagePath": "./images/Grand_Frigate.png",
+        "maxPirates": 159,
+        "mass": 540000,
+        "volume": 810000,
+        "maxSwabbies": 76
+      },
+      "enemyShip": {
+        "shipType": "Grand Frigate",
+        "size": "large",
+        "movesPerTurn": 3,
+        "shotsPerMove": 2,
+        "cannonSize": "large",
+        "maxPillageDamage": {
+          "small": 36,
+          "medium": 24,
+          "large": 18
+        },
+        "maxSinkDamage": {
+          "small": 60,
+          "medium": 40,
+          "large": 30
+        },
+        "rockDamage": {
+          "small": 3,
+          "medium": 2,
+          "large": 1.5
+        },
+        "ramDamage": {
+          "small": 4,
+          "medium": 2.667,
+          "large": 2
+        },
+        "imagePath": "./images/Grand_Frigate.png",
+        "maxPirates": 159,
+        "mass": 540000,
+        "volume": 810000,
+        "maxSwabbies": 76
+      },
+      "playerDamageTaken": 15,
+      "enemyDamageTaken": 19,
+      "playerVesselPirates": 152,
+      "enemyVesselPirates": 159,
+      "battleType": "brigands"
     }
   ],
   "copyScoreConfig": {
