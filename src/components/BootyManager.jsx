@@ -14,10 +14,7 @@ import ResultsModal from "./atoms/ResultsModal";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import ExpandedBootyView from "./ExpandedBootyView";
 
-import { processLogContent } from "../assets/greedy";
-
 export default function BootyManager({
-  setResults,
   addBattleResult,
   results,
   deleteBattle,
@@ -79,36 +76,12 @@ export default function BootyManager({
     if (!fileText) {
       return;
     }
+    const res = addBattleResult(fileText, state.inputValue);
 
-    const res = processLogContent(
-      fileText,
-      state.inputValue > 0 ? state.inputValue : 500
-    );
-    if (res.wonBattle) {
-      setResults((R) => {
-        return {
-          ...R,
-          lavishLockers: R.lavishLockers + res.totalHits,
-          poe: R.poe + res.poe,
-          commodities: R.commodities + res.commodities,
-          wins: R.wins + 1,
-        };
-      });
-    } else {
-      setResults((R) => {
-        return {
-          ...R,
-          lavishLockers: R.lavishLockers - res.totalHits,
-          poe: R.poe - res.poe,
-          commodities: R.commodities - res.commodities,
-          losses: R.losses + 1,
-        };
-      });
-    }
     setShowResultsModal({
       show: true,
-      summary: res.result,
-      payCommands: state.checked ? res.payCommands : [],
+      summary: res.greedyHitsSummary,
+      payCommands: state.checked ? res.greedyHitPayCommands : [],
     });
   };
 
@@ -133,6 +106,7 @@ export default function BootyManager({
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            marginBottom: "4px",
           }}
         >
           <Typography
@@ -146,32 +120,7 @@ export default function BootyManager({
             <HelpOutlineIcon size="small" fontSize="11" />
           </IconButton>
         </div>
-
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={state.checked}
-              onChange={handleCheckboxChange}
-              name="payCommands"
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" style={{ fontSize: "12px" }}>
-              Show Greedy Pay
-            </Typography>
-          }
-          sx={{ mt: 0.5, mb: 0.2 }}
-        />
-        <Box
-          sx={{
-            display: "flex",
-            gap: 1,
-            justifyContent: "center",
-            alignItems: "center",
-            flexWrap: "wrap",
-          }}
-        >
+        <Box sx={{ display: "flex", gap: 1, mb: 1 }}>
           <label htmlFor="file-input">
             <input
               id="file-input"
@@ -187,7 +136,32 @@ export default function BootyManager({
               Load File
             </Button>
           </label>
-
+          <Button
+            size="small"
+            variant="outlined"
+            disabled={!isFileLoaded}
+            onClick={handleAddBattleResults}
+          >
+            Add battle results
+          </Button>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            gap: 1,
+            justifyContent: "center",
+            alignItems: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          <Button
+            size="small"
+            variant="outlined"
+            disabled={!isFileLoaded}
+            onClick={handleFindGreedyHits}
+          >
+            Find Greedies
+          </Button>
           <TextField
             type="number"
             value={state.inputValue}
@@ -204,26 +178,23 @@ export default function BootyManager({
               },
             }}
           />
-          <Button
-            size="small"
-            variant="outlined"
-            disabled={!isFileLoaded}
-            onClick={handleFindGreedyHits}
-          >
-            Find Greedies
-          </Button>
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={state.checked}
+                onChange={handleCheckboxChange}
+                name="payCommands"
+                size="small"
+              />
+            }
+            label={
+              <Typography variant="body2" style={{ fontSize: "12px" }}>
+                Show Greedy Pay
+              </Typography>
+            }
+          />
         </Box>
-        <Box sx={{ display: "flex", gap: 1, mt: 1 }}>
-          <ExpandedBootyView results={results} deleteBattle={deleteBattle} />
-          <Button
-            size="small"
-            variant="outlined"
-            disabled={!isFileLoaded}
-            onClick={handleAddBattleResults}
-          >
-            Add battle results
-          </Button>
-        </Box>
+        <ExpandedBootyView results={results} deleteBattle={deleteBattle} />
       </Box>
       {showResultsModal.show ? (
         <ResultsModal

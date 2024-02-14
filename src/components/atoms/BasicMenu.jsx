@@ -2,10 +2,20 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import { Typography, Box } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
-export default function BasicMenu({ toggleDarkMode, setShowBootyCounter }) {
+export default function BasicMenu({
+  toggleDarkMode,
+  setShowBootyCounter,
+  resetResults,
+  updateCopyScoreConfig,
+  results,
+}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -25,6 +35,18 @@ export default function BasicMenu({ toggleDarkMode, setShowBootyCounter }) {
       return !SBC;
     });
     handleClose();
+  };
+
+  const handleShowPercentageChange = (event) => {
+    updateCopyScoreConfig({ showPercentage: event.target.checked });
+  };
+
+  const handleShowFractionChange = (event) => {
+    updateCopyScoreConfig({ showAsFraction: event.target.checked });
+  };
+
+  const handleReverseOrderChange = (event) => {
+    updateCopyScoreConfig({ reverseOrder: event.target.checked });
   };
 
   return (
@@ -54,6 +76,49 @@ export default function BasicMenu({ toggleDarkMode, setShowBootyCounter }) {
         <MenuItem onClick={handleToggleBootyCounter}>
           Toggle Booty View
         </MenuItem>
+        <MenuItem
+          onClick={() => {
+            resetResults();
+            handleClose();
+          }}
+        >
+          Reset All Battle Data
+        </MenuItem>
+        <Box sx={{ p: 1 }}>
+          <FormGroup>
+            <Typography>Copy Score Configuration</Typography>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={results.copyScoreConfig.showPercentage}
+                  onChange={handleShowPercentageChange}
+                  size="small"
+                />
+              }
+              label="Show Percentage"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={results.copyScoreConfig.showAsFraction}
+                  onChange={handleShowFractionChange}
+                  size="small"
+                />
+              }
+              label="Show Fraction"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={results.copyScoreConfig.reverseOrder}
+                  onChange={handleReverseOrderChange}
+                  size="small"
+                />
+              }
+              label="Reverse Order"
+            />
+          </FormGroup>
+        </Box>
       </Menu>
     </div>
   );

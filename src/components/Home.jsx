@@ -19,6 +19,11 @@ const defaultResults = {
   losses: 0,
   pirates: [],
   battles: [],
+  copyScoreConfig: {
+    showPercentage: true,
+    showAsFraction: true,
+    reverseOrder: false,
+  },
 };
 
 export default function Home({ toggleDarkMode, darkMode }) {
@@ -31,10 +36,6 @@ export default function Home({ toggleDarkMode, darkMode }) {
     localStorage.setItem("myResults", JSON.stringify(results));
   }, [results]);
 
-  useEffect(() => {
-    console.log(results);
-  }, [results]);
-
   const [battle, setBattle] = useState({
     playerShip: ships[0],
     enemyShip: ships[0],
@@ -45,6 +46,20 @@ export default function Home({ toggleDarkMode, darkMode }) {
   const [battleType, setBattleType] = useState("brigands");
   const [expandShipInfo, setExpandShipInfo] = useState(false);
   const [showBootyCounter, setShowBootyCounter] = useState(true);
+
+  const resetResults = () => {
+    setResults(defaultResults);
+  };
+
+  const updateCopyScoreConfig = (newConfig) => {
+    setResults((currentResults) => ({
+      ...currentResults,
+      copyScoreConfig: {
+        ...currentResults.copyScoreConfig,
+        ...newConfig,
+      },
+    }));
+  };
 
   const addBattleResult = (chatLogContent, payPerGreedy) => {
     const {
@@ -124,6 +139,8 @@ export default function Home({ toggleDarkMode, darkMode }) {
         battles: updatedBattles,
       };
     });
+
+    return { greedyHitsSummary, greedyHitPayCommands };
   };
 
   const deleteBattle = (battleId) => {
@@ -276,7 +293,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
     return parseFloat(damagePercent.toFixed(0));
   };
 
-  const getShipDamageStatus = (identity) => {
+  const getShipDamageStatus = (identity, showAsFraction = true) => {
     let damageTaken, maxPillageDamage;
 
     if (identity === "player") {
@@ -293,27 +310,34 @@ export default function Home({ toggleDarkMode, darkMode }) {
       return num % 1 === 0 ? num.toString() : num.toFixed(1);
     };
 
-    return `${formatNumber(damageTaken)}/${formatNumber(maxPillageDamage)}`;
+    if (showAsFraction) {
+      return `${formatNumber(damageTaken)}/${formatNumber(maxPillageDamage)}`;
+    } else {
+      return formatNumber(damageTaken);
+    }
   };
 
   const copyScoreToClipboard = async () => {
-    const player =
-      getShipDamageStatus("player") +
-      "(" +
-      Math.min(getDamage("player"), 100) +
-      "%)";
+    const { showPercentage, showAsFraction, reverseOrder } =
+      results.copyScoreConfig;
 
-    const enemy =
-      getShipDamageStatus("enemy") +
-      "(" +
-      Math.min(getDamage("enemy"), 100) +
-      "%)";
+    const formatWithPercentage = (identity, showPercentage) => {
+      const baseScore = getShipDamageStatus(identity, showAsFraction);
+      const percentage = Math.min(getDamage(identity), 100) + "%";
+      return showPercentage ? `${baseScore}(${percentage})` : baseScore;
+    };
 
-    const score = player + " - " + enemy;
+    const player = formatWithPercentage("player", showPercentage);
+    const enemy = formatWithPercentage("enemy", showPercentage);
+
+    const score = reverseOrder
+      ? `${enemy} - ${player}`
+      : `${player} - ${enemy}`;
+
     try {
       await navigator.clipboard.writeText(score);
     } catch (err) {
-      alert("Failed to copy: ");
+      alert("Failed to copy: " + err.message);
     }
   };
 
@@ -356,6 +380,9 @@ export default function Home({ toggleDarkMode, darkMode }) {
         <BasicMenu
           toggleDarkMode={toggleDarkMode}
           setShowBootyCounter={setShowBootyCounter}
+          resetResults={resetResults}
+          updateCopyScoreConfig={updateCopyScoreConfig}
+          results={results}
         />
       </Box>
       {showBootyCounter ? (
@@ -368,7 +395,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
       <Box
         sx={{
           display: "flex",
-          gap: 2,
+          gap: 1.5,
           justifyContent: "center",
           flexWrap: "wrap",
           mb: 1.5,
@@ -399,7 +426,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
           gap: 1,
           justifyContent: "center",
           flexWrap: "wrap",
-          mb: 2,
+          mb: 1.2,
         }}
       >
         <Button size="small" variant="outlined" onClick={recordRamDamage}>

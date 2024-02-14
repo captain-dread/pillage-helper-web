@@ -1,6 +1,6 @@
 import { Box, Typography, Paper } from "@mui/material";
 
-export default function Booty({ setResults, results, darkMode }) {
+export default function Booty({ results, darkMode }) {
   return (
     <Paper
       sx={{
@@ -11,7 +11,6 @@ export default function Booty({ setResults, results, darkMode }) {
         mb: 1,
         borderRadius: 1,
         minWidth: 285,
-        px: 1,
         py: 0.5,
         gap: 2,
         elevation: 2,
@@ -29,16 +28,6 @@ export default function Booty({ setResults, results, darkMode }) {
       </Box>
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <Typography sx={{ pr: 0.5, fontSize: 14 }}>
-          {results.commodities}
-        </Typography>
-        <img
-          src="./icons/commodities.png"
-          alt="poe"
-          style={{ width: "15px", height: "15px" }}
-        />
-      </Box>
-      <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5, fontSize: 14 }}>
           {results.lavishLockers}
         </Typography>
         <img
@@ -48,57 +37,13 @@ export default function Booty({ setResults, results, darkMode }) {
         />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5, color: "green", fontSize: 14 }}>
-          {results.wins}
-        </Typography>
-        <Counter reference="wins" setResults={setResults} />
+        <Typography sx={{ pr: 0.5, fontSize: 14 }}>{results.wins}W</Typography>
       </Box>
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5, color: "red", fontSize: 14 }}>
-          {results.losses}
+        <Typography sx={{ pr: 0.5, fontSize: 14 }}>
+          {results.losses}L
         </Typography>
-        <Counter reference="losses" setResults={setResults} />
       </Box>
     </Paper>
-  );
-}
-
-function Counter({ reference, setResults }) {
-  const updateResults = (operation) => {
-    setResults((R) => {
-      const newValue =
-        operation === "increment" ? R[reference] + 1 : R[reference] - 1;
-      return {
-        ...R,
-        [reference]: newValue,
-      };
-    });
-  };
-
-  return (
-    <Box>
-      <Typography
-        sx={{
-          textAlign: "center",
-          fontSize: 14,
-          lineHeight: "1",
-          cursor: "pointer",
-        }}
-        onClick={() => updateResults("increment")}
-      >
-        +
-      </Typography>
-      <Typography
-        sx={{
-          textAlign: "center",
-          fontSize: 16,
-          lineHeight: "1",
-          cursor: "pointer",
-        }}
-        onClick={() => updateResults("decrement")}
-      >
-        -
-      </Typography>
-    </Box>
   );
 }

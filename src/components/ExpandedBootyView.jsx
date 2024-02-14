@@ -41,7 +41,12 @@ export default function BasicModal({ results, deleteBattle }) {
 
   return (
     <div>
-      <Button size="small" variant="outlined" onClick={handleOpen}>
+      <Button
+        size="small"
+        variant="contained"
+        onClick={handleOpen}
+        sx={{ mb: 2, mt: 0.5 }}
+      >
         View Booty
       </Button>
       <Modal
@@ -85,7 +90,7 @@ export default function BasicModal({ results, deleteBattle }) {
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
                     <TableCell component="th" scope="row">
-                      {results.poe}
+                      {results.poe.toLocaleString()}
                     </TableCell>
                     <TableCell align="right">{results.lavishLockers}</TableCell>
                     <TableCell align="right">{results.wins}</TableCell>
