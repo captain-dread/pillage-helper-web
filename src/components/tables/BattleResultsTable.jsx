@@ -34,6 +34,7 @@ export default function BattleResultsTable({ results, deleteBattle }) {
             <TableCell align="right">Score</TableCell>
             <TableCell align="right">Opponent Type</TableCell>
             <TableCell align="right">Greedy Hits</TableCell>
+            <TableCell align="right">Print To Console</TableCell>
             <TableCell align="right">Delete Battle</TableCell>
           </TableRow>
         </TableHead>
@@ -76,6 +77,16 @@ export default function BattleResultsTable({ results, deleteBattle }) {
                   size="small"
                 >
                   Copy
+                </Button>
+              </TableCell>
+              <TableCell align="right">
+                <Button
+                  size="small"
+                  onClick={() => {
+                    console.log(row);
+                  }}
+                >
+                  Print
                 </Button>
               </TableCell>
               <TableCell align="right">

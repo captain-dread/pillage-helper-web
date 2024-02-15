@@ -224,6 +224,7 @@ export function getLatestBattleResult(logContent, pay) {
       pirates: greedyResults.pirates,
       playerVesselPirates: bootyResults.playerVesselPirates.length,
       enemyVesselPirates: bootyResults.enemyVesselPirates.length,
+      battleLog: latestBattle,
     };
   } catch (e) {
     console.error("Error processing log content: ", e);

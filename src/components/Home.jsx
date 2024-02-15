@@ -78,6 +78,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
       greedyHitsSummary,
       playerVesselPirates,
       enemyVesselPirates,
+      battleLog,
     } = getLatestBattleResult(chatLogContent, payPerGreedy);
 
     setResults((prevState) => {
@@ -130,6 +131,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
           playerVesselPirates,
           enemyVesselPirates,
           battleType,
+          battleLog,
         },
       ];
 
