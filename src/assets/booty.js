@@ -45,9 +45,12 @@ function extractPlunderedGoods(inputString) {
       piecesOfEight: parseInt(numberStrings[0].replace(/,/g, ""), 10),
       unitsOfGoods: parseInt(numberStrings[1].replace(/,/g, ""), 10),
     };
+  } else {
+    return {
+      piecesOfEight: 0,
+      unitsOfGoods: 0,
+    };
   }
-
-  return null;
 }
 
 function greedyHitStringSummary(battleResult) {
