@@ -47,7 +47,7 @@ export default function BootyManager({
 
   const handleHelpClick = () => {
     window.open(
-      "https://github.com/captain-dread/pillage-helper-web",
+      "https://github.com/captain-dread/pillage-helper-web?tab=readme-ov-file#guide-using-the-booty-manager",
       "_blank"
     );
   };

@@ -29,9 +29,9 @@ A modern wep app that helps you track pillage damage on the game Puzzle Pirates.
 ---
 
 
-### Guide: Using the "Find Greedy Hits" Feature
+### Guide: Using the Booty Manager
 
-**Wait for the message "The victors plundered..." to appear in the chat log before searching.**
+You need to start saving chat logs to use this feature. You also need **wait for the message "The victors plundered..." to appear in the chat log before uploading the chat file.**
 
 #### Step 1: Saving chat logs
 - **In-Game Process**:
@@ -44,6 +44,8 @@ A modern wep app that helps you track pillage damage on the game Puzzle Pirates.
 - **Website Process**:
   1. Click on the `Load Chat File` button.
   2. Select the previously saved chat log file.
-  3. Click "Find"
+  3. Click "Add Battle Results" or "Find Greedies"
+
+You'll now be able to see a ton of information about your recent battle and overall summary of the pillage under "View Booty" button"
 
 This method adheres to the game's Terms of Service (TOS). You can refer to [Puzzle Pirates TOS](https://yppedia.puzzlepirates.com/Official:Third_Party_Software) under the section "Reading yohoho.log"
