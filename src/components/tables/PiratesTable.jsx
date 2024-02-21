@@ -19,7 +19,6 @@ export default function PiratesTable({ sortedPirates }) {
             <TableCell align="right">Battles</TableCell>
             <TableCell align="right">Lavish Lockers</TableCell>
             <TableCell align="right">Kraken Blood Shares</TableCell>
-            <TableCell align="right">Booty Share Adjustment</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -34,7 +33,6 @@ export default function PiratesTable({ sortedPirates }) {
               <TableCell align="right">{pirate.battles}</TableCell>
               <TableCell align="right">{pirate.greedyHits}</TableCell>
               <TableCell align="right">{pirate.krakenShares}</TableCell>
-              <TableCell align="right">{pirate.bootyShareAdjustment}</TableCell>
             </TableRow>
           ))}
         </TableBody>

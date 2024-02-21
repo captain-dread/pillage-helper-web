@@ -11,8 +11,13 @@ import {
   Button,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Counter from "../atoms/Counter";
 
-export default function BattleResultsTable({ results, deleteBattle }) {
+export default function BattleResultsTable({
+  results,
+  deleteBattle,
+  updateKrakenShareToBattle,
+}) {
   const battles = results.battles;
 
   const copyToClipboard = (text) => {
@@ -34,6 +39,7 @@ export default function BattleResultsTable({ results, deleteBattle }) {
             <TableCell align="right">Score</TableCell>
             <TableCell align="right">Opponent Type</TableCell>
             <TableCell align="right">Greedy Hits</TableCell>
+            <TableCell align="right">Pirate Kraken Shares</TableCell>
             <TableCell align="right">Print To Console</TableCell>
             <TableCell align="right">Delete Battle</TableCell>
           </TableRow>
@@ -62,13 +68,13 @@ export default function BattleResultsTable({ results, deleteBattle }) {
               <TableCell align="right" sx={{ fontSize: 12 }}>
                 {row.playerShip.shipType} v {row.enemyShip.shipType}
               </TableCell>
-              <TableCell align="right">{row.battleType}</TableCell>
               <TableCell align="right">
                 {row.playerVesselPirates} v {row.enemyVesselPirates}
               </TableCell>
               <TableCell align="right">
                 {row.playerDamageTaken} - {row.enemyDamageTaken}
               </TableCell>
+              <TableCell align="right">{row.battleType}</TableCell>
               <TableCell align="right">
                 <Button
                   onClick={() => {
@@ -79,6 +85,15 @@ export default function BattleResultsTable({ results, deleteBattle }) {
                   Copy
                 </Button>
               </TableCell>
+
+              <TableCell align="right">
+                <Counter
+                  count={row.krakenBloods}
+                  updateKrakenShareToBattle={updateKrakenShareToBattle}
+                  id={row.id}
+                />
+              </TableCell>
+
               <TableCell align="right">
                 <Button
                   size="small"

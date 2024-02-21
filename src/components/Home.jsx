@@ -132,6 +132,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
           enemyVesselPirates,
           battleType,
           battleLog,
+          krakenBloods: 0,
         },
       ];
 
@@ -150,6 +151,55 @@ export default function Home({ toggleDarkMode, darkMode }) {
     });
 
     return { greedyHitsSummary, greedyHitPayCommands };
+  };
+
+  const updateKrakenShareToBattle = (battleId, operation) => {
+    const updatedBattles = results.battles.map((battle) => {
+      if (battle.id === battleId) {
+        return {
+          ...battle,
+          krakenBloods:
+            operation === "add"
+              ? battle.krakenBloods + 1
+              : battle.krakenBloods - 1,
+        };
+      } else {
+        return battle;
+      }
+    });
+    const updatedOverallKrakenBloods =
+      operation === "add" ? results.krakenBloods + 1 : results.krakenBloods - 1;
+
+    const piratesAggregator = {};
+    updatedBattles.forEach((battle) => {
+      battle.pirates.forEach((pirate) => {
+        const { name, greedyHits } = pirate;
+
+        if (!piratesAggregator[name]) {
+          piratesAggregator[name] = {
+            name,
+            greedyHits,
+            battles: 1,
+            krakenShares: battle.krakenBloods,
+            bootyShareAdjustment: 0,
+          };
+        } else {
+          piratesAggregator[name].greedyHits += greedyHits;
+          piratesAggregator[name].battles += 1;
+          piratesAggregator[name].krakenShares += battle.krakenBloods;
+        }
+      });
+    });
+    const updatedPirates = Object.values(piratesAggregator);
+
+    setResults((prevState) => {
+      return {
+        ...prevState,
+        krakenBloods: updatedOverallKrakenBloods,
+        battles: updatedBattles,
+        pirates: updatedPirates,
+      };
+    });
   };
 
   const deleteBattle = (battleId) => {
@@ -461,6 +511,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
         addBattleResult={addBattleResult}
         results={results}
         deleteBattle={deleteBattle}
+        updateKrakenShareToBattle={updateKrakenShareToBattle}
       />
     </Box>
   );

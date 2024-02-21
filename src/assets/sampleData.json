@@ -1260,6 +1260,7 @@
       "poe": 33677,
       "commodities": 13,
       "lavishLockers": 14,
+      "krakenBloods": 0,
       "pirates": [
         {
           "name": "Gluba",
@@ -2011,6 +2012,7 @@
       "poe": 82738,
       "commodities": 1,
       "lavishLockers": 13,
+      "krakenBloods": 0,
       "pirates": [
         {
           "name": "Presuntoo",

@@ -31,7 +31,11 @@ const style = {
   p: 1.5,
 };
 
-export default function BasicModal({ results, deleteBattle }) {
+export default function BasicModal({
+  results,
+  deleteBattle,
+  updateKrakenShareToBattle,
+}) {
   const [open, setOpen] = React.useState(false);
   const [alignment, setAlignment] = React.useState("battles");
 
@@ -100,6 +104,7 @@ export default function BasicModal({ results, deleteBattle }) {
                   <TableRow>
                     <TableCell>Total PoE</TableCell>
                     <TableCell>Total Lavish Lockers</TableCell>
+                    <TableCell>Kraken Bloods</TableCell>
                     <TableCell align="right">Battles Won</TableCell>
                     <TableCell align="right">Battles Lost</TableCell>
                     <TableCell align="right">Unique Pirates Jobbed</TableCell>
@@ -113,6 +118,7 @@ export default function BasicModal({ results, deleteBattle }) {
                       {results.poe.toLocaleString()}
                     </TableCell>
                     <TableCell align="right">{results.lavishLockers}</TableCell>
+                    <TableCell align="right">{results.krakenBloods}</TableCell>
                     <TableCell align="right">{results.wins}</TableCell>
                     <TableCell align="right">{results.losses}</TableCell>
                     <TableCell align="right">
@@ -125,7 +131,7 @@ export default function BasicModal({ results, deleteBattle }) {
           </Box>
           {alignment === "battles" ? (
             <Typography sx={{ fontSize: 13, pl: 1 }}>
-              "List Of All Battles"
+              List Of All Battles
             </Typography>
           ) : (
             <Box
@@ -155,7 +161,11 @@ export default function BasicModal({ results, deleteBattle }) {
             </Box>
           )}
           {alignment === "battles" ? (
-            <BattleResultsTable results={results} deleteBattle={deleteBattle} />
+            <BattleResultsTable
+              results={results}
+              deleteBattle={deleteBattle}
+              updateKrakenShareToBattle={updateKrakenShareToBattle}
+            />
           ) : (
             <PiratesTable sortedPirates={sortedPirates} />
           )}

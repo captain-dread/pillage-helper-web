@@ -18,6 +18,7 @@ export default function BootyManager({
   addBattleResult,
   results,
   deleteBattle,
+  updateKrakenShareToBattle,
 }) {
   const [file, setFile] = useState(null);
   const [fileText, setFileText] = useState("");
@@ -194,7 +195,11 @@ export default function BootyManager({
             }
           />
         </Box>
-        <ExpandedBootyView results={results} deleteBattle={deleteBattle} />
+        <ExpandedBootyView
+          results={results}
+          deleteBattle={deleteBattle}
+          updateKrakenShareToBattle={updateKrakenShareToBattle}
+        />
       </Box>
       {showResultsModal.show ? (
         <ResultsModal
