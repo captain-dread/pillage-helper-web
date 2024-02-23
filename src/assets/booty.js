@@ -96,11 +96,15 @@ function getParticipatingPirates(latestBattle, didWinLastBattle) {
   const enemyVesselPirates = [];
   const realPirates = [];
 
+  const cleanName = (name) => name.replace(/[^\w\s]$/, "");
+
   if (didWinLastBattle) {
     latestBattle.forEach((line) => {
       if (line.includes("Game over.  Winners:")) {
         const winnersPart = line.split("Winners: ")[1];
-        const names = winnersPart.split(",").map((name) => name.trim());
+        const names = winnersPart
+          .split(",")
+          .map((name) => cleanName(name.trim()));
         for (let name of names) {
           playerVesselPirates.push(name);
           if (!name.includes(" ")) {
@@ -114,7 +118,9 @@ function getParticipatingPirates(latestBattle, didWinLastBattle) {
     latestBattle.forEach((line) => {
       if (line.includes("Game over.  Winners:")) {
         const winnersPart = line.split("Winners: ")[1];
-        const names = winnersPart.split(",").map((name) => name.trim());
+        const names = winnersPart
+          .split(",")
+          .map((name) => cleanName(name.trim()));
         for (let name of names) {
           enemyVesselPirates.push(name);
         }
@@ -129,7 +135,7 @@ function getParticipatingPirates(latestBattle, didWinLastBattle) {
     const match = stringWithoutTimestamp.match(eliminationPattern);
 
     if (match) {
-      const pirateName = match[1];
+      const pirateName = cleanName(match[1]);
       if (didWinLastBattle) {
         // Original logic for winning scenario
         if (!playerVesselPirates.includes(pirateName)) {
