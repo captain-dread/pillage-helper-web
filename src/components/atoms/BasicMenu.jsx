@@ -31,13 +31,6 @@ export default function BasicMenu({
     handleClose();
   };
 
-  const handleToggleBootyCounter = () => {
-    setShowBootyCounter((SBC) => {
-      return !SBC;
-    });
-    handleClose();
-  };
-
   const handleShowPercentageChange = (event) => {
     updateCopyScoreConfig({ showPercentage: event.target.checked });
   };
@@ -48,6 +41,27 @@ export default function BasicMenu({
 
   const handleReverseOrderChange = (event) => {
     updateCopyScoreConfig({ reverseOrder: event.target.checked });
+  };
+
+  const downloadJson = () => {
+    const jsonString = JSON.stringify(results);
+    const blob = new Blob([jsonString], { type: "application/json" });
+
+    const today = new Date().toISOString().split("T")[0];
+    const randomId = Math.floor(1000 + Math.random() * 9000);
+
+    const fileName = `${today}_${randomId}.json`;
+
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    handleClose();
   };
 
   return (
@@ -74,9 +88,7 @@ export default function BasicMenu({
         <MenuItem onClick={handleDarkModeToggle} sx={{ py: 0.5 }}>
           Toggle Theme
         </MenuItem>
-        <MenuItem onClick={handleToggleBootyCounter}>
-          Toggle Booty View
-        </MenuItem>
+        <MenuItem onClick={downloadJson}>Export Pillage Data</MenuItem>
         <MenuItem
           onClick={() => {
             resetResults();
@@ -95,7 +107,7 @@ export default function BasicMenu({
         </MenuItem>
         <Box sx={{ p: 1 }}>
           <FormGroup>
-            <Typography>Copy Score Configuration</Typography>
+            <Typography>Copy Score Settings</Typography>
             <FormControlLabel
               control={
                 <Checkbox
