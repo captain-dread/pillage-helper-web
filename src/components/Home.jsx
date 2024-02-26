@@ -47,7 +47,6 @@ export default function Home({ toggleDarkMode, darkMode }) {
 
   const [battleType, setBattleType] = useState("brigands");
   const [expandShipInfo, setExpandShipInfo] = useState(false);
-  const [showBootyCounter, setShowBootyCounter] = useState(true);
 
   const resetResults = () => {
     setResults(defaultResults);
@@ -438,20 +437,18 @@ export default function Home({ toggleDarkMode, darkMode }) {
         </Typography>
         <BasicMenu
           toggleDarkMode={toggleDarkMode}
-          setShowBootyCounter={setShowBootyCounter}
           resetResults={resetResults}
+          setResults={setResults}
           updateCopyScoreConfig={updateCopyScoreConfig}
           results={results}
           loadSampleData={loadSampleData}
         />
       </Box>
-      {showBootyCounter ? (
-        <BootyOverview
-          setResults={setResults}
-          results={results}
-          darkMode={darkMode}
-        />
-      ) : null}
+      <BootyOverview
+        setResults={setResults}
+        results={results}
+        darkMode={darkMode}
+      />
       <Box
         sx={{
           display: "flex",

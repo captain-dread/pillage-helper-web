@@ -11,17 +11,51 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 export default function BasicMenu({
   toggleDarkMode,
-  setShowBootyCounter,
   resetResults,
   updateCopyScoreConfig,
   results,
   loadSampleData,
+  setResults,
 }) {
+  const [data, setData] = React.useState(null);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
+  React.useEffect(() => {
+    if (data) {
+      setResults(data);
+      setData(null);
+    }
+  }, [data]);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
+  const handleFileChange = (event) => {
+    const selectedFile = event.target.files[0];
+    if (selectedFile) {
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        try {
+          const json = JSON.parse(e.target.result);
+          setData(json);
+        } catch (error) {
+          console.error("Error parsing JSON:", error);
+        }
+      };
+
+      reader.onerror = (e) => {
+        console.error("Error reading file:", e.target.error);
+      };
+
+      reader.readAsText(selectedFile);
+    }
+
+    handleClose();
+  };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -88,15 +122,6 @@ export default function BasicMenu({
         <MenuItem onClick={handleDarkModeToggle} sx={{ py: 0.5 }}>
           Toggle Theme
         </MenuItem>
-        <MenuItem onClick={downloadJson}>Export Pillage Data</MenuItem>
-        <MenuItem
-          onClick={() => {
-            resetResults();
-            handleClose();
-          }}
-        >
-          Reset All Battle Data
-        </MenuItem>
         <MenuItem
           onClick={() => {
             loadSampleData();
@@ -104,6 +129,28 @@ export default function BasicMenu({
           }}
         >
           Add Sample Data
+        </MenuItem>
+        <MenuItem onClick={downloadJson}>Export Pillage Data</MenuItem>
+        <MenuItem>
+          <label htmlFor="data-input">
+            <input
+              id="data-input"
+              type="file"
+              style={{ display: "none" }}
+              onChange={handleFileChange}
+            />
+            <Typography size="small" variant="outlined">
+              Import Pillage Data
+            </Typography>
+          </label>
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            resetResults();
+            handleClose();
+          }}
+        >
+          Reset Pillage Data
         </MenuItem>
         <Box sx={{ p: 1 }}>
           <FormGroup>
