@@ -413,8 +413,8 @@ export default function Home({ toggleDarkMode, darkMode }) {
     minHeight: "100vh",
     background: `${
       darkMode
-        ? "linear-gradient(to bottom, #0a0f0b, #212121)"
-        : "linear-gradient(to bottom, #fafafa, #ffffff)"
+        ? "linear-gradient(to bottom, #332922, #121212)" // Subtle dark gold to almost black
+        : "linear-gradient(to bottom right, #fafafa, #d7e1ec, #ffffff)" // Light mode remains the same
     }`,
   };
 

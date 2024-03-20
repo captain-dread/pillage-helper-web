@@ -14,8 +14,23 @@ export default function Booty({ results, darkMode }) {
         py: 0.5,
         gap: 2,
         elevation: 2,
+        pt: 1,
+        position: "relative",
       }}
     >
+      <Typography
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          fontSize: 9,
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        Booty Overview
+      </Typography>
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <Typography sx={{ pr: 0.5, fontSize: 14 }}>
           {results.poe.toLocaleString()}
