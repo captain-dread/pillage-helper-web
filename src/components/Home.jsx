@@ -426,6 +426,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
           alignItems: "center",
           justifyContent: "center",
           pb: 0.5,
+          position: "relative",
         }}
       >
         <Typography
@@ -442,6 +443,12 @@ export default function Home({ toggleDarkMode, darkMode }) {
           updateCopyScoreConfig={updateCopyScoreConfig}
           results={results}
           loadSampleData={loadSampleData}
+        />
+        <img
+          style={{ position: "absolute", top: 7, left: -19 }}
+          src="/images/monkey_almond.png"
+          width={20}
+          height={20}
         />
       </Box>
       <BootyOverview
