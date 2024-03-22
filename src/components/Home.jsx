@@ -446,7 +446,7 @@ export default function Home({ toggleDarkMode, darkMode }) {
         />
         <img
           style={{ position: "absolute", top: 7, left: -19 }}
-          src="/images/monkey_almond.png"
+          src="images/monkey_almond.png"
           width={20}
           height={20}
         />
