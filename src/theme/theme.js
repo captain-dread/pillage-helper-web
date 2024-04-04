@@ -1,5 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
+// Light Theme
 const lightTheme = createTheme({
   palette: {
     mode: "light",
@@ -18,8 +19,12 @@ const lightTheme = createTheme({
       secondary: "#666666",
     },
   },
+  typography: {
+    fontFamily: '"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif',
+  },
 });
 
+// Dark Theme
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -39,17 +44,7 @@ const darkTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: [
-      "Georgia",
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(","),
+    fontFamily: '"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif',
   },
 });
 
