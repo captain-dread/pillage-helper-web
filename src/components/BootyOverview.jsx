@@ -1,5 +1,8 @@
 import { Box, Typography, Paper } from "@mui/material";
 
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+
 export default function Booty({ results, darkMode }) {
   return (
     <Paper
@@ -52,12 +55,12 @@ export default function Booty({ results, darkMode }) {
         />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5, fontSize: 14 }}>{results.wins}W</Typography>
+        <Typography sx={{ fontSize: 14 }}>{results.wins}W</Typography>
+        <ArrowDropUpIcon sx={{ color: "green" }} />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ pr: 0.5, fontSize: 14 }}>
-          {results.losses}L
-        </Typography>
+        <Typography sx={{ fontSize: 14 }}>{results.losses}L</Typography>
+        <ArrowDropDownIcon sx={{ color: "red" }} />
       </Box>
     </Paper>
   );
