@@ -1,5 +1,7 @@
 import { Box, Typography, LinearProgress } from "@mui/material";
 
+import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
+
 export default function DamageTracker({
   getDamage,
   getShipDamageStatus,
@@ -70,11 +72,16 @@ export default function DamageTracker({
             backgroundPosition: "center",
             ml: 0.5,
             cursor: "pointer",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
           onClick={() => {
             toggleBattleType();
           }}
-        ></Box>
+        >
+          <SwapHorizIcon sx={{ fontSize: 14 }} />
+        </Box>
       </Box>
       <Typography sx={{ fontSize: ".65rem" }} textAlign="center">
         {getShipDamageStatus(identity)} (received/max)
