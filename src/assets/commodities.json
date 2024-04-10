@@ -1,0 +1,666 @@
+{
+    "Hemp": {
+        "mass": "125",
+        "volume": "250"
+    },
+    "Hemp oil": {
+        "mass": "1",
+        "volume": "1"
+    },
+    "Iron": {
+        "mass": "7.8",
+        "volume": "1"
+    },
+    "Kraken's ink": {
+        "mass": "0.1",
+        "volume": "1"
+    },
+    "Lacquer": {
+        "mass": "1",
+        "volume": "1"
+    },
+    "Stone": {
+        "mass": "2.6",
+        "volume": "1"
+    },
+    "Sugar cane": {
+        "mass": "50",
+        "volume": "100"
+    },
+    "Varnish": {
+        "mass": "1",
+        "volume": "1"
+    },
+    "Wood": {
+        "mass": "175",
+        "volume": "250"
+    },
+    "Broom flower": {
+        "mass": "0.2",
+        "volume": "1"
+    },
+    "Butterfly weed": {
+        "mass": "0.1",
+        "volume": "1"
+    },
+    "Cowslip": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Elderberries": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Indigo": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Iris root": {
+        "mass": "0.3",
+        "volume": "1"
+    },
+    "Lily of the valley": {
+        "mass": "0.3",
+        "volume": "1"
+    },
+    "Lobelia": {
+        "mass": "0.2",
+        "volume": "1"
+    },
+    "Madder": {
+        "mass": "0.4",
+        "volume": "1"
+    },
+    "Nettle": {
+        "mass": "0.3",
+        "volume": "1"
+    },
+    "Old man's beard": {
+        "mass": "0.8",
+        "volume": "1"
+    },
+    "Pokeweed berries": {
+        "mass": "0.3",
+        "volume": "1"
+    },
+    "Sassafras": {
+        "mass": "0.5",
+        "volume": "1"
+    },
+    "Weld": {
+        "mass": "0.3",
+        "volume": "1"
+    },
+    "Yarrow": {
+        "mass": "0.2",
+        "volume": "1"
+    },
+    "Chalcocite": {
+        "mass": "5.7",
+        "volume": "1"
+    },
+    "Cubanite": {
+        "mass": "4.7",
+        "volume": "1"
+    },
+    "Gold nugget": {
+        "mass": "0.4",
+        "volume": "1"
+    },
+    "Lorandite": {
+        "mass": "5.5",
+        "volume": "1"
+    },
+    "Leushite": {
+        "mass": "4.4",
+        "volume": "1"
+    },
+    "Masuyite": {
+        "mass": "5.1",
+        "volume": "1"
+    },
+    "Papagoite": {
+        "mass": "3.3",
+        "volume": "1"
+    },
+    "Serandite": {
+        "mass": "3.4",
+        "volume": "1"
+    },
+    "Sincosite": {
+        "mass": "3",
+        "volume": "1"
+    },
+    "Tellurium": {
+        "mass": "6.2",
+        "volume": "1"
+    },
+    "Thorianite": {
+        "mass": "0.1",
+        "volume": "1"
+    },
+    "Bananas": {
+        "mass": "125",
+        "volume": "100"
+    },
+    "Carambolas": {
+        "mass": "125",
+        "volume": "100"
+    },
+    "Coconuts": {
+        "mass": "125",
+        "volume": "100"
+    },
+    "Durians": {
+        "mass": "125",
+        "volume": "100"
+    },
+    "Limes": {
+        "mass": "125",
+        "volume": "100"
+    },
+    "Mangos": {
+        "mass": "125",
+        "volume": "100"
+    },
+    "Passion fruit": {
+        "mass": "125",
+        "volume": "100"
+    },
+    "Pineapples": {
+        "mass": "125",
+        "volume": "100"
+    },
+    "Pomegranates": {
+        "mass": "125",
+        "volume": "100"
+    },
+    "Rambutan": {
+        "mass": "125",
+        "volume": "100"
+    },
+    "Swill": {
+        "mass": "1",
+        "volume": "1"
+    },
+    "Grog": {
+        "mass": "1",
+        "volume": "1"
+    },
+    "Fine rum": {
+        "mass": "1",
+        "volume": "1"
+    },
+    "Small cannon balls": {
+        "mass": "7.1",
+        "volume": "1"
+    },
+    "Medium cannon balls": {
+        "mass": "14.2",
+        "volume": "2"
+    },
+    "Large cannon balls": {
+        "mass": "21.3",
+        "volume": "3"
+    },
+    "Lifeboats": {
+        "mass": "25",
+        "volume": "100"
+    },
+    "Aqua cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Black cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Blue cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Brown cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Gold cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Green cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Grey cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Lavender cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Lemon cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Light blue cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Light green cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Lime cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Magenta cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Maroon cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Mint cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Navy cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Orange cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Peach cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Persimmon cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Pink cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Purple cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Red cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Rose cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Tan cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Violet cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "White cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Yellow cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine aqua cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine black cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine blue cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine brown cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine gold cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine green cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine grey cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine lavender cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine lemon cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine light blue cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine light green cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine lime cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine magenta cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine maroon cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine mint cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine navy cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine orange cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine peach cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine persimmon cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine pink cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine purple cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine red cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine rose cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine tan cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine violet cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine white cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Fine yellow cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Sail cloth": {
+        "mass": "0.7",
+        "volume": "1"
+    },
+    "Blue dye": {
+        "mass": "1",
+        "volume": "1"
+    },
+    "Green dye": {
+        "mass": "1",
+        "volume": "1"
+    },
+    "Kraken's blood": {
+        "mass": "1",
+        "volume": "1"
+    },
+    "Red dye": {
+        "mass": "1",
+        "volume": "1"
+    },
+    "Yellow dye": {
+        "mass": "1",
+        "volume": "1"
+    },
+    "Aqua enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Black enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Blue enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Brown enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Gold enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Green enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Grey enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Lavender enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Lemon enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Light blue enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Light green enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Lime enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Magenta enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Maroon enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Mint enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Navy enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Orange enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Peach enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Persimmon enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Pink enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Purple enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Red enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Rose enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Tan enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Violet enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "White enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Yellow enamel": {
+        "mass": "5",
+        "volume": "1"
+    },
+    "Aqua paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Black paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Blue paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Brown paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Gold paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Green paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Grey paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Lavender paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Lemon paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Light blue paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Light green paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Lime paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Magenta paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Maroon paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Mint paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Navy paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Orange paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Peach paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Persimmon paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Pink paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Purple paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Red paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Rose paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Tan paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Violet paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "White paint": {
+        "mass": "1.2",
+        "volume": "1"
+    },
+    "Yellow paint": {
+        "mass": "1.2",
+        "volume": "1"
+    }
+}
