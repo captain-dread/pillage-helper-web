@@ -9,20 +9,29 @@ export default function SelectSmall({
   currentShip,
   ships,
   handleShipChange,
+  calculatorSelect,
 }) {
   const handleChange = (event) => {
     const selectedShip = ships.find(
       (item) => item.shipType === event.target.value
     );
     if (selectedShip) {
-      handleShipChange(identity, selectedShip);
+      if (calculatorSelect) {
+        handleShipChange(selectedShip);
+      } else {
+        handleShipChange(identity, selectedShip);
+      }
     }
   };
 
   return (
-    <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }} size="small">
+    <FormControl
+      variant="standard"
+      sx={{ m: `${calculatorSelect ? 0 : 1}`, minWidth: 120 }}
+      size="small"
+    >
       <InputLabel id="select-ship" sx={{ fontSize: "0.7rem" }}>
-        {identity}
+        {identity ? identity : ""}
       </InputLabel>
       <Select
         labelId="select-ship"

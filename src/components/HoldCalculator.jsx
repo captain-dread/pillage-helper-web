@@ -1,8 +1,9 @@
-import { useState } from "react";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
+import { useEffect, useState } from "react";
+import { Box, Button, Modal, LinearProgress, Typography } from "@mui/material";
+import SelectShipInput from "./atoms/SelectShipInput.jsx";
+import MultipleSelect from "./atoms/MultipleSelect.jsx";
+
+import { ships } from "../assets/ships.js";
 
 const style = {
   position: "absolute",
@@ -17,9 +18,23 @@ const style = {
 };
 
 export default function HoldCalculatorModal() {
+  const [shipHold, setShipHold] = useState({ mass: 0, volume: 0 });
   const [open, setOpen] = useState(false);
+  const [ship, setShip] = useState(ships[0]);
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const progressBarColor =
+    shipHold.mass <= 40 ? "green" : shipHold.mass <= 65 ? "yellow" : "red";
+
+  useEffect(() => {
+    setShipHold({ mass: 50, volume: 50 });
+  }, [ship]);
+
+  useEffect(() => {
+    console.log(shipHold);
+  }, [shipHold]);
 
   return (
     <div>
@@ -38,12 +53,74 @@ export default function HoldCalculatorModal() {
         aria-describedby="hold-calculator-model"
       >
         <Box sx={style}>
-          <Typography id="hold-calculator" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="hold-calculator-model" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-around",
+              width: "100%",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <SelectShipInput
+                ships={ships}
+                currentShip={ship}
+                handleShipChange={setShip}
+                calculatorSelect={true}
+              />
+              <Box
+                sx={{
+                  height: 70,
+                  width: 80,
+                  mt: 0.5,
+                  backgroundImage: `url(${ship.imagePath})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+              />
+            </Box>
+
+            <Box sx={{ pt: 1 }}>
+              <Box sx={{ width: "100px" }}>
+                <Typography sx={{ fontSize: ".8rem" }}>Mass</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={shipHold.mass}
+                  sx={{
+                    width: "100%",
+                    height: "2rem",
+                    "& .MuiLinearProgress-bar": {
+                      backgroundColor: progressBarColor,
+                    },
+                  }}
+                />
+              </Box>
+              <Box sx={{ width: "100px" }}>
+                <Typography sx={{ fontSize: ".8rem" }}>Volume</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={shipHold.mass}
+                  sx={{
+                    width: "100%",
+                    height: "2rem",
+                    "& .MuiLinearProgress-bar": {
+                      backgroundColor: progressBarColor,
+                    },
+                  }}
+                />
+              </Box>
+            </Box>
+          </Box>
+
+          <Box>
+            <MultipleSelect />
+          </Box>
         </Box>
       </Modal>
     </div>
