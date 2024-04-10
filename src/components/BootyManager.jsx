@@ -13,6 +13,7 @@ import {
 import ResultsModal from "./atoms/ResultsModal";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import ExpandedBootyView from "./ExpandedBootyView";
+import HoldCalculatorModal from "./HoldCalculator";
 
 export default function BootyManager({
   addBattleResult,
@@ -195,11 +196,14 @@ export default function BootyManager({
             }
           />
         </Box>
-        <ExpandedBootyView
-          results={results}
-          deleteBattle={deleteBattle}
-          updateKrakenShareToBattle={updateKrakenShareToBattle}
-        />
+        <Box sx={{ display: "flex", gap: 1, mt: 0.5 }}>
+          <ExpandedBootyView
+            results={results}
+            deleteBattle={deleteBattle}
+            updateKrakenShareToBattle={updateKrakenShareToBattle}
+          />
+          <HoldCalculatorModal />
+        </Box>
       </Box>
       {showResultsModal.show ? (
         <ResultsModal
