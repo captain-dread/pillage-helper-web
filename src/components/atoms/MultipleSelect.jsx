@@ -32,8 +32,10 @@ const organizeCommoditiesByType = (commodities) => {
   }, {});
 };
 
-export default function MultipleSelectCheckmarksInputs() {
-  const [commoditiesSelected, setCommoditiesSelected] = useState({});
+export default function MultipleSelectCheckmarksInputs({
+  commoditiesSelected,
+  setCommoditiesSelected,
+}) {
   const [commoditiesByType, setCommoditiesByType] = useState({});
 
   useEffect(() => {
@@ -54,9 +56,26 @@ export default function MultipleSelectCheckmarksInputs() {
     const {
       target: { value },
     } = event;
+
+    // Convert selected resource names back to their full commodity objects
+    const selectedCommodities =
+      typeof value === "string"
+        ? value
+            .split(",")
+            .map((resource) =>
+              commoditiesByType[type].find(
+                (commodity) => commodity.resource === resource
+              )
+            )
+        : value.map((resource) =>
+            commoditiesByType[type].find(
+              (commodity) => commodity.resource === resource
+            )
+          );
+
     setCommoditiesSelected({
       ...commoditiesSelected,
-      [type]: typeof value === "string" ? value.split(",") : value,
+      [type]: selectedCommodities,
     });
   };
 
@@ -76,7 +95,9 @@ export default function MultipleSelectCheckmarksInputs() {
             labelId={`select-${type}-label`}
             id={`select-${type}`}
             multiple
-            value={commoditiesSelected[type]}
+            value={commoditiesSelected[type].map(
+              (commodity) => commodity.resource
+            )}
             onChange={handleChange(type)}
             input={<OutlinedInput label={type} />}
             renderValue={(selected) => selected.join(", ")}
@@ -90,7 +111,9 @@ export default function MultipleSelectCheckmarksInputs() {
               >
                 <Checkbox
                   checked={
-                    commoditiesSelected[type].indexOf(commodity.resource) > -1
+                    commoditiesSelected[type]
+                      .map((commodity) => commodity.resource)
+                      .indexOf(commodity.resource) > -1
                   }
                 />
                 <ListItemText

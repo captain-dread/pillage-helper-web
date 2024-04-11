@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Box, Button, Modal, LinearProgress, Typography } from "@mui/material";
 import SelectShipInput from "./atoms/SelectShipInput.jsx";
 import MultipleSelect from "./atoms/MultipleSelect.jsx";
+import Slider from "./atoms/Slider.jsx";
 
 import { ships } from "../assets/ships.js";
 
@@ -23,10 +24,23 @@ const style = {
 
 export default function HoldCalculatorModal() {
   const [shipHold, setShipHold] = useState({ mass: 0, volume: 0 });
+  const [commoditiesSelected, setCommoditiesSelected] = useState({
+    "Basic Commodity": [],
+    Herbs: [],
+    Minerals: [],
+    Forageables: [],
+    "Ship Supplies": [],
+    Cloth: [],
+    Dyes: [],
+    Enamels: [],
+    Paints: [],
+  });
+
   const [open, setOpen] = useState(false);
   const [ship, setShip] = useState(ships[0]);
 
   const handleOpen = () => setOpen(true);
+
   const handleClose = () => setOpen(false);
 
   const progressBarColor =
@@ -35,6 +49,10 @@ export default function HoldCalculatorModal() {
   useEffect(() => {
     setShipHold({ mass: 50, volume: 50 });
   }, [ship]);
+
+  useEffect(() => {
+    console.log("CommoditiesSelected: ", commoditiesSelected);
+  }, [commoditiesSelected]);
 
   return (
     <div>
@@ -120,7 +138,26 @@ export default function HoldCalculatorModal() {
           </Box>
 
           <Box>
-            <MultipleSelect />
+            <MultipleSelect
+              commoditiesSelected={commoditiesSelected}
+              setCommoditiesSelected={setCommoditiesSelected}
+            />
+
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <Slider
+                value={10}
+                minValue={0}
+                maxValue={75}
+                onChange={() => {}}
+                label="Wood"
+              />
+            </Box>
           </Box>
         </Box>
       </Modal>
