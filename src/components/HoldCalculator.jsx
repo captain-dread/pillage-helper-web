@@ -14,7 +14,11 @@ const style = {
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
-  p: 4,
+  py: 4,
+  px: 2,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
 };
 
 export default function HoldCalculatorModal() {
@@ -49,11 +53,12 @@ export default function HoldCalculatorModal() {
         aria-describedby="hold-calculator-model"
       >
         <Box sx={style}>
+          <Typography textAlign="center">Hold Calculator</Typography>
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-around",
-              width: "100%",
+              width: "300px",
             }}
           >
             <Box

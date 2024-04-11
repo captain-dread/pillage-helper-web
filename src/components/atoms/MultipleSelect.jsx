@@ -11,13 +11,13 @@ import {
 } from "@mui/material";
 import commodities from "../../assets/commodities.json";
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
+const ITEM_HEIGHT = 40;
+const ITEM_PADDING_TOP = 4;
 const MenuProps = {
   PaperProps: {
     style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
+      maxHeight: ITEM_HEIGHT * 4 + ITEM_PADDING_TOP,
+      width: 175,
     },
   },
 };
@@ -61,9 +61,16 @@ export default function MultipleSelectCheckmarksInputs() {
   };
 
   return (
-    <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        pt: 1,
+      }}
+    >
       {Object.keys(commoditiesByType).map((type) => (
-        <FormControl key={type} sx={{ m: 1, minWidth: 150 }} size="small">
+        <FormControl key={type} sx={{ m: 0.5, minWidth: 150 }} size="small">
           <InputLabel id={`select-${type}-label`}>{type}</InputLabel>
           <Select
             labelId={`select-${type}-label`}
@@ -76,13 +83,20 @@ export default function MultipleSelectCheckmarksInputs() {
             MenuProps={MenuProps}
           >
             {commoditiesByType[type].map((commodity) => (
-              <MenuItem key={commodity.resource} value={commodity.resource}>
+              <MenuItem
+                key={commodity.resource}
+                value={commodity.resource}
+                sx={{ p: 0 }}
+              >
                 <Checkbox
                   checked={
                     commoditiesSelected[type].indexOf(commodity.resource) > -1
                   }
                 />
-                <ListItemText primary={commodity.resource} />
+                <ListItemText
+                  primary={commodity.resource}
+                  sx={{ fontSize: ".9rem" }}
+                />
               </MenuItem>
             ))}
           </Select>
