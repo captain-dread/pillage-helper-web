@@ -1,167 +1,167 @@
-Resource,Mass,Volume
-Hemp,125,250
-Hemp oil,1,1
-Iron,7.8,1
-Kraken's ink,0.1,1
-Lacquer,1,1
-Stone,2.6,1
-Sugar cane,50,100
-Varnish,1,1
-Wood,175,250
-Broom flower,0.2,1
-Butterfly weed,0.1,1
-Cowslip,0.7,1
-Elderberries,0.7,1
-Indigo,0.7,1
-Iris root,0.3,1
-Lily of the valley,0.3,1
-Lobelia,0.2,1
-Madder,0.4,1
-Nettle,0.3,1
-Old man's beard,0.8,1
-Pokeweed berries,0.3,1
-Sassafras,0.5,1
-Weld,0.3,1
-Yarrow,0.2,1
-Chalcocite,5.7,1
-Cubanite,4.7,1
-Gold nugget,0.4,1
-Lorandite,5.5,1
-Leushite,4.4,1
-Masuyite,5.1,1
-Papagoite,3.3,1
-Serandite,3.4,1
-Sincosite,3,1
-Tellurium,6.2,1
-Thorianite,0.1,1
-Bananas,125,100
-Carambolas,125,100
-Coconuts,125,100
-Durians,125,100
-Limes,125,100
-Mangos,125,100
-Passion fruit,125,100
-Pineapples,125,100
-Pomegranates,125,100
-Rambutan,125,100
-Swill,1,1
-Grog,1,1
-Fine rum,1,1
-Small cannon balls,7.1,1
-Medium cannon balls,14.2,2
-Large cannon balls,21.3,3
-Lifeboats,25,100
-Aqua cloth,0.7,1
-Black cloth,0.7,1
-Blue cloth,0.7,1
-Brown cloth,0.7,1
-Gold cloth,0.7,1
-Green cloth,0.7,1
-Grey cloth,0.7,1
-Lavender cloth,0.7,1
-Lemon cloth,0.7,1
-Light blue cloth,0.7,1
-Light green cloth,0.7,1
-Lime cloth,0.7,1
-Magenta cloth,0.7,1
-Maroon cloth,0.7,1
-Mint cloth,0.7,1
-Navy cloth,0.7,1
-Orange cloth,0.7,1
-Peach cloth,0.7,1
-Persimmon cloth,0.7,1
-Pink cloth,0.7,1
-Purple cloth,0.7,1
-Red cloth,0.7,1
-Rose cloth,0.7,1
-Tan cloth,0.7,1
-Violet cloth,0.7,1
-White cloth,0.7,1
-Yellow cloth,0.7,1
-Fine aqua cloth,0.7,1
-Fine black cloth,0.7,1
-Fine blue cloth,0.7,1
-Fine brown cloth,0.7,1
-Fine gold cloth,0.7,1
-Fine green cloth,0.7,1
-Fine grey cloth,0.7,1
-Fine lavender cloth,0.7,1
-Fine lemon cloth,0.7,1
-Fine light blue cloth,0.7,1
-Fine light green cloth,0.7,1
-Fine lime cloth,0.7,1
-Fine magenta cloth,0.7,1
-Fine maroon cloth,0.7,1
-Fine mint cloth,0.7,1
-Fine navy cloth,0.7,1
-Fine orange cloth,0.7,1
-Fine peach cloth,0.7,1
-Fine persimmon cloth,0.7,1
-Fine pink cloth,0.7,1
-Fine purple cloth,0.7,1
-Fine red cloth,0.7,1
-Fine rose cloth,0.7,1
-Fine tan cloth,0.7,1
-Fine violet cloth,0.7,1
-Fine white cloth,0.7,1
-Fine yellow cloth,0.7,1
-Sail cloth,0.7,1
-Blue dye,1,1
-Green dye,1,1
-Kraken's blood,1,1
-Red dye,1,1
-Yellow dye,1,1
-Aqua enamel,5,1
-Black enamel,5,1
-Blue enamel,5,1
-Brown enamel,5,1
-Gold enamel,5,1
-Green enamel,5,1
-Grey enamel,5,1
-Lavender enamel,5,1
-Lemon enamel,5,1
-Light blue enamel,5,1
-Light green enamel,5,1
-Lime enamel,5,1
-Magenta enamel,5,1
-Maroon enamel,5,1
-Mint enamel,5,1
-Navy enamel,5,1
-Orange enamel,5,1
-Peach enamel,5,1
-Persimmon enamel,5,1
-Pink enamel,5,1
-Purple enamel,5,1
-Red enamel,5,1
-Rose enamel,5,1
-Tan enamel,5,1
-Violet enamel,5,1
-White enamel,5,1
-Yellow enamel,5,1
-Aqua paint,1.2,1
-Black paint,1.2,1
-Blue paint,1.2,1
-Brown paint,1.2,1
-Gold paint,1.2,1
-Green paint,1.2,1
-Grey paint,1.2,1
-Lavender paint,1.2,1
-Lemon paint,1.2,1
-Light blue paint,1.2,1
-Light green paint,1.2,1
-Lime paint,1.2,1
-Magenta paint,1.2,1
-Maroon paint,1.2,1
-Mint paint,1.2,1
-Navy paint,1.2,1
-Orange paint,1.2,1
-Peach paint,1.2,1
-Persimmon paint,1.2,1
-Pink paint,1.2,1
-Purple paint,1.2,1
-Red paint,1.2,1
-Rose paint,1.2,1
-Tan paint,1.2,1
-Violet paint,1.2,1
-White paint,1.2,1
-Yellow paint,1.2,1
+Resource,Type,Mass,Volume
+Hemp,Basic Commodity,125,250
+Hemp oil,Basic Commodity,1,1
+Iron,Basic Commodity,7.8,1
+Kraken's ink,Basic Commodity,0.1,1
+Lacquer,Basic Commodity,1,1
+Stone,Basic Commodity,2.6,1
+Sugar cane,Basic Commodity,50,100
+Varnish,Basic Commodity,1,1
+Wood,Basic Commodity,175,250
+Broom flower,Herbs,0.2,1
+Butterfly weed,Herbs,0.1,1
+Cowslip,Herbs,0.7,1
+Elderberries,Herbs,0.7,1
+Indigo,Herbs,0.7,1
+Iris root,Herbs,0.3,1
+Lily of the valley,Herbs,0.3,1
+Lobelia,Herbs,0.2,1
+Madder,Herbs,0.4,1
+Nettle,Herbs,0.3,1
+Old man's beard,Herbs,0.8,1
+Pokeweed berries,Herbs,0.3,1
+Sassafras,Herbs,0.5,1
+Weld,Herbs,0.3,1
+Yarrow,Herbs,0.2,1
+Chalcocite,Minerals,5.7,1
+Cubanite,Minerals,4.7,1
+Gold nugget,Minerals,0.4,1
+Lorandite,Minerals,5.5,1
+Leushite,Minerals,4.4,1
+Masuyite,Minerals,5.1,1
+Papagoite,Minerals,3.3,1
+Serandite,Minerals,3.4,1
+Sincosite,Minerals,3,1
+Tellurium,Minerals,6.2,1
+Thorianite,Minerals,0.1,1
+Bananas,Forageables,125,100
+Carambolas,Forageables,125,100
+Coconuts,Forageables,125,100
+Durians,Forageables,125,100
+Limes,Forageables,125,100
+Mangos,Forageables,125,100
+Passion fruit,Forageables,125,100
+Pineapples,Forageables,125,100
+Pomegranates,Forageables,125,100
+Rambutan,Forageables,125,100
+Swill,Ship Supplies,1,1
+Grog,Ship Supplies,1,1
+Fine rum,Ship Supplies,1,1
+Small cannon balls,Ship Supplies,7.1,1
+Medium cannon balls,Ship Supplies,14.2,2
+Large cannon balls,Ship Supplies,21.3,3
+Lifeboats,Ship Supplies,25,100
+Aqua cloth,Cloth,0.7,1
+Black cloth,Cloth,0.7,1
+Blue cloth,Cloth,0.7,1
+Brown cloth,Cloth,0.7,1
+Gold cloth,Cloth,0.7,1
+Green cloth,Cloth,0.7,1
+Grey cloth,Cloth,0.7,1
+Lavender cloth,Cloth,0.7,1
+Lemon cloth,Cloth,0.7,1
+Light blue cloth,Cloth,0.7,1
+Light green cloth,Cloth,0.7,1
+Lime cloth,Cloth,0.7,1
+Magenta cloth,Cloth,0.7,1
+Maroon cloth,Cloth,0.7,1
+Mint cloth,Cloth,0.7,1
+Navy cloth,Cloth,0.7,1
+Orange cloth,Cloth,0.7,1
+Peach cloth,Cloth,0.7,1
+Persimmon cloth,Cloth,0.7,1
+Pink cloth,Cloth,0.7,1
+Purple cloth,Cloth,0.7,1
+Red cloth,Cloth,0.7,1
+Rose cloth,Cloth,0.7,1
+Tan cloth,Cloth,0.7,1
+Violet cloth,Cloth,0.7,1
+White cloth,Cloth,0.7,1
+Yellow cloth,Cloth,0.7,1
+Fine aqua cloth,Cloth,0.7,1
+Fine black cloth,Cloth,0.7,1
+Fine blue cloth,Cloth,0.7,1
+Fine brown cloth,Cloth,0.7,1
+Fine gold cloth,Cloth,0.7,1
+Fine green cloth,Cloth,0.7,1
+Fine grey cloth,Cloth,0.7,1
+Fine lavender cloth,Cloth,0.7,1
+Fine lemon cloth,Cloth,0.7,1
+Fine light blue cloth,Cloth,0.7,1
+Fine light green cloth,Cloth,0.7,1
+Fine lime cloth,Cloth,0.7,1
+Fine magenta cloth,Cloth,0.7,1
+Fine maroon cloth,Cloth,0.7,1
+Fine mint cloth,Cloth,0.7,1
+Fine navy cloth,Cloth,0.7,1
+Fine orange cloth,Cloth,0.7,1
+Fine peach cloth,Cloth,0.7,1
+Fine persimmon cloth,Cloth,0.7,1
+Fine pink cloth,Cloth,0.7,1
+Fine purple cloth,Cloth,0.7,1
+Fine red cloth,Cloth,0.7,1
+Fine rose cloth,Cloth,0.7,1
+Fine tan cloth,Cloth,0.7,1
+Fine violet cloth,Cloth,0.7,1
+Fine white cloth,Cloth,0.7,1
+Fine yellow cloth,Cloth,0.7,1
+Sail cloth,Cloth,0.7,1
+Blue dye,Dyes,1,1
+Green dye,Dyes,1,1
+Kraken's blood,Dyes,1,1
+Red dye,Dyes,1,1
+Yellow dye,Dyes,1,1
+Aqua enamel,Enamels,5,1
+Black enamel,Enamels,5,1
+Blue enamel,Enamels,5,1
+Brown enamel,Enamels,5,1
+Gold enamel,Enamels,5,1
+Green enamel,Enamels,5,1
+Grey enamel,Enamels,5,1
+Lavender enamel,Enamels,5,1
+Lemon enamel,Enamels,5,1
+Light blue enamel,Enamels,5,1
+Light green enamel,Enamels,5,1
+Lime enamel,Enamels,5,1
+Magenta enamel,Enamels,5,1
+Maroon enamel,Enamels,5,1
+Mint enamel,Enamels,5,1
+Navy enamel,Enamels,5,1
+Orange enamel,Enamels,5,1
+Peach enamel,Enamels,5,1
+Persimmon enamel,Enamels,5,1
+Pink enamel,Enamels,5,1
+Purple enamel,Enamels,5,1
+Red enamel,Enamels,5,1
+Rose enamel,Enamels,5,1
+Tan enamel,Enamels,5,1
+Violet enamel,Enamels,5,1
+White enamel,Enamels,5,1
+Yellow enamel,Enamels,5,1
+Aqua paint,Paints,1.2,1
+Black paint,Paints,1.2,1
+Blue paint,Paints,1.2,1
+Brown paint,Paints,1.2,1
+Gold paint,Paints,1.2,1
+Green paint,Paints,1.2,1
+Grey paint,Paints,1.2,1
+Lavender paint,Paints,1.2,1
+Lemon paint,Paints,1.2,1
+Light blue paint,Paints,1.2,1
+Light green paint,Paints,1.2,1
+Lime paint,Paints,1.2,1
+Magenta paint,Paints,1.2,1
+Maroon paint,Paints,1.2,1
+Mint paint,Paints,1.2,1
+Navy paint,Paints,1.2,1
+Orange paint,Paints,1.2,1
+Peach paint,Paints,1.2,1
+Persimmon paint,Paints,1.2,1
+Pink paint,Paints,1.2,1
+Purple paint,Paints,1.2,1
+Red paint,Paints,1.2,1
+Rose paint,Paints,1.2,1
+Tan paint,Paints,1.2,1
+Violet paint,Paints,1.2,1
+White paint,Paints,1.2,1
+Yellow paint,Paints,1.2,1

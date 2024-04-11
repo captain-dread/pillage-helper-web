@@ -1,666 +1,998 @@
-{
-    "Hemp": {
+[
+    {
+        "resource": "Hemp",
+        "type": "Basic Commodity",
         "mass": "125",
         "volume": "250"
     },
-    "Hemp oil": {
+    {
+        "resource": "Hemp oil",
+        "type": "Basic Commodity",
         "mass": "1",
         "volume": "1"
     },
-    "Iron": {
+    {
+        "resource": "Iron",
+        "type": "Basic Commodity",
         "mass": "7.8",
         "volume": "1"
     },
-    "Kraken's ink": {
+    {
+        "resource": "Kraken's ink",
+        "type": "Basic Commodity",
         "mass": "0.1",
         "volume": "1"
     },
-    "Lacquer": {
+    {
+        "resource": "Lacquer",
+        "type": "Basic Commodity",
         "mass": "1",
         "volume": "1"
     },
-    "Stone": {
+    {
+        "resource": "Stone",
+        "type": "Basic Commodity",
         "mass": "2.6",
         "volume": "1"
     },
-    "Sugar cane": {
+    {
+        "resource": "Sugar cane",
+        "type": "Basic Commodity",
         "mass": "50",
         "volume": "100"
     },
-    "Varnish": {
+    {
+        "resource": "Varnish",
+        "type": "Basic Commodity",
         "mass": "1",
         "volume": "1"
     },
-    "Wood": {
+    {
+        "resource": "Wood",
+        "type": "Basic Commodity",
         "mass": "175",
         "volume": "250"
     },
-    "Broom flower": {
+    {
+        "resource": "Broom flower",
+        "type": "Herbs",
         "mass": "0.2",
         "volume": "1"
     },
-    "Butterfly weed": {
+    {
+        "resource": "Butterfly weed",
+        "type": "Herbs",
         "mass": "0.1",
         "volume": "1"
     },
-    "Cowslip": {
+    {
+        "resource": "Cowslip",
+        "type": "Herbs",
         "mass": "0.7",
         "volume": "1"
     },
-    "Elderberries": {
+    {
+        "resource": "Elderberries",
+        "type": "Herbs",
         "mass": "0.7",
         "volume": "1"
     },
-    "Indigo": {
+    {
+        "resource": "Indigo",
+        "type": "Herbs",
         "mass": "0.7",
         "volume": "1"
     },
-    "Iris root": {
+    {
+        "resource": "Iris root",
+        "type": "Herbs",
         "mass": "0.3",
         "volume": "1"
     },
-    "Lily of the valley": {
+    {
+        "resource": "Lily of the valley",
+        "type": "Herbs",
         "mass": "0.3",
         "volume": "1"
     },
-    "Lobelia": {
+    {
+        "resource": "Lobelia",
+        "type": "Herbs",
         "mass": "0.2",
         "volume": "1"
     },
-    "Madder": {
+    {
+        "resource": "Madder",
+        "type": "Herbs",
         "mass": "0.4",
         "volume": "1"
     },
-    "Nettle": {
+    {
+        "resource": "Nettle",
+        "type": "Herbs",
         "mass": "0.3",
         "volume": "1"
     },
-    "Old man's beard": {
+    {
+        "resource": "Old man's beard",
+        "type": "Herbs",
         "mass": "0.8",
         "volume": "1"
     },
-    "Pokeweed berries": {
+    {
+        "resource": "Pokeweed berries",
+        "type": "Herbs",
         "mass": "0.3",
         "volume": "1"
     },
-    "Sassafras": {
+    {
+        "resource": "Sassafras",
+        "type": "Herbs",
         "mass": "0.5",
         "volume": "1"
     },
-    "Weld": {
+    {
+        "resource": "Weld",
+        "type": "Herbs",
         "mass": "0.3",
         "volume": "1"
     },
-    "Yarrow": {
+    {
+        "resource": "Yarrow",
+        "type": "Herbs",
         "mass": "0.2",
         "volume": "1"
     },
-    "Chalcocite": {
+    {
+        "resource": "Chalcocite",
+        "type": "Minerals",
         "mass": "5.7",
         "volume": "1"
     },
-    "Cubanite": {
+    {
+        "resource": "Cubanite",
+        "type": "Minerals",
         "mass": "4.7",
         "volume": "1"
     },
-    "Gold nugget": {
+    {
+        "resource": "Gold nugget",
+        "type": "Minerals",
         "mass": "0.4",
         "volume": "1"
     },
-    "Lorandite": {
+    {
+        "resource": "Lorandite",
+        "type": "Minerals",
         "mass": "5.5",
         "volume": "1"
     },
-    "Leushite": {
+    {
+        "resource": "Leushite",
+        "type": "Minerals",
         "mass": "4.4",
         "volume": "1"
     },
-    "Masuyite": {
+    {
+        "resource": "Masuyite",
+        "type": "Minerals",
         "mass": "5.1",
         "volume": "1"
     },
-    "Papagoite": {
+    {
+        "resource": "Papagoite",
+        "type": "Minerals",
         "mass": "3.3",
         "volume": "1"
     },
-    "Serandite": {
+    {
+        "resource": "Serandite",
+        "type": "Minerals",
         "mass": "3.4",
         "volume": "1"
     },
-    "Sincosite": {
+    {
+        "resource": "Sincosite",
+        "type": "Minerals",
         "mass": "3",
         "volume": "1"
     },
-    "Tellurium": {
+    {
+        "resource": "Tellurium",
+        "type": "Minerals",
         "mass": "6.2",
         "volume": "1"
     },
-    "Thorianite": {
+    {
+        "resource": "Thorianite",
+        "type": "Minerals",
         "mass": "0.1",
         "volume": "1"
     },
-    "Bananas": {
+    {
+        "resource": "Bananas",
+        "type": "Forageables",
         "mass": "125",
         "volume": "100"
     },
-    "Carambolas": {
+    {
+        "resource": "Carambolas",
+        "type": "Forageables",
         "mass": "125",
         "volume": "100"
     },
-    "Coconuts": {
+    {
+        "resource": "Coconuts",
+        "type": "Forageables",
         "mass": "125",
         "volume": "100"
     },
-    "Durians": {
+    {
+        "resource": "Durians",
+        "type": "Forageables",
         "mass": "125",
         "volume": "100"
     },
-    "Limes": {
+    {
+        "resource": "Limes",
+        "type": "Forageables",
         "mass": "125",
         "volume": "100"
     },
-    "Mangos": {
+    {
+        "resource": "Mangos",
+        "type": "Forageables",
         "mass": "125",
         "volume": "100"
     },
-    "Passion fruit": {
+    {
+        "resource": "Passion fruit",
+        "type": "Forageables",
         "mass": "125",
         "volume": "100"
     },
-    "Pineapples": {
+    {
+        "resource": "Pineapples",
+        "type": "Forageables",
         "mass": "125",
         "volume": "100"
     },
-    "Pomegranates": {
+    {
+        "resource": "Pomegranates",
+        "type": "Forageables",
         "mass": "125",
         "volume": "100"
     },
-    "Rambutan": {
+    {
+        "resource": "Rambutan",
+        "type": "Forageables",
         "mass": "125",
         "volume": "100"
     },
-    "Swill": {
+    {
+        "resource": "Swill",
+        "type": "Ship Supplies",
         "mass": "1",
         "volume": "1"
     },
-    "Grog": {
+    {
+        "resource": "Grog",
+        "type": "Ship Supplies",
         "mass": "1",
         "volume": "1"
     },
-    "Fine rum": {
+    {
+        "resource": "Fine rum",
+        "type": "Ship Supplies",
         "mass": "1",
         "volume": "1"
     },
-    "Small cannon balls": {
+    {
+        "resource": "Small cannon balls",
+        "type": "Ship Supplies",
         "mass": "7.1",
         "volume": "1"
     },
-    "Medium cannon balls": {
+    {
+        "resource": "Medium cannon balls",
+        "type": "Ship Supplies",
         "mass": "14.2",
         "volume": "2"
     },
-    "Large cannon balls": {
+    {
+        "resource": "Large cannon balls",
+        "type": "Ship Supplies",
         "mass": "21.3",
         "volume": "3"
     },
-    "Lifeboats": {
+    {
+        "resource": "Lifeboats",
+        "type": "Ship Supplies",
         "mass": "25",
         "volume": "100"
     },
-    "Aqua cloth": {
+    {
+        "resource": "Aqua cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Black cloth": {
+    {
+        "resource": "Black cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Blue cloth": {
+    {
+        "resource": "Blue cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Brown cloth": {
+    {
+        "resource": "Brown cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Gold cloth": {
+    {
+        "resource": "Gold cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Green cloth": {
+    {
+        "resource": "Green cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Grey cloth": {
+    {
+        "resource": "Grey cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Lavender cloth": {
+    {
+        "resource": "Lavender cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Lemon cloth": {
+    {
+        "resource": "Lemon cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Light blue cloth": {
+    {
+        "resource": "Light blue cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Light green cloth": {
+    {
+        "resource": "Light green cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Lime cloth": {
+    {
+        "resource": "Lime cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Magenta cloth": {
+    {
+        "resource": "Magenta cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Maroon cloth": {
+    {
+        "resource": "Maroon cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Mint cloth": {
+    {
+        "resource": "Mint cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Navy cloth": {
+    {
+        "resource": "Navy cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Orange cloth": {
+    {
+        "resource": "Orange cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Peach cloth": {
+    {
+        "resource": "Peach cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Persimmon cloth": {
+    {
+        "resource": "Persimmon cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Pink cloth": {
+    {
+        "resource": "Pink cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Purple cloth": {
+    {
+        "resource": "Purple cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Red cloth": {
+    {
+        "resource": "Red cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Rose cloth": {
+    {
+        "resource": "Rose cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Tan cloth": {
+    {
+        "resource": "Tan cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Violet cloth": {
+    {
+        "resource": "Violet cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "White cloth": {
+    {
+        "resource": "White cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Yellow cloth": {
+    {
+        "resource": "Yellow cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine aqua cloth": {
+    {
+        "resource": "Fine aqua cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine black cloth": {
+    {
+        "resource": "Fine black cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine blue cloth": {
+    {
+        "resource": "Fine blue cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine brown cloth": {
+    {
+        "resource": "Fine brown cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine gold cloth": {
+    {
+        "resource": "Fine gold cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine green cloth": {
+    {
+        "resource": "Fine green cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine grey cloth": {
+    {
+        "resource": "Fine grey cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine lavender cloth": {
+    {
+        "resource": "Fine lavender cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine lemon cloth": {
+    {
+        "resource": "Fine lemon cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine light blue cloth": {
+    {
+        "resource": "Fine light blue cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine light green cloth": {
+    {
+        "resource": "Fine light green cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine lime cloth": {
+    {
+        "resource": "Fine lime cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine magenta cloth": {
+    {
+        "resource": "Fine magenta cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine maroon cloth": {
+    {
+        "resource": "Fine maroon cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine mint cloth": {
+    {
+        "resource": "Fine mint cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine navy cloth": {
+    {
+        "resource": "Fine navy cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine orange cloth": {
+    {
+        "resource": "Fine orange cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine peach cloth": {
+    {
+        "resource": "Fine peach cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine persimmon cloth": {
+    {
+        "resource": "Fine persimmon cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine pink cloth": {
+    {
+        "resource": "Fine pink cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine purple cloth": {
+    {
+        "resource": "Fine purple cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine red cloth": {
+    {
+        "resource": "Fine red cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine rose cloth": {
+    {
+        "resource": "Fine rose cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine tan cloth": {
+    {
+        "resource": "Fine tan cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine violet cloth": {
+    {
+        "resource": "Fine violet cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine white cloth": {
+    {
+        "resource": "Fine white cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Fine yellow cloth": {
+    {
+        "resource": "Fine yellow cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Sail cloth": {
+    {
+        "resource": "Sail cloth",
+        "type": "Cloth",
         "mass": "0.7",
         "volume": "1"
     },
-    "Blue dye": {
+    {
+        "resource": "Blue dye",
+        "type": "Dyes",
         "mass": "1",
         "volume": "1"
     },
-    "Green dye": {
+    {
+        "resource": "Green dye",
+        "type": "Dyes",
         "mass": "1",
         "volume": "1"
     },
-    "Kraken's blood": {
+    {
+        "resource": "Kraken's blood",
+        "type": "Dyes",
         "mass": "1",
         "volume": "1"
     },
-    "Red dye": {
+    {
+        "resource": "Red dye",
+        "type": "Dyes",
         "mass": "1",
         "volume": "1"
     },
-    "Yellow dye": {
+    {
+        "resource": "Yellow dye",
+        "type": "Dyes",
         "mass": "1",
         "volume": "1"
     },
-    "Aqua enamel": {
+    {
+        "resource": "Aqua enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Black enamel": {
+    {
+        "resource": "Black enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Blue enamel": {
+    {
+        "resource": "Blue enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Brown enamel": {
+    {
+        "resource": "Brown enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Gold enamel": {
+    {
+        "resource": "Gold enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Green enamel": {
+    {
+        "resource": "Green enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Grey enamel": {
+    {
+        "resource": "Grey enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Lavender enamel": {
+    {
+        "resource": "Lavender enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Lemon enamel": {
+    {
+        "resource": "Lemon enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Light blue enamel": {
+    {
+        "resource": "Light blue enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Light green enamel": {
+    {
+        "resource": "Light green enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Lime enamel": {
+    {
+        "resource": "Lime enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Magenta enamel": {
+    {
+        "resource": "Magenta enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Maroon enamel": {
+    {
+        "resource": "Maroon enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Mint enamel": {
+    {
+        "resource": "Mint enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Navy enamel": {
+    {
+        "resource": "Navy enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Orange enamel": {
+    {
+        "resource": "Orange enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Peach enamel": {
+    {
+        "resource": "Peach enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Persimmon enamel": {
+    {
+        "resource": "Persimmon enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Pink enamel": {
+    {
+        "resource": "Pink enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Purple enamel": {
+    {
+        "resource": "Purple enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Red enamel": {
+    {
+        "resource": "Red enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Rose enamel": {
+    {
+        "resource": "Rose enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Tan enamel": {
+    {
+        "resource": "Tan enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Violet enamel": {
+    {
+        "resource": "Violet enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "White enamel": {
+    {
+        "resource": "White enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Yellow enamel": {
+    {
+        "resource": "Yellow enamel",
+        "type": "Enamels",
         "mass": "5",
         "volume": "1"
     },
-    "Aqua paint": {
+    {
+        "resource": "Aqua paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Black paint": {
+    {
+        "resource": "Black paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Blue paint": {
+    {
+        "resource": "Blue paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Brown paint": {
+    {
+        "resource": "Brown paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Gold paint": {
+    {
+        "resource": "Gold paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Green paint": {
+    {
+        "resource": "Green paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Grey paint": {
+    {
+        "resource": "Grey paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Lavender paint": {
+    {
+        "resource": "Lavender paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Lemon paint": {
+    {
+        "resource": "Lemon paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Light blue paint": {
+    {
+        "resource": "Light blue paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Light green paint": {
+    {
+        "resource": "Light green paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Lime paint": {
+    {
+        "resource": "Lime paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Magenta paint": {
+    {
+        "resource": "Magenta paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Maroon paint": {
+    {
+        "resource": "Maroon paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Mint paint": {
+    {
+        "resource": "Mint paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Navy paint": {
+    {
+        "resource": "Navy paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Orange paint": {
+    {
+        "resource": "Orange paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Peach paint": {
+    {
+        "resource": "Peach paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Persimmon paint": {
+    {
+        "resource": "Persimmon paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Pink paint": {
+    {
+        "resource": "Pink paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Purple paint": {
+    {
+        "resource": "Purple paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Red paint": {
+    {
+        "resource": "Red paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Rose paint": {
+    {
+        "resource": "Rose paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Tan paint": {
+    {
+        "resource": "Tan paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Violet paint": {
+    {
+        "resource": "Violet paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "White paint": {
+    {
+        "resource": "White paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     },
-    "Yellow paint": {
+    {
+        "resource": "Yellow paint",
+        "type": "Paints",
         "mass": "1.2",
         "volume": "1"
     }
-}
+]
