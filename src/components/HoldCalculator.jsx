@@ -23,7 +23,11 @@ const style = {
 };
 
 export default function HoldCalculatorModal() {
-  const [shipHold, setShipHold] = useState({ mass: 0, volume: 0 });
+  const [shipHold, setShipHold] = useState({
+    mass: 0,
+    volume: 0,
+    commodities: {},
+  });
   const [commoditiesSelected, setCommoditiesSelected] = useState({
     "Basic Commodity": [],
     Herbs: [],
@@ -35,24 +39,53 @@ export default function HoldCalculatorModal() {
     Enamels: [],
     Paints: [],
   });
-
   const [open, setOpen] = useState(false);
   const [ship, setShip] = useState(ships[0]);
 
   const handleOpen = () => setOpen(true);
-
   const handleClose = () => setOpen(false);
 
-  const progressBarColor =
-    shipHold.mass <= 40 ? "green" : shipHold.mass <= 65 ? "yellow" : "red";
+  const selectedCommodities = Object.values(commoditiesSelected).flat();
+
+  // Update progress bar color based on total mass/volume
+  const calculateProgressColor = (value) =>
+    value <= 40 ? "green" : value <= 65 ? "yellow" : "red";
+  const progressBarColorMass = calculateProgressColor(
+    (shipHold.mass / ship.mass) * 100
+  );
+  const progressBarColorVolume = calculateProgressColor(
+    (shipHold.volume / ship.volume) * 100
+  );
+
+  const handleSliderChange = (commodity, newValue) => {
+    const newMass = newValue * commodity.mass;
+    const newVolume = newValue * commodity.volume;
+    const oldMass = shipHold.commodities[commodity.resource]?.mass || 0;
+    const oldVolume = shipHold.commodities[commodity.resource]?.volume || 0;
+
+    // Update only if within ship capacity
+    if (
+      shipHold.mass - oldMass + newMass <= ship.mass &&
+      shipHold.volume - oldVolume + newVolume <= ship.volume
+    ) {
+      setShipHold((prev) => ({
+        mass: prev.mass - oldMass + newMass,
+        volume: prev.volume - oldVolume + newVolume,
+        commodities: {
+          ...prev.commodities,
+          [commodity.resource]: {
+            quantity: newValue,
+            mass: newMass,
+            volume: newVolume,
+          },
+        },
+      }));
+    }
+  };
 
   useEffect(() => {
-    setShipHold({ mass: 50, volume: 50 });
+    setShipHold({ mass: 0, volume: 0, commodities: {} }); // Reset on ship change
   }, [ship]);
-
-  useEffect(() => {
-    console.log("CommoditiesSelected: ", commoditiesSelected);
-  }, [commoditiesSelected]);
 
   return (
     <div>
@@ -72,92 +105,85 @@ export default function HoldCalculatorModal() {
       >
         <Box sx={style}>
           <Typography textAlign="center">Hold Calculator</Typography>
+          {/* Ship Selection and Display */}
+          <SelectShipInput
+            ships={ships}
+            currentShip={ship}
+            handleShipChange={setShip}
+            calculatorSelect={true}
+          />
           <Box
             sx={{
-              display: "flex",
-              justifyContent: "space-around",
-              width: "300px",
+              height: 70,
+              width: 80,
+              mt: 0.5,
+              backgroundImage: `url(${ship.imagePath})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
             }}
+          />
+
+          {/* Mass and Volume Progress Bars */}
+          <Box
+            sx={{ pt: 1, display: "flex", gap: 2, justifyContent: "center" }}
           >
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <SelectShipInput
-                ships={ships}
-                currentShip={ship}
-                handleShipChange={setShip}
-                calculatorSelect={true}
-              />
-              <Box
+            <Box sx={{ width: "100px" }}>
+              <Typography sx={{ fontSize: ".8rem" }}>Mass</Typography>
+              <LinearProgress
+                variant="determinate"
+                value={(shipHold.mass / ship.mass) * 100}
                 sx={{
-                  height: 70,
-                  width: 80,
-                  mt: 0.5,
-                  backgroundImage: `url(${ship.imagePath})`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
+                  width: "100%",
+                  height: "2rem",
+                  "& .MuiLinearProgress-bar": {
+                    backgroundColor: progressBarColorMass,
+                  },
                 }}
               />
             </Box>
-
-            <Box sx={{ pt: 1 }}>
-              <Box sx={{ width: "100px" }}>
-                <Typography sx={{ fontSize: ".8rem" }}>Mass</Typography>
-                <LinearProgress
-                  variant="determinate"
-                  value={shipHold.mass}
-                  sx={{
-                    width: "100%",
-                    height: "2rem",
-                    "& .MuiLinearProgress-bar": {
-                      backgroundColor: progressBarColor,
-                    },
-                  }}
-                />
-              </Box>
-              <Box sx={{ width: "100px" }}>
-                <Typography sx={{ fontSize: ".8rem" }}>Volume</Typography>
-                <LinearProgress
-                  variant="determinate"
-                  value={shipHold.mass}
-                  sx={{
-                    width: "100%",
-                    height: "2rem",
-                    "& .MuiLinearProgress-bar": {
-                      backgroundColor: progressBarColor,
-                    },
-                  }}
-                />
-              </Box>
+            <Box sx={{ width: "100px" }}>
+              <Typography sx={{ fontSize: ".8rem" }}>Volume</Typography>
+              <LinearProgress
+                variant="determinate"
+                value={(shipHold.volume / ship.volume) * 100}
+                sx={{
+                  width: "100%",
+                  height: "2rem",
+                  "& .MuiLinearProgress-bar": {
+                    backgroundColor: progressBarColorVolume,
+                  },
+                }}
+              />
             </Box>
           </Box>
 
-          <Box>
-            <MultipleSelect
-              commoditiesSelected={commoditiesSelected}
-              setCommoditiesSelected={setCommoditiesSelected}
-            />
+          {/* Commodity Selection and Sliders */}
+          <MultipleSelect
+            commoditiesSelected={commoditiesSelected}
+            setCommoditiesSelected={setCommoditiesSelected}
+          />
+          <Box
+            sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
+          >
+            {selectedCommodities.map((commodity) => {
+              const maxByMass = Math.floor(ship.mass / commodity.mass);
+              const maxByVolume = Math.floor(ship.volume / commodity.volume);
+              const maxValue = Math.min(maxByMass, maxByVolume);
+              const currentValue =
+                shipHold.commodities[commodity.resource]?.quantity || 0;
 
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                flexWrap: "wrap",
-              }}
-            >
-              <Slider
-                value={10}
-                minValue={0}
-                maxValue={75}
-                onChange={() => {}}
-                label="Wood"
-              />
-            </Box>
+              return (
+                <Box key={commodity.resource} sx={{ m: 1 }}>
+                  <Slider
+                    value={currentValue}
+                    maxValue={maxValue}
+                    onChange={(value) => handleSliderChange(commodity, value)}
+                    label={commodity.resource}
+                  />
+                </Box>
+              );
+            })}
           </Box>
         </Box>
       </Modal>
