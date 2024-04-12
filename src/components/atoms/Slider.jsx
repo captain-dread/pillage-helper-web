@@ -5,20 +5,22 @@ import Typography from "@mui/material/Typography";
 
 export default function SliderSizes({ value, maxValue, onChange, label }) {
   const handleChange = (event, newValue) => {
-    onChange(newValue); // Assuming onChange expects the new value directly
+    onChange(newValue);
   };
 
   return (
     <Box sx={{ width: 300, display: "flex", alignItems: "center" }}>
-      <Typography sx={{ fontSize: ".8rem", pr: 0.5 }}>{label}</Typography>
+      <Typography sx={{ fontSize: ".8rem", pr: 0.5, textAlign: "center" }}>
+        {label}
+      </Typography>
       <MuiSlider
         size="small"
-        defaultValue={0} // This prop might not be needed if you are controlling the value prop
+        defaultValue={0}
         aria-label="Small"
         valueLabelDisplay="on"
-        max={maxValue} // Corrected the prop name from maxValue to max
+        max={maxValue}
         value={value}
-        onChange={handleChange} // Use the adjusted handleChange
+        onChange={handleChange}
       />
       <Typography sx={{ fontSize: ".9rem", px: 1 }}>{maxValue}</Typography>
     </Box>
