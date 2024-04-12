@@ -11,7 +11,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "clamp(400px, 90vw, 800px)",
+  width: "clamp(360px, 80vw, 700px)",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -43,13 +43,16 @@ export default function HoldCalculatorModal() {
   const [ship, setShip] = useState(ships[0]);
 
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    setShipHold({ mass: 0, volume: 0, commodities: {} });
+  };
 
   const selectedCommodities = Object.values(commoditiesSelected).flat();
 
-  // Update progress bar color based on total mass/volume
   const calculateProgressColor = (value) =>
-    value <= 40 ? "green" : value <= 65 ? "yellow" : "red";
+    value <= 60 ? "green" : value <= 85 ? "yellow" : "red";
+
   const progressBarColorMass = calculateProgressColor(
     (shipHold.mass / ship.mass) * 100
   );
@@ -63,28 +66,30 @@ export default function HoldCalculatorModal() {
     const oldMass = shipHold.commodities[commodity.resource]?.mass || 0;
     const oldVolume = shipHold.commodities[commodity.resource]?.volume || 0;
 
-    // Update only if within ship capacity
-    if (
-      shipHold.mass - oldMass + newMass <= ship.mass &&
-      shipHold.volume - oldVolume + newVolume <= ship.volume
-    ) {
-      setShipHold((prev) => ({
-        mass: prev.mass - oldMass + newMass,
-        volume: prev.volume - oldVolume + newVolume,
-        commodities: {
-          ...prev.commodities,
-          [commodity.resource]: {
-            quantity: newValue,
-            mass: newMass,
-            volume: newVolume,
-          },
-        },
-      }));
+    // Check if the new values would exceed the ship's capacity
+    const totalNewMass = shipHold.mass - oldMass + newMass;
+    const totalNewVolume = shipHold.volume - oldVolume + newVolume;
+
+    if (totalNewMass > ship.mass || totalNewVolume > ship.volume) {
+      return;
     }
+
+    setShipHold((prev) => ({
+      mass: Math.max(0, prev.mass - oldMass + newMass), // Ensure non-negative
+      volume: Math.max(0, prev.volume - oldVolume + newVolume), // Ensure non-negative
+      commodities: {
+        ...prev.commodities,
+        [commodity.resource]: {
+          quantity: newValue,
+          mass: newMass,
+          volume: newVolume,
+        },
+      },
+    }));
   };
 
   useEffect(() => {
-    setShipHold({ mass: 0, volume: 0, commodities: {} }); // Reset on ship change
+    setShipHold({ mass: 0, volume: 0, commodities: {} });
   }, [ship]);
 
   return (
@@ -106,55 +111,111 @@ export default function HoldCalculatorModal() {
         <Box sx={style}>
           <Typography textAlign="center">Hold Calculator</Typography>
           {/* Ship Selection and Display */}
-          <SelectShipInput
-            ships={ships}
-            currentShip={ship}
-            handleShipChange={setShip}
-            calculatorSelect={true}
-          />
-          <Box
-            sx={{
-              height: 70,
-              width: 80,
-              mt: 0.5,
-              backgroundImage: `url(${ship.imagePath})`,
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-            }}
-          />
-
-          {/* Mass and Volume Progress Bars */}
-          <Box
-            sx={{ pt: 1, display: "flex", gap: 2, justifyContent: "center" }}
-          >
-            <Box sx={{ width: "100px" }}>
-              <Typography sx={{ fontSize: ".8rem" }}>Mass</Typography>
-              <LinearProgress
-                variant="determinate"
-                value={(shipHold.mass / ship.mass) * 100}
+          <Box sx={{ display: "flex", gap: 3 }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <SelectShipInput
+                ships={ships}
+                currentShip={ship}
+                handleShipChange={setShip}
+                calculatorSelect={true}
+              />
+              <Box
                 sx={{
-                  width: "100%",
-                  height: "2rem",
-                  "& .MuiLinearProgress-bar": {
-                    backgroundColor: progressBarColorMass,
-                  },
+                  height: 70,
+                  width: 80,
+                  mt: 0.5,
+                  backgroundImage: `url(${ship.imagePath})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
                 }}
               />
             </Box>
-            <Box sx={{ width: "100px" }}>
-              <Typography sx={{ fontSize: ".8rem" }}>Volume</Typography>
-              <LinearProgress
-                variant="determinate"
-                value={(shipHold.volume / ship.volume) * 100}
-                sx={{
-                  width: "100%",
-                  height: "2rem",
-                  "& .MuiLinearProgress-bar": {
-                    backgroundColor: progressBarColorVolume,
-                  },
-                }}
-              />
+            {/* Mass and Volume Progress Bars */}
+            <Box
+              sx={{ pt: 1, display: "flex", gap: 1, flexDirection: "column" }}
+            >
+              <Box sx={{ width: "100px" }}>
+                <Typography sx={{ fontSize: ".8rem" }}>Mass</Typography>
+                <Box
+                  position="relative"
+                  display="flex"
+                  alignItems="center"
+                  sx={{ flex: 1 }}
+                >
+                  <LinearProgress
+                    variant="determinate"
+                    value={(shipHold.mass / ship.mass) * 100}
+                    sx={{
+                      width: "100%",
+                      height: "2rem",
+                      "& .MuiLinearProgress-bar": {
+                        backgroundColor: progressBarColorMass,
+                      },
+                    }}
+                  />
+                  <Box
+                    position="absolute"
+                    width="100%"
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    style={{ height: "100%" }}
+                  >
+                    <Typography
+                      variant="body2"
+                      color="textPrimary"
+                      sx={{ color: "black", fontWeight: "bold" }}
+                    >
+                      {((shipHold.mass / ship.mass) * 100).toFixed(2)}%
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+
+              <Box sx={{ width: "100px" }}>
+                <Typography sx={{ fontSize: ".8rem" }}>Volume</Typography>
+                <Box
+                  position="relative"
+                  display="flex"
+                  alignItems="center"
+                  sx={{ flex: 1 }}
+                >
+                  <LinearProgress
+                    variant="determinate"
+                    value={(shipHold.volume / ship.volume) * 100}
+                    sx={{
+                      width: "100%",
+                      height: "2rem",
+                      "& .MuiLinearProgress-bar": {
+                        backgroundColor: progressBarColorVolume,
+                      },
+                    }}
+                  />
+                  <Box
+                    position="absolute"
+                    width="100%"
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    style={{ height: "100%" }}
+                  >
+                    <Typography
+                      variant="body2"
+                      color="textPrimary"
+                      sx={{ color: "black", fontWeight: "bold" }}
+                    >
+                      {((shipHold.volume / ship.volume) * 100).toFixed(2)}%
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
             </Box>
           </Box>
 
@@ -174,7 +235,7 @@ export default function HoldCalculatorModal() {
                 shipHold.commodities[commodity.resource]?.quantity || 0;
 
               return (
-                <Box key={commodity.resource} sx={{ m: 1 }}>
+                <Box key={commodity.resource} sx={{ mt: 3 }}>
                   <Slider
                     value={currentValue}
                     maxValue={maxValue}

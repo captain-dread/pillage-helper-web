@@ -11,12 +11,11 @@ export default function SliderSizes({ value, maxValue, onChange, label }) {
   return (
     <Box sx={{ width: 300, display: "flex", alignItems: "center" }}>
       <Typography sx={{ fontSize: ".8rem", pr: 0.5 }}>{label}</Typography>
-      <Typography sx={{ fontSize: ".9rem", pr: 1 }}>0</Typography>
       <MuiSlider
         size="small"
         defaultValue={0} // This prop might not be needed if you are controlling the value prop
         aria-label="Small"
-        valueLabelDisplay="auto"
+        valueLabelDisplay="on"
         max={maxValue} // Corrected the prop name from maxValue to max
         value={value}
         onChange={handleChange} // Use the adjusted handleChange

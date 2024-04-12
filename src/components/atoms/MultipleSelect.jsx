@@ -12,12 +12,13 @@ import {
 import commodities from "../../assets/commodities.json";
 
 const ITEM_HEIGHT = 40;
-const ITEM_PADDING_TOP = 4;
+const ITEM_PADDING_TOP = 3;
 const MenuProps = {
   PaperProps: {
     style: {
       maxHeight: ITEM_HEIGHT * 4 + ITEM_PADDING_TOP,
       width: 175,
+      p: 0,
     },
   },
 };
@@ -118,7 +119,7 @@ export default function MultipleSelectCheckmarksInputs({
                 />
                 <ListItemText
                   primary={commodity.resource}
-                  sx={{ fontSize: ".9rem" }}
+                  sx={{ fontSize: ".7rem" }}
                 />
               </MenuItem>
             ))}

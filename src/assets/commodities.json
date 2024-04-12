@@ -1,998 +1,1004 @@
 [
-    {
-        "resource": "Hemp",
-        "type": "Basic Commodity",
-        "mass": "125",
-        "volume": "250"
-    },
-    {
-        "resource": "Hemp oil",
-        "type": "Basic Commodity",
-        "mass": "1",
-        "volume": "1"
-    },
-    {
-        "resource": "Iron",
-        "type": "Basic Commodity",
-        "mass": "7.8",
-        "volume": "1"
-    },
-    {
-        "resource": "Kraken's ink",
-        "type": "Basic Commodity",
-        "mass": "0.1",
-        "volume": "1"
-    },
-    {
-        "resource": "Lacquer",
-        "type": "Basic Commodity",
-        "mass": "1",
-        "volume": "1"
-    },
-    {
-        "resource": "Stone",
-        "type": "Basic Commodity",
-        "mass": "2.6",
-        "volume": "1"
-    },
-    {
-        "resource": "Sugar cane",
-        "type": "Basic Commodity",
-        "mass": "50",
-        "volume": "100"
-    },
-    {
-        "resource": "Varnish",
-        "type": "Basic Commodity",
-        "mass": "1",
-        "volume": "1"
-    },
-    {
-        "resource": "Wood",
-        "type": "Basic Commodity",
-        "mass": "175",
-        "volume": "250"
-    },
-    {
-        "resource": "Broom flower",
-        "type": "Herbs",
-        "mass": "0.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Butterfly weed",
-        "type": "Herbs",
-        "mass": "0.1",
-        "volume": "1"
-    },
-    {
-        "resource": "Cowslip",
-        "type": "Herbs",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Elderberries",
-        "type": "Herbs",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Indigo",
-        "type": "Herbs",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Iris root",
-        "type": "Herbs",
-        "mass": "0.3",
-        "volume": "1"
-    },
-    {
-        "resource": "Lily of the valley",
-        "type": "Herbs",
-        "mass": "0.3",
-        "volume": "1"
-    },
-    {
-        "resource": "Lobelia",
-        "type": "Herbs",
-        "mass": "0.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Madder",
-        "type": "Herbs",
-        "mass": "0.4",
-        "volume": "1"
-    },
-    {
-        "resource": "Nettle",
-        "type": "Herbs",
-        "mass": "0.3",
-        "volume": "1"
-    },
-    {
-        "resource": "Old man's beard",
-        "type": "Herbs",
-        "mass": "0.8",
-        "volume": "1"
-    },
-    {
-        "resource": "Pokeweed berries",
-        "type": "Herbs",
-        "mass": "0.3",
-        "volume": "1"
-    },
-    {
-        "resource": "Sassafras",
-        "type": "Herbs",
-        "mass": "0.5",
-        "volume": "1"
-    },
-    {
-        "resource": "Weld",
-        "type": "Herbs",
-        "mass": "0.3",
-        "volume": "1"
-    },
-    {
-        "resource": "Yarrow",
-        "type": "Herbs",
-        "mass": "0.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Chalcocite",
-        "type": "Minerals",
-        "mass": "5.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Cubanite",
-        "type": "Minerals",
-        "mass": "4.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Gold nugget",
-        "type": "Minerals",
-        "mass": "0.4",
-        "volume": "1"
-    },
-    {
-        "resource": "Lorandite",
-        "type": "Minerals",
-        "mass": "5.5",
-        "volume": "1"
-    },
-    {
-        "resource": "Leushite",
-        "type": "Minerals",
-        "mass": "4.4",
-        "volume": "1"
-    },
-    {
-        "resource": "Masuyite",
-        "type": "Minerals",
-        "mass": "5.1",
-        "volume": "1"
-    },
-    {
-        "resource": "Papagoite",
-        "type": "Minerals",
-        "mass": "3.3",
-        "volume": "1"
-    },
-    {
-        "resource": "Serandite",
-        "type": "Minerals",
-        "mass": "3.4",
-        "volume": "1"
-    },
-    {
-        "resource": "Sincosite",
-        "type": "Minerals",
-        "mass": "3",
-        "volume": "1"
-    },
-    {
-        "resource": "Tellurium",
-        "type": "Minerals",
-        "mass": "6.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Thorianite",
-        "type": "Minerals",
-        "mass": "0.1",
-        "volume": "1"
-    },
-    {
-        "resource": "Bananas",
-        "type": "Forageables",
-        "mass": "125",
-        "volume": "100"
-    },
-    {
-        "resource": "Carambolas",
-        "type": "Forageables",
-        "mass": "125",
-        "volume": "100"
-    },
-    {
-        "resource": "Coconuts",
-        "type": "Forageables",
-        "mass": "125",
-        "volume": "100"
-    },
-    {
-        "resource": "Durians",
-        "type": "Forageables",
-        "mass": "125",
-        "volume": "100"
-    },
-    {
-        "resource": "Limes",
-        "type": "Forageables",
-        "mass": "125",
-        "volume": "100"
-    },
-    {
-        "resource": "Mangos",
-        "type": "Forageables",
-        "mass": "125",
-        "volume": "100"
-    },
-    {
-        "resource": "Passion fruit",
-        "type": "Forageables",
-        "mass": "125",
-        "volume": "100"
-    },
-    {
-        "resource": "Pineapples",
-        "type": "Forageables",
-        "mass": "125",
-        "volume": "100"
-    },
-    {
-        "resource": "Pomegranates",
-        "type": "Forageables",
-        "mass": "125",
-        "volume": "100"
-    },
-    {
-        "resource": "Rambutan",
-        "type": "Forageables",
-        "mass": "125",
-        "volume": "100"
-    },
-    {
-        "resource": "Swill",
-        "type": "Ship Supplies",
-        "mass": "1",
-        "volume": "1"
-    },
-    {
-        "resource": "Grog",
-        "type": "Ship Supplies",
-        "mass": "1",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine rum",
-        "type": "Ship Supplies",
-        "mass": "1",
-        "volume": "1"
-    },
-    {
-        "resource": "Small cannon balls",
-        "type": "Ship Supplies",
-        "mass": "7.1",
-        "volume": "1"
-    },
-    {
-        "resource": "Medium cannon balls",
-        "type": "Ship Supplies",
-        "mass": "14.2",
-        "volume": "2"
-    },
-    {
-        "resource": "Large cannon balls",
-        "type": "Ship Supplies",
-        "mass": "21.3",
-        "volume": "3"
-    },
-    {
-        "resource": "Lifeboats",
-        "type": "Ship Supplies",
-        "mass": "25",
-        "volume": "100"
-    },
-    {
-        "resource": "Aqua cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Black cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Blue cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Brown cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Gold cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Green cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Grey cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Lavender cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Lemon cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Light blue cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Light green cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Lime cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Magenta cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Maroon cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Mint cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Navy cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Orange cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Peach cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Persimmon cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Pink cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Purple cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Red cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Rose cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Tan cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Violet cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "White cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Yellow cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine aqua cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine black cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine blue cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine brown cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine gold cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine green cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine grey cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine lavender cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine lemon cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine light blue cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine light green cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine lime cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine magenta cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine maroon cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine mint cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine navy cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine orange cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine peach cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine persimmon cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine pink cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine purple cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine red cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine rose cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine tan cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine violet cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine white cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Fine yellow cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Sail cloth",
-        "type": "Cloth",
-        "mass": "0.7",
-        "volume": "1"
-    },
-    {
-        "resource": "Blue dye",
-        "type": "Dyes",
-        "mass": "1",
-        "volume": "1"
-    },
-    {
-        "resource": "Green dye",
-        "type": "Dyes",
-        "mass": "1",
-        "volume": "1"
-    },
-    {
-        "resource": "Kraken's blood",
-        "type": "Dyes",
-        "mass": "1",
-        "volume": "1"
-    },
-    {
-        "resource": "Red dye",
-        "type": "Dyes",
-        "mass": "1",
-        "volume": "1"
-    },
-    {
-        "resource": "Yellow dye",
-        "type": "Dyes",
-        "mass": "1",
-        "volume": "1"
-    },
-    {
-        "resource": "Aqua enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Black enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Blue enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Brown enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Gold enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Green enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Grey enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Lavender enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Lemon enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Light blue enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Light green enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Lime enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Magenta enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Maroon enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Mint enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Navy enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Orange enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Peach enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Persimmon enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Pink enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Purple enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Red enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Rose enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Tan enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Violet enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "White enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Yellow enamel",
-        "type": "Enamels",
-        "mass": "5",
-        "volume": "1"
-    },
-    {
-        "resource": "Aqua paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Black paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Blue paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Brown paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Gold paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Green paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Grey paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Lavender paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Lemon paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Light blue paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Light green paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Lime paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Magenta paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Maroon paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Mint paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Navy paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Orange paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Peach paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Persimmon paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Pink paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Purple paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Red paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Rose paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Tan paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Violet paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "White paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    },
-    {
-        "resource": "Yellow paint",
-        "type": "Paints",
-        "mass": "1.2",
-        "volume": "1"
-    }
+  {
+    "resource": "Hemp",
+    "type": "Basic Commodity",
+    "mass": "125",
+    "volume": "250"
+  },
+  {
+    "resource": "Hemp oil",
+    "type": "Basic Commodity",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Iron",
+    "type": "Basic Commodity",
+    "mass": "7.8",
+    "volume": "1"
+  },
+  {
+    "resource": "Kraken's ink",
+    "type": "Basic Commodity",
+    "mass": "0.1",
+    "volume": "1"
+  },
+  {
+    "resource": "Lacquer",
+    "type": "Basic Commodity",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Stone",
+    "type": "Basic Commodity",
+    "mass": "2.6",
+    "volume": "1"
+  },
+  {
+    "resource": "Sugar cane",
+    "type": "Basic Commodity",
+    "mass": "50",
+    "volume": "100"
+  },
+  {
+    "resource": "Varnish",
+    "type": "Basic Commodity",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Wood",
+    "type": "Basic Commodity",
+    "mass": "175",
+    "volume": "250"
+  },
+  {
+    "resource": "Broom flower",
+    "type": "Herbs",
+    "mass": "0.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Butterfly weed",
+    "type": "Herbs",
+    "mass": "0.1",
+    "volume": "1"
+  },
+  {
+    "resource": "Cowslip",
+    "type": "Herbs",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Elderberries",
+    "type": "Herbs",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Indigo",
+    "type": "Herbs",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Iris root",
+    "type": "Herbs",
+    "mass": "0.3",
+    "volume": "1"
+  },
+  {
+    "resource": "Lily of the valley",
+    "type": "Herbs",
+    "mass": "0.3",
+    "volume": "1"
+  },
+  {
+    "resource": "Lobelia",
+    "type": "Herbs",
+    "mass": "0.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Madder",
+    "type": "Herbs",
+    "mass": "0.4",
+    "volume": "1"
+  },
+  {
+    "resource": "Nettle",
+    "type": "Herbs",
+    "mass": "0.3",
+    "volume": "1"
+  },
+  {
+    "resource": "Old man's beard",
+    "type": "Herbs",
+    "mass": "0.8",
+    "volume": "1"
+  },
+  {
+    "resource": "Pokeweed berries",
+    "type": "Herbs",
+    "mass": "0.3",
+    "volume": "1"
+  },
+  {
+    "resource": "Sassafras",
+    "type": "Herbs",
+    "mass": "0.5",
+    "volume": "1"
+  },
+  {
+    "resource": "Weld",
+    "type": "Herbs",
+    "mass": "0.3",
+    "volume": "1"
+  },
+  {
+    "resource": "Yarrow",
+    "type": "Herbs",
+    "mass": "0.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Chalcocite",
+    "type": "Minerals",
+    "mass": "5.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Cubanite",
+    "type": "Minerals",
+    "mass": "4.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Gold nugget",
+    "type": "Minerals",
+    "mass": "0.4",
+    "volume": "1"
+  },
+  {
+    "resource": "Lorandite",
+    "type": "Minerals",
+    "mass": "5.5",
+    "volume": "1"
+  },
+  {
+    "resource": "Leushite",
+    "type": "Minerals",
+    "mass": "4.4",
+    "volume": "1"
+  },
+  {
+    "resource": "Masuyite",
+    "type": "Minerals",
+    "mass": "5.1",
+    "volume": "1"
+  },
+  {
+    "resource": "Papagoite",
+    "type": "Minerals",
+    "mass": "3.3",
+    "volume": "1"
+  },
+  {
+    "resource": "Serandite",
+    "type": "Minerals",
+    "mass": "3.4",
+    "volume": "1"
+  },
+  {
+    "resource": "Sincosite",
+    "type": "Minerals",
+    "mass": "3",
+    "volume": "1"
+  },
+  {
+    "resource": "Tellurium",
+    "type": "Minerals",
+    "mass": "6.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Thorianite",
+    "type": "Minerals",
+    "mass": "0.1",
+    "volume": "1"
+  },
+  {
+    "resource": "Bananas",
+    "type": "Forageables",
+    "mass": "125",
+    "volume": "100"
+  },
+  {
+    "resource": "Carambolas",
+    "type": "Forageables",
+    "mass": "125",
+    "volume": "100"
+  },
+  {
+    "resource": "Coconuts",
+    "type": "Forageables",
+    "mass": "125",
+    "volume": "100"
+  },
+  {
+    "resource": "Durians",
+    "type": "Forageables",
+    "mass": "125",
+    "volume": "100"
+  },
+  {
+    "resource": "Limes",
+    "type": "Forageables",
+    "mass": "125",
+    "volume": "100"
+  },
+  {
+    "resource": "Mangos",
+    "type": "Forageables",
+    "mass": "125",
+    "volume": "100"
+  },
+  {
+    "resource": "Passion fruit",
+    "type": "Forageables",
+    "mass": "125",
+    "volume": "100"
+  },
+  {
+    "resource": "Pineapples",
+    "type": "Forageables",
+    "mass": "125",
+    "volume": "100"
+  },
+  {
+    "resource": "Pomegranates",
+    "type": "Forageables",
+    "mass": "125",
+    "volume": "100"
+  },
+  {
+    "resource": "Rambutan",
+    "type": "Forageables",
+    "mass": "125",
+    "volume": "100"
+  },
+  {
+    "resource": "Swill",
+    "type": "Ship Supplies",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Grog",
+    "type": "Ship Supplies",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine rum",
+    "type": "Ship Supplies",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Rum Spice",
+    "type": "Ship Supplies",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Small cannon balls",
+    "type": "Ship Supplies",
+    "mass": "7.1",
+    "volume": "1"
+  },
+  {
+    "resource": "Medium cannon balls",
+    "type": "Ship Supplies",
+    "mass": "14.2",
+    "volume": "2"
+  },
+  {
+    "resource": "Large cannon balls",
+    "type": "Ship Supplies",
+    "mass": "21.3",
+    "volume": "3"
+  },
+  {
+    "resource": "Lifeboats",
+    "type": "Ship Supplies",
+    "mass": "25",
+    "volume": "100"
+  },
+  {
+    "resource": "Aqua cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Black cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Blue cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Brown cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Gold cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Green cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Grey cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Lavender cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Lemon cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Light blue cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Light green cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Lime cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Magenta cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Maroon cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Mint cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Navy cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Orange cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Peach cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Persimmon cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Pink cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Purple cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Red cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Rose cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Tan cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Violet cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "White cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Yellow cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine aqua cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine black cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine blue cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine brown cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine gold cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine green cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine grey cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine lavender cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine lemon cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine light blue cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine light green cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine lime cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine magenta cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine maroon cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine mint cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine navy cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine orange cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine peach cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine persimmon cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine pink cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine purple cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine red cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine rose cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine tan cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine violet cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine white cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Fine yellow cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Sail cloth",
+    "type": "Cloth",
+    "mass": "0.7",
+    "volume": "1"
+  },
+  {
+    "resource": "Blue dye",
+    "type": "Dyes",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Green dye",
+    "type": "Dyes",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Kraken's blood",
+    "type": "Dyes",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Red dye",
+    "type": "Dyes",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Yellow dye",
+    "type": "Dyes",
+    "mass": "1",
+    "volume": "1"
+  },
+  {
+    "resource": "Aqua enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Black enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Blue enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Brown enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Gold enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Green enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Grey enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Lavender enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Lemon enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Light blue enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Light green enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Lime enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Magenta enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Maroon enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Mint enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Navy enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Orange enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Peach enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Persimmon enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Pink enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Purple enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Red enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Rose enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Tan enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Violet enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "White enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Yellow enamel",
+    "type": "Enamels",
+    "mass": "5",
+    "volume": "1"
+  },
+  {
+    "resource": "Aqua paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Black paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Blue paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Brown paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Gold paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Green paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Grey paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Lavender paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Lemon paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Light blue paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Light green paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Lime paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Magenta paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Maroon paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Mint paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Navy paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Orange paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Peach paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Persimmon paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Pink paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Purple paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Red paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Rose paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Tan paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Violet paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "White paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  },
+  {
+    "resource": "Yellow paint",
+    "type": "Paints",
+    "mass": "1.2",
+    "volume": "1"
+  }
 ]
