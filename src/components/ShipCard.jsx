@@ -13,6 +13,7 @@ import DamageTracker from "./atoms/DamageTracker";
 
 import CrisisAlertIcon from "@mui/icons-material/CrisisAlert";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import SettingsBackupRestoreIcon from "@mui/icons-material/SettingsBackupRestore";
 
 export default function ShipCard({
   identity,
@@ -73,39 +74,72 @@ export default function ShipCard({
         />
 
         <Stack direction="column" spacing={0.5} sx={{ p: 0.5 }}>
-          <Button
-            variant="text"
-            size="small"
-            sx={buttonStyle}
-            onClick={() => {
-              recordShotsTaken(identity, 1);
-            }}
-          >
-            One Hit
-            <CrisisAlertIcon size="small" sx={{ fontSize: 10, ml: 0.5 }} />
-          </Button>
-          <Button
-            size="small"
-            variant="text"
-            sx={buttonStyle}
-            onClick={() => {
-              recordShotsTaken(identity, 2);
-            }}
-          >
-            Two Hits
-            <CrisisAlertIcon size="small" sx={{ fontSize: 10, mx: 0.5 }} />
-            <CrisisAlertIcon size="small" sx={{ fontSize: 10 }} />
-          </Button>
-          <Button
-            size="small"
-            variant="text"
-            sx={buttonStyle}
-            onClick={() => {
-              recordRockDamage(identity);
-            }}
-          >
-            Rock/Edge Hit
-          </Button>
+          <Box sx={{ display: "flex" }}>
+            <IconButton
+              aria-label="undo"
+              size="small"
+              onClick={() => {
+                recordShotsTaken(identity, 1, true);
+              }}
+            >
+              <SettingsBackupRestoreIcon sx={{ fontSize: 12 }} />
+            </IconButton>
+            <Button
+              variant="text"
+              size="small"
+              sx={buttonStyle}
+              onClick={() => {
+                recordShotsTaken(identity, 1);
+              }}
+            >
+              One Hit
+              <CrisisAlertIcon size="small" sx={{ fontSize: 10, ml: 0.5 }} />
+            </Button>
+          </Box>
+          <Box sx={{ display: "flex" }}>
+            <IconButton
+              aria-label="undo"
+              size="small"
+              onClick={() => {
+                recordShotsTaken(identity, 2, true);
+              }}
+            >
+              <SettingsBackupRestoreIcon sx={{ fontSize: 12 }} />
+            </IconButton>
+            <Button
+              size="small"
+              variant="text"
+              sx={buttonStyle}
+              onClick={() => {
+                recordShotsTaken(identity, 2);
+              }}
+            >
+              Two Hits
+              <CrisisAlertIcon size="small" sx={{ fontSize: 10, mx: 0.5 }} />
+              <CrisisAlertIcon size="small" sx={{ fontSize: 10 }} />
+            </Button>
+          </Box>
+          <Box sx={{ display: "flex" }}>
+            <IconButton
+              aria-label="undo"
+              size="small"
+              onClick={() => {
+                recordRockDamage(identity, true);
+              }}
+            >
+              <SettingsBackupRestoreIcon sx={{ fontSize: 12 }} />
+            </IconButton>
+            <Button
+              size="small"
+              variant="text"
+              sx={buttonStyle}
+              onClick={() => {
+                recordRockDamage(identity);
+              }}
+            >
+              Rock/Edge Hit
+            </Button>
+          </Box>
         </Stack>
 
         <DamageTracker
@@ -125,4 +159,5 @@ const buttonStyle = {
   fontSize: 12,
   display: "flex",
   justifyContent: "center",
+  flex: 1,
 };

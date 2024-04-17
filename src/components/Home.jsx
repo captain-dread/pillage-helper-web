@@ -294,14 +294,25 @@ export default function Home({ toggleDarkMode, darkMode }) {
     });
   };
 
-  const recordShotsTaken = (identity, shots) => {
-    setBattle((prevBattle) => ({
-      ...prevBattle,
-      [identity === "player" ? "playerDamageTaken" : "enemyDamageTaken"]:
-        prevBattle[
-          identity === "player" ? "playerDamageTaken" : "enemyDamageTaken"
-        ] + shots,
-    }));
+  const recordShotsTaken = (identity, shots, undo = false) => {
+    setBattle((prevBattle) => {
+      const damageKey =
+        identity === "player" ? "playerDamageTaken" : "enemyDamageTaken";
+      let updatedDamage = prevBattle[damageKey];
+
+      if (undo) {
+        // Subtract the shots ensuring it doesn't go below zero
+        updatedDamage = Math.max(0, updatedDamage - shots);
+      } else {
+        // Add the shots to the current damage
+        updatedDamage += shots;
+      }
+
+      return {
+        ...prevBattle,
+        [damageKey]: updatedDamage,
+      };
+    });
   };
 
   const recordRamDamage = () => {
@@ -316,22 +327,32 @@ export default function Home({ toggleDarkMode, darkMode }) {
     });
   };
 
-  const recordRockDamage = (identity) => {
-    if (identity === "player") {
-      setBattle({
-        ...battle,
-        playerDamageTaken:
-          battle.playerDamageTaken +
-          battle.playerShip.rockDamage[battle.enemyShip.cannonSize],
-      });
-    } else {
-      setBattle({
-        ...battle,
-        enemyDamageTaken:
-          battle.enemyDamageTaken +
-          battle.enemyShip.rockDamage[battle.playerShip.cannonSize],
-      });
-    }
+  const recordRockDamage = (identity, undo = false) => {
+    setBattle((prevBattle) => {
+      if (identity === "player") {
+        const damageAmount =
+          prevBattle.playerShip.rockDamage[prevBattle.enemyShip.cannonSize];
+        const updatedDamage = undo
+          ? Math.max(0, prevBattle.playerDamageTaken - damageAmount)
+          : prevBattle.playerDamageTaken + damageAmount;
+
+        return {
+          ...prevBattle,
+          playerDamageTaken: updatedDamage,
+        };
+      } else {
+        const damageAmount =
+          prevBattle.enemyShip.rockDamage[prevBattle.playerShip.cannonSize];
+        const updatedDamage = undo
+          ? Math.max(0, prevBattle.enemyDamageTaken - damageAmount)
+          : prevBattle.enemyDamageTaken + damageAmount;
+
+        return {
+          ...prevBattle,
+          enemyDamageTaken: updatedDamage,
+        };
+      }
+    });
   };
 
   const getDamage = (identity) => {
