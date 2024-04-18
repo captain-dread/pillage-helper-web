@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { Box, Button, Modal, LinearProgress, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Modal,
+  LinearProgress,
+  Typography,
+  TextField,
+} from "@mui/material";
 import SelectShipInput from "./atoms/SelectShipInput.jsx";
 import MultipleSelect from "./atoms/MultipleSelect.jsx";
 import Slider from "./atoms/Slider.jsx";
@@ -109,7 +116,9 @@ export default function HoldCalculatorModal() {
         aria-describedby="hold-calculator-model"
       >
         <Box sx={style}>
-          <Typography textAlign="center">Hold Calculator</Typography>
+          <Typography textAlign="center" sx={{ fontWeight: "bold" }}>
+            Hold Calculator
+          </Typography>
           {/* Ship Selection and Display */}
           <Box sx={{ display: "flex", gap: 3 }}>
             <Box
@@ -225,7 +234,11 @@ export default function HoldCalculatorModal() {
             setCommoditiesSelected={setCommoditiesSelected}
           />
           <Box
-            sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
           >
             {selectedCommodities.map((commodity) => {
               const maxByMass = Math.floor(ship.mass / commodity.mass);
@@ -234,13 +247,38 @@ export default function HoldCalculatorModal() {
               const currentValue =
                 shipHold.commodities[commodity.resource]?.quantity || 0;
 
+              const handleInputChange = (e) => {
+                const value = Math.max(
+                  0,
+                  Math.min(maxValue, Number(e.target.value))
+                );
+                handleSliderChange(commodity, value);
+              };
+
               return (
-                <Box key={commodity.resource} sx={{ mt: 3 }}>
+                <Box
+                  key={commodity.resource}
+                  sx={{
+                    mt: 3,
+                    display: "flex",
+                    gap: 2,
+                    alignItems: "center",
+                  }}
+                >
                   <Slider
                     value={currentValue}
                     maxValue={maxValue}
                     onChange={(value) => handleSliderChange(commodity, value)}
                     label={commodity.resource}
+                  />
+                  <TextField
+                    type="number"
+                    value={currentValue}
+                    onChange={handleInputChange}
+                    inputProps={{ min: 0, max: maxValue }}
+                    variant="standard"
+                    size="small"
+                    sx={{ width: 50 }}
                   />
                 </Box>
               );
