@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Your Pillage Data</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Get Your Pillage Data</h1>
+    <p>
+      If you want to download your old pillage data, click the following button
+    </p>
+    <button onclick="downloadData()">Download Pillage Data</button>
+    <script>
+      function downloadData() {
+        const data = localStorage.getItem("myResults");
+        if (data) {
+          const blob = new Blob([data], { type: "application/json" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "pillage-data.json";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        } else {
+          alert('No data found in local storage for "myResults".');
+        }
+      }
+    </script>
+  </body>
+</html>
